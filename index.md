@@ -24,20 +24,20 @@ This table is just an example. Actual 12-day overview will differ based on the c
 
 | Instruction Day | Theme                                                                               | Timing           | Format    |
 |:----------------|:------------------------------------------------------------------------------------|:-----------------|:----------|
-| 1               | Introduction to GIS & Remote Sensing                                                | 30 November 2022 | Virtual   | 
-| 2               | Introduction to Google Earth Engine: Programming and Image Processing/Visualization | 7 December 2022  | Virtual   |
-| 3               | Remote Sensing with High Resolution Imagery                                         | 15 February 2023 | Virtual   |
-| 4               | Introduction to Synthetic Aperture Radar (SAR)                                      | 8 March 2023     | Virtual   |
-| 5               | SAR for Mangrove Monitoring                                                         | 15 March 2023    | Virtual   | 
-| 6               | SAR for Flood Monitoring with DEM                                                   | 22 March 2023    | Virtual   |
-| --              | Q&A: Online Meeting                                                                 | 5 April 2023     | Virtual   |
-| 7               | Drone Image Processing                                                              | 10 July 2023     | In-person |
-| 8               | Intermediate Google Earth Engine: Mangrove Use Case                                 | 11 July 2023     | In-person |
-| 9               | Intermediate Google Earth Engine: Flooding Use Case                                 | 12 July 2023     | In-person |
-| 10              | Advanced Google Earth Engine: Change Detection                                      | 13 July 2023     | In-person |
-| 11              | Map Validation and Area Estimation with Collect Earth Online                        | 14 July 2023     | In-person |
+| 1               | Introduction to GIS & Remote Sensing                                                | November 30 2022 | Virtual   | 
+| 2               | Introduction to Google Earth Engine: Programming and Image Processing/Visualization | December 7 2022  | Virtual   |
+| 3               | Remote Sensing with High Resolution Imagery                                         | February 15 2023 | Virtual   |
+| 4               | Introduction to Synthetic Aperture Radar (SAR)                                      | March 8 2023     | Virtual   |
+| 5               | SAR for Mangrove Monitoring                                                         | March 15 2023    | Virtual   | 
+| 6               | SAR for Flood Monitoring with DEM                                                   | March 22 2023    | Virtual   |
+| --              | Q&A: Online Meeting                                                                 | April 5 2023     | Virtual   |
+| 7               | Drone Image Processing                                                              | July 10 2023     | In-person |
+| 8               | Intermediate Google Earth Engine: Mangrove Use Case                                 | July 11 2023     | In-person |
+| 9               | Intermediate Google Earth Engine: Flooding Use Case                                 | July 12 2023     | In-person |
+| 10              | Advanced Google Earth Engine: Change Detection                                      | July 13 2023     | In-person |
+| 11              | Map Validation and Area Estimation with Collect Earth Online                        | July 14 2023     | In-person |
 | 12              | Capstone and Follow-up Support                                                      | TBD              | Virtual   |
-| --              | Q&A: Online Meeting                                                                 | 2 August 2023    | Virtual   |
+| --              | Q&A: Online Meeting                                                                 | August 2 2023    | Virtual   |
 
 ## Feedback
 If you have any feedback from any of the workshops, please fill out the form below. It helps us improve future workshops!
