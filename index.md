@@ -20,7 +20,6 @@ If you have any questions about the material, please submit a question below! We
 [Ask a Question](https://forms.gle/a7MW4PtgtmPiPoZJ9){: .btn .btn-purple }
 
 ## Agenda
-This table is just an example. Actual 12-day overview will differ based on the country.
 
 | Instruction Day | Theme                                                                               | Timing           | Format    |
 |:----------------|:------------------------------------------------------------------------------------|:-----------------|:----------|
