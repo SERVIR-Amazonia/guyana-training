@@ -21,7 +21,7 @@ If you have any questions about the material, please submit a question below! We
 
 ## Agenda
 
-| Instruction Day | Theme                                                                               | Timing            | Format    |
+| Instruction Day | Theme                                                                               | Date              | Format    |
 |:----------------|:------------------------------------------------------------------------------------|:------------------|:----------|
 | 1               | Introduction to GIS & Remote Sensing                                                | November 30, 2022 | Virtual   | 
 | 2               | Introduction to Google Earth Engine: Programming and Image Processing/Visualization | December 7, 2022  | Virtual   |
