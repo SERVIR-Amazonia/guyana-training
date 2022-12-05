@@ -21,18 +21,26 @@ This exercise will demonstrate how to utilize Earth Explorer to locate and downl
 1. Navigate to the Earth Explorer home page: https://earthexplorer.usgs.gov/ 
 2. **Filter by location.** Select the “Search Criteria” tab in the upper lefthand corner. Input the area of interest using ONE of the following methods:
     1. **Search**
-        1. Select the Geocoder tab and then select “World Features” underneath the “Search Limits” description. Type “Negril” into the Feature Name field and press “Show.” Select the second entry that comes up. [IMAGE negril selection world features]
+        1. Select the Geocoder tab and then select “World Features” underneath the “Search Limits” description. Type “Negril” into the Feature Name field and press “Show.” Select the second entry that comes up. 
+        <img align="center" src="../images/intro-rs-images/ex-1.1-location-name.png"  vspace="10" width="600">
+
     2. **Interactive map**
-        1. Scroll down to the “Polygon” tab. Drag the map and zoom in to Negril. Select “Use Map” to highlight the area shown on the map. [IMAGE polygon select]
+        1. Scroll down to the “Polygon” tab. Drag the map and zoom in to Negril. Select “Use Map” to highlight the area shown on the map. 
+        <img align="center" src="../images/intro-rs-images/ex-1.1-location-polygon.png"  vspace="10" width="600">
     3. **Coordinates**
-        1. Scroll down to the “Polygon” tab. Select “Add Coordinate.”  Input 18&deg; 16' 00" as the latitude and 78&deg; 21' 00" as the longitude and press “Add.” [IMAGE coord select]
+        1. Scroll down to the “Polygon” tab. Select “Add Coordinate.”  Input 18&deg; 16' 00" as the latitude and 78&deg; 21' 00" as the longitude and press “Add.” 
+        <img align="center" src="../images/intro-rs-images/ex-1.1-location-coords.png"  vspace="10" width="600">
     4. **Shapefile**
         1. Sign in to your Earth Explorer account by selecting “Sign In” in the upper righthand corner.
-        2. Select the “KML/Shapefile Upload” tab. In the dropdown menu, choose the “Shapefile” option and press “Select File.” Navigate to the `intro-rs-data` folder and choose `negril-pa-shapefile.zip` and press “Open.” [IMAGE select shapefile] 
-3. **Filter by date and cloud cover.** Scroll down to the bottom of the “Search Criteria” tab and input `09/01/2022` to `09/21/2022`. Next, press the “Cloud Cover” tab and move the slider so that the range is set between “0% to 15%.” Press the “Data Sets >>” button to move on to the next section. [IMAGE select cloud cover and date]
-4. **Filter by data set.** Under the “Data Sets” tab, expand the section labeled “Landsat.” We want to use the most recent collection of Landsat data, so choose the “Landsat Collection 2 Level-1” option. Check the “Landsat 8-9 OLI/TIRS C2 L1” box option. Select the “Additional Criteria >>” button to move on to the next section. [IMAGE dataset choice]
+        2. Select the “KML/Shapefile Upload” tab. In the dropdown menu, choose the “Shapefile” option and press “Select File.” Navigate to the `intro-rs-data` folder and choose `negril-pa-shapefile.zip` and press “Open.” 
+        <img align="center" src="../images/intro-rs-images/ex-1.1-location-shp.png"  vspace="10" width="600">
+3. **Filter by date and cloud cover.** Scroll down to the bottom of the “Search Criteria” tab and input `09/01/2022` to `09/21/2022`. Next, press the “Cloud Cover” tab and move the slider so that the range is set between “0% to 15%.” Press the “Data Sets >>” button to move on to the next section. 
+<img align="center" src="../images/intro-rs-images/ex-1.1-date-cloud.png"  vspace="10" width="600">
+4. **Filter by data set.** Under the “Data Sets” tab, expand the section labeled “Landsat.” We want to use the most recent collection of Landsat data, so choose the “Landsat Collection 2 Level-1” option. Check the “Landsat 8-9 OLI/TIRS C2 L1” box option. Select the “Additional Criteria >>” button to move on to the next section. 
+<img align="center" src="../images/intro-rs-images/ex-1.1-dataset-select.png"  vspace="10" width="600">
 5. We do not need to filter by any additional criteria, but you can explore what options are available for the Landsat 8-9 Collection 2 Level 1 data set in this tab. Press “Results >>” to see the available data.
-6. Select the first image result. You can see what the image looks like and scroll down to learn about the metadata. The image should have the following properties: [IMAGE L8 first]
+6. Select the first image result. You can see what the image looks like and scroll down to learn about the metadata. The image should have the following properties: 
+<img align="center" src="../images/intro-rs-images/ex-1.1-location-name.png"  vspace="10" width="600">
     1. **ID:** LC08_L1TP_012047_20220916_20220922_02_T1
     2. **Date Acquired:** 2022/09/16
     3. **Path:** 012

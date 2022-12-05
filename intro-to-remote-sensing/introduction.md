@@ -25,13 +25,15 @@ Welcome to an Introduction to GIS & Remote Sensing! This workshop will give an o
 
 **How is the data collected?** Satellites carry one or more sensors that measure the level of electromagnetic radiation coming from the Earth and its atmosphere. The level changes based on different atmospheric and surface conditions. Those variations give us information about the atmospheric and surface conditions within the Earth’s system.
 
-[IMAGE earth radiation]
+<img align="center" src="../images/intro-rs-images/reflected-energy-radiation.png" hspace="15" vspace="10" width="500">
+
 Figure 1. Earth radiation components. Image source: NASA ARSET.
 
 All radiation, or electromagnetic energy, travels in waves or varying sizes. Those differences can be viewed on the electromagnetic spectrum below.
 
 
-[IMAGE electromagnetic spectrum]
+<img align="center" src="../images/intro-rs-images/electromagnetic-spectrum.jpg" hspace="15" vspace="10" width="500">
+
 Figure 2. Electromagnetic spectrum. Image source: Google sites.
 
 The radiation that sensors measure come in two primary forms:
@@ -40,7 +42,8 @@ The radiation that sensors measure come in two primary forms:
 
 Different types of objects will absorb and emit energy at different wavelengths. A common example is that of healthy, green vegetation: red and blue wavelengths are absorbed, while green and infrared wavelengths are reflected or emitted back. The amount of energy that is reflected or emitted differs between objects as well. Snow, for instance, reflects up to 90% of solar radiation, while the ocean only reflects around 6%. In exchange, the ocean emits far more infrared radiation than snow, since most of the energy that is absorbed gets re-emitted. All of these differences make up an object’s unique spectral signature that can be measured and used for further analysis.
 
-[IMAGE vegetation signature]
+<img align="center" src="../images/intro-rs-images/vegetation-spectral-signature.jpg" hspace="15" vspace="10" width="600">
+
 Figure 3. Spectral signature of vegetation. Image source: Living Textbook, ITC, University of Twente. 
 
 **Passive vs. active measurements.** Sensors can either be passive or active: passive sensors use energy from the sun to measure reflected energy, while active sensors provide their own source of energy to take measurements. Passive sensors tend to operate within the visible, infrared, thermal infrared, and microwave (shortwave) portions of the electromagnetic spectrum and measure indices such as sea surface temperature, water quality, vegetation, and cloud properties. These sensors, however, experience challenges with penetrating cloud cover. Active sensors mainly operate in the microwave (longwave) portion of the electromagnetic spectrum. Radar and lidar are the most common examples of these types of sensors and are useful for measuring features such as elevation. These sensors can be used in the day or night and can penetrate cloud cover, but are more challenging to process and may have limited availability. The remainder of the lesson and the next few workshops will focus on passive remote sensing.
@@ -48,7 +51,8 @@ Figure 3. Spectral signature of vegetation. Image source: Living Textbook, ITC, 
 ## Resolution
 **What are the different types of resolution?** Resolution defines particular characteristics of a satellite that can help determine the effectiveness of its use in different scientific applications. There are two fundamental types of resolution: (1) **Spatial resolution** determines the level of detail that the satellite captures in each pixel measurement. For example, if a satellite has a resolution of 30 meters, that means that each pixel covers a 30 meter by 30 meter surface area. (2) **Temporal resolution** indicates the frequency with which the satellite collects its data for the same location. A satellite with a temporal resolution of 5 days collects new imagery at a given location every 5 days. Temporal resolution is often referred to as “revisit time,” and spatial resolution is simply called “resolution.” 
 
-[IMAGE resolution diff]
+<img align="center" src="../images//intro-rs-images/high-vs-low-resolution.jpg" hspace="15" vspace="10" width="600">
+
 Figure 4. Gridded image indicating difference between high and low resolution. Image source: Liang & Wang, 2020
 
 **Coarseness.** Satellites can have low, moderate, or high spatial and temporal resolution. A satellite with a high spatial resolution does not mean it will also possess a high temporal resolution, and vice versa. In fact, with many of the freely available NASA Earth observations, it is difficult to get both a high spatial and temporal resolution, as high spatial resolution requires a narrower swath, which results in a less frequent revisit time. While there are no definitive numerical ranges for the different resolution levels, the suggestions below give an idea of what values are generally considered to fall into low, moderate, or high spatial and temporal resolution categories:
@@ -64,7 +68,8 @@ Figure 4. Gridded image indicating difference between high and low resolution. I
 ## How Data is Stored
 **Storage depends on the data type.** There are four general types of passive remote sensing imagery: visible, infrared, multispectral, and hyperspectral Visible data is made up of pixels that fall within the red, green, or blue wavelengths. Those pixels are then stored in one of three corresponding red, green, or blue bands within a raster image. Infrared imagery expands upon visible imagery by including pixels within the infrared range of the spectrum that are stored in separate bands. Multispectral raster imagery is usually made up of 7-12 bands that include the visible bands and multiple infrared bands across the electromagnetic spectrum. Hyperspectral data contains the most amount of detail, as those raster images can be made up of hundreds of narrow bands across the electromagnetic spectrum.
 
-[IMAGE multi vs hyperspectral]
+<img align="center" src="../images//intro-rs-images/multispectral-vs-hyperspectral.png" hspace="15" vspace="10" width="600">
+
 Figure 5. Multi- vs. hyperspectral band. Image source: *Hyperspectral and Multispectral Imaging*, Edmund Optics, 2022
 
 The values stored in these bands are accessed and analyzed using different tools that we will cover in the next few workshops.
@@ -87,3 +92,6 @@ A number of these satellites and sensors are particularly useful for hydrologic 
 | GRACE        | Gravity Recovery and Climate Experiment | 2002 - present | 300-400 km   | 1 month      | NASA      |
 
 
+<img align="center" src="../images/intro-rs-images/applications.png" hspace="15" vspace="10" width="600">
+
+Figure 6. Example of Applications. Image source: *University of Maryland*
