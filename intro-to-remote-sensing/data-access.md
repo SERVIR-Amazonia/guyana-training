@@ -45,7 +45,11 @@ This exercise will demonstrate how to utilize Earth Explorer to locate and downl
     2. **Date Acquired:** 2022/09/16
     3. **Path:** 012
     4. **Row:** 047
+    <img align="center" src="../images/intro-rs-images/ex-1.1-first-image.png"  vspace="10" width="600">
 7. Press the download icon to see the options for download. **Note that you must be signed in to complete this step.** You can explore the different formats that you can choose to download the data. The best choice for analysis is the “Product Bundle.” Downloading data can sometimes take a while, so all the data needed for the rest of the workshop has been downloaded for you and included in the `intro-rs-data` folder.
+
+<img align="center" src="../images/intro-rs-images/ex-1.1-image-results.png"  vspace="10" width="600">
+<img align="center" src="../images/intro-rs-images/ex-1.1-download-options.png"  vspace="10" width="400">
 
 ## Copernicus Open Access Hub
 **What is Open Access Hub?** The Copernicus Open Access Hub is a free and open-source platform for accessing any of the European Space Agency’s Sentinel data products. Users can choose between a graphical user interface (GUI) or an application programming interface to interact with and download data based on their project needs. Documentation for use of each of the products, as well as a user guide for the Hub itself, is also available on the Hub’s website. 
@@ -54,11 +58,17 @@ This exercise will demonstrate how to utilize Earth Explorer to locate and downl
 This exercise will demonstrate how to use Copernicus Open Access Hub to locate and download Sentinel-2 scenes for a particular date range and area of interest. For this lesson, our area of interest is the western coast of Jamaica and the date range is September 1, 2022 to September 16, 2022.
 
 1. Navigate to the Copernicus Open Access Hub home page: [https://scihub.copernicus.eu/] 
-2. Select the “Open Hub” button to use the GUI option to browse the available data. It is also accessible via this link: [https://scihub.copernicus.eu/dhus/#/home] [IMAGE open hub button]
-3. Login to your account by clicking on the icon of a person with a question mark. [IMAGE open hub login button]
+2. Select the “Open Hub” button to use the GUI option to browse the available data. It is also accessible via this link: [https://scihub.copernicus.eu/dhus/#/home]
+<img align="center" src="../images/intro-rs-images/ex-1.2-open-hub-button.png"  vspace="10" width="600">
+
+3. Login to your account by clicking on the icon of a person with a question mark.
+<img align="center" src="../images/intro-rs-images/ex-1.2-login.png"  vspace="10" width="600">
+
 4. You can search for data products using one of two ways: the first is text search, which you use if you know the ID for your desired image, and the second is advanced search, which you can use to narrow down products based on a set of criteria. The tutorial will follow the steps for advanced search.
 5. Using your cursor, drag the map and zoom in to the western coast of Jamaica. 
-6. Right-click and drag your mouse over the area of interest to draw a rectangle around the area of interest. [IMAGE aoi]
+6. Right-click and drag your mouse over the area of interest to draw a rectangle around the area of interest. 
+<img align="center" src="../images/intro-rs-images/ex-1.2-highlighted-aoi.png"  vspace="10" width="500">
+
 7. Click on the 3 horizontally stacked bars on the left hand side of the search bar to open up the Advanced Search menu.
 8. Input the following parameters into the Advanced Search box:
     1. **Sensing period:** 2022/09/01 to 2022/09/21
@@ -67,7 +77,10 @@ This exercise will demonstrate how to use Copernicus Open Access Hub to locate a
         1. **Satellite Platform:** `S2B_*`
         2. **Product Type:** `S2MSI2A` (Corresponds to Sentinel-2 MSI Level 2A.)
         3. **Cloud Cover %:** `[0 TO 30]`
-9. Press the magnifying glass icon on the right hand side of the search bar to search for the corresponding data products. [IMAGE final search terms]
+9. Press the magnifying glass icon on the right hand side of the search bar to search for the corresponding data products.
+<img align="center" src="../images/intro-rs-images/ex-1.2-advanced-search.png"  vspace="10" width="400">
+
 10. You can select the eye icon to inspect details about the image tile, or press the downward arrow to download the image.
-    1. All the data you need has already been downloaded for you, so you do not need to download the images. [IMAGE eye download]
+    1. All the data you need has already been downloaded for you, so you do not need to download the images. 
+    <img align="center" src="../images/intro-rs-images/ex-1.2-metadata-download.png"  vspace="10" width="600">
 

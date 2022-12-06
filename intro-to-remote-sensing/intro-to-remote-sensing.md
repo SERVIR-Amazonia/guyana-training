@@ -10,8 +10,8 @@ nav_order: 3
 Navigate through the different lesson sections by using the menu on the lefthand side or the table of contents below.
 
 ## Session Agenda
-**Date**: DATE  
-**Instructor(s):** NAME(S)
+**Date**: November 30, 2022
+**Instructor(s):** Jose (Pepe) Ochoa
 
 <table>
   <tbody>
@@ -41,7 +41,7 @@ Navigate through the different lesson sections by using the menu on the lefthand
       <td>
         <ul>
             <li>How to visualize and interpret remote sensing data</li>
-            <li>Visualizing vegetation indices using Landsat</li>
+            <li>Examine differences between data products</li>
           </ul>
       </td>
     </tr>
@@ -53,9 +53,9 @@ Navigate through the different lesson sections by using the menu on the lefthand
       <td>11:15 - 12:00</td>
       <td>
         <ul>
-            <li>How to select the right type of remote sensing data for your research</li>
-            <li>Visualizing vegetation indices with Sentinel-2</li>
-            <li>Sentinel-2 vs. Landsat</li>
+            <li>Create a cloud-free true color image</li>
+            <li>Visualize vegetation with color infrared imagery</li>
+            <li>Calculate NDVI using Landsat 8</li>
           </ul>
       </td>
     </tr>
@@ -68,9 +68,7 @@ Navigate through the different lesson sections by using the menu on the lefthand
       <td>
         <ul>
             <li>Morning recap</li>
-            <li>Introduction to high-resolution imagery</li>
-            <li>How projections affect your data</li>
-            <li>Visualizing vegetation indices with Planet</li>
+            <li>Making and customizing a map using raster data: create a DEM and hillshade map</li>
           </ul>
       </td>
     </tr>
