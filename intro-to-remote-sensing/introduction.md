@@ -31,7 +31,6 @@ Figure 1. Earth radiation components. Image source: NASA ARSET.
 
 All radiation, or electromagnetic energy, travels in waves or varying sizes. Those differences can be viewed on the electromagnetic spectrum below.
 
-
 <img align="center" src="../images/intro-rs-images/electromagnetic-spectrum.jpg" hspace="15" vspace="10" width="500">
 
 Figure 2. Electromagnetic spectrum. Image source: Google sites.
