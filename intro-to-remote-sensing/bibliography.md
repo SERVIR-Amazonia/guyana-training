@@ -5,7 +5,7 @@ parent: Introduction to Remote Sensing
 nav_order: 6
 ---
 
-# Bibliogaphy
+# Bibliography
 
 Chapter 1 - A systematic view of remote sensing, Editor(s): Shunlin Liang, Jindi Wang, Advanced Remote Sensing (Second Edition), Academic Press,  2020, Pages 1-57, ISBN 9780128158265, https://doi.org/10.1016/B978-0-12-815826-5.00001-5
 
