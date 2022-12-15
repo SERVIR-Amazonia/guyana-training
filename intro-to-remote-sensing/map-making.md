@@ -23,7 +23,7 @@ Let’s call the path **points_jamaica_pa** and use the ‘Save Place as’ opti
 
 <img align="center" src="../images/intro-rs-images/ex-4.1-ge-save-place.png"  vspace="10" width="600">
 
-Now we can use any of the online web services available, for example GPS visualizer (https://www.gpsvisualizer.com/elevation) to convert our Kml file into a GPX file, which is a valid format for height points entry in QGIS. We use the Convert & add elevation button, then download the file.
+Now we can use any of the online web services available, for example GPS visualizer [(https://www.gpsvisualizer.com/elevation)](https://www.gpsvisualizer.com/elevation) to convert our Kml file into a GPX file, which is a valid format for height points entry in QGIS. We use the Convert & add elevation button, then download the file.
 
 <img align="center" src="../images/intro-rs-images/ex-4.1-convert.png"  vspace="10" width="600">
 
