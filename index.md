@@ -24,7 +24,7 @@ If you have any questions about the material, please submit a question below! We
 | Instruction Day | Theme                                                                               | Date              | Format    |
 |:----------------|:------------------------------------------------------------------------------------|:------------------|:----------|
 | 1               | Introduction to GIS & Remote Sensing                                                | November 30, 2022 | Virtual   | 
-| 2               | Introduction to Google Earth Engine: Programming and Image Processing/Visualization | December 7, 2022  | Virtual   |
+| 2               | Introduction to Google Earth Engine: Programming and Image Processing/Visualization | January 18, 2023  | Virtual   |
 | 3               | Remote Sensing with High Resolution Imagery                                         | February 15, 2023 | Virtual   |
 | 4               | Introduction to Synthetic Aperture Radar (SAR)                                      | March 8, 2023     | Virtual   |
 | 5               | SAR for Mangrove Monitoring                                                         | March 15, 2023    | Virtual   | 
