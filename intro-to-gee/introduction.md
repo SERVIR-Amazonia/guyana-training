@@ -18,3 +18,7 @@ Welcome to an Introduction to Google Earth Engine (GEE)! This workshop will give
 ## Requirements
 
 You will need in advance to have a GEE account approved. Go the GEE website and sign up for a new user account: [https://earthengine.google.com/signup/](https://earthengine.google.com/signup/).
+
+## Content
+
+Coming soon... For now, please refer to this [document](https://docs.google.com/document/d/1pLJgjKtRBLu5oKufQ13IJDvzaUqb7ljLwg6tmCsutRM/edit?usp=sharing). 
