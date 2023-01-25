@@ -9,9 +9,9 @@ nav_order: 6
 
 ## Recent Workshop Highlights
 
-<img align="left" src="images/photos-session1/4.jpeg"  vspace="10" width="250">
+<img align="left" src="images/photos-session1/4.jpeg"  vspace="10" width="350">
 
-<img align="left" src="images/photos-session1/3.jpeg"  vspace="10" width="250">
+<img align="left" src="images/photos-session1/3.jpeg"  vspace="10" width="350">
 
-<img align="left" src="images/photos-session1/7.jpeg"  vspace="10" width="250">
+<img align="left" src="images/photos-session1/7.jpeg"  vspace="10" width="350">
 
