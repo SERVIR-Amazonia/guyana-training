@@ -120,7 +120,7 @@ Once the exportation has finished we can download the data and upload it in othe
 
 Figure 45. HydroShed River network raster loaded in QGIS.
 
-Script link: https://code.earthengine.google.com/1115def3cb8e14a3a772e03ebaa19aa7.
+Script link: [https://code.earthengine.google.com/1115def3cb8e14a3a772e03ebaa19aa7](https://code.earthengine.google.com/1115def3cb8e14a3a772e03ebaa19aa7).
 
 ## Challenge 1: Working with derived water indexes
 
