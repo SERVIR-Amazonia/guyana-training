@@ -30,7 +30,6 @@ Figure 16. BitwiseAnd function description.
 
 ```javascript
 var cloudMask= landsat8_sr.map(cloudShadowMask)
-Complete function to add:;
 print('cloud_mask: ', cloudMask)
 
 
@@ -86,7 +85,7 @@ Map.addLayer(l8_sr_med, visual_lan, 'true color landsat median');
 
 Figure 19. Computed temporal median of a Landsat-8 collection, plus clipped.
 
-We can analyze and compare some very cloudy areas after they have been cloud-masked. For this checkpoint you can go the link at [https://code.earthengine.google.com/gee02](https://code.earthengine.google.com/gee02).
+We can analyze and compare some very cloudy areas after they have been cloud-masked. For this checkpoint you can go the link at [https://code.earthengine.google.com/7b26479cbd8ca711b1e0023e5afaff99](https://code.earthengine.google.com/7b26479cbd8ca711b1e0023e5afaff99).
 
 <img align="center" src="../images/intro-gee-images/20_compare.png" hspace="15" vspace="10" width="600">
 

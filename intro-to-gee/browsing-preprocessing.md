@@ -111,4 +111,4 @@ Map.addLayer(landsat8_sr, visualization, 'True Color (432)');
 
 Figure 15. True color Landsat 8 collection 2 mosaic for Guyana.
 
-We have added the layer of surface reflectance (SR) values for 3 months to visualize. You can check the code link at [https://code.earthengine.google.com/gee01](https://code.earthengine.google.com/gee01).
+We have added the layer of surface reflectance (SR) values for 3 months to visualize. You can check the code link at [https://code.earthengine.google.com/c242421f3cc5229e8e24bd019b8f6ceb](https://code.earthengine.google.com/c242421f3cc5229e8e24bd019b8f6ceb).

@@ -7,7 +7,7 @@ nav_order: 6
 
 # Exporting hydrologic datasets
 
-In this exercise we learn how to export a dataset with appropriate parametrization in order to be loaded and utilized in another platform.  There exist plenty of water resources data collentions available in the GEE catalog, however we will look for river information. The World WildLife Fund (WWF) has developed the HydroSHEDS Free Flowing Rivers Network in partnership with the U.S. Geological Survey, the International Centre for Tropical Agriculture, The Nature Conservancy, and the Center for Environmental Systems Research of the University of Kassel, Germany. This dataset provides hydrographic data at regional and global scales including information of river networks, watershed boundaries, drainage directions, and flow accumulations. Let’s type in the catalog search bar ‘flowing rivers’:
+In this exercise we learn how to export a dataset with appropriate parametrization in order to be loaded and utilized in another platform.  There exist plenty of water resources data collections available in the GEE catalog, however we will look for river information. The World WildLife Fund (WWF) has developed the HydroSHEDS Free Flowing Rivers Network in partnership with the U.S. Geological Survey, the International Centre for Tropical Agriculture, The Nature Conservancy, and the Center for Environmental Systems Research of the University of Kassel, Germany. This dataset provides hydrographic data at regional and global scales including information of river networks, watershed boundaries, drainage directions, and flow accumulations. Let’s type in the catalog search bar ‘flowing rivers’:
 
 <img align="center" src="../images/intro-gee-images/35rivers.png" hspace="15" vspace="10" width="600">
 
@@ -40,7 +40,7 @@ Map.addLayer(rivers, null, 'FeatureCollection', false);
 
 Figure 37. HydroSHEDS clipped layer showing the river network in Guyana.
 
-The layer named as ‘Feature collection’ contains every single item of the dataset such as small tributaries and minor rivers. Now let’s do a zoom at 10 km scale over the capital. In order to see the scale of visualization we use the scale bar in the lower right corner as it is circled and pointed out in Figure .  Let’s leave only the hydrosheds and true color sentinel layers activated.
+The layer named as ‘Feature collection’ contains every single item of the dataset such as small tributaries and minor rivers. Now let’s do a zoom at 10 km scale over the capital city. We are able to see the scale of visualization by using the scale bar in the lower right corner as it is circled and pointed out in Figure 38.  Let’s leave only the hydrosheds and true color sentinel layers activated.
 
 <img align="center" src="../images/intro-gee-images/38_river_sem.png" hspace="15" vspace="10" width="600">
 
@@ -53,7 +53,7 @@ Map.addLayer(cloud_mask, {}, 'cloud mask', false);
 Map.addLayer(l8_sr_cloud_masked.median(), visual_lan, 'image cloud masked', 0);
 ```
 
-Now let’s export this dataset using the function *Export*. Something very important is to keep the visor panel large enough for our intended to be exported region or study area. The larger your study region the longer will be the Export request task. One additional step you could do is to draw a polygon of a smaller area of interest within the Guyana territory.  You can check this optional step in the script link.
+Now let’s export this dataset using the function *Export*. Something very important is to keep the visor panel large enough for our intended to be exported region or study area. The larger your study region the longer will be the Export request task. One additional step you could do is to draw a polygon of a smaller area of interest within the Guyana territory.  You can check this optional step in the general script link.
 
 ```javascript
 Export.image.toDrive(
