@@ -9,9 +9,10 @@ nav_order: 2
 
 This exercise will walk us through retrieving and visualizing Landsat 8 data collections. Create a new repository called ‘training-servir-gee’.
 
-<img align="center" src="../images/intro-gee-images/03_new.png" hspace="15" vspace="10" width="600">
-
-Figure 3. Creating a new script
+<figure>
+  <img align="center" src="../images/intro-gee-images/03_new.png" hspace="15" vspace="10" width="600">
+  <figcaption>Figure 3. Creating a new script</figcaption>
+</figure>
 
 We set the name for our new script ‘sat_image_processing’.
 
