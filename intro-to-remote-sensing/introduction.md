@@ -12,8 +12,7 @@ Welcome to an Introduction to GIS & Remote Sensing! This workshop will give an o
 ## Pre-workshop Set-up
 1. [Install](https://www.qgis.org/en/site/forusers/download.html) QGIS if not already installed.
 2. Create an [Earth Explorer account](https://ers.cr.usgs.gov/register). 
-3. Create a [Planet NICFI account](https://www.planet.com/nicfi/#sign-up).
-4. [Download](https://drive.google.com/drive/folders/1p-ZAwhuVXRD-VzAujLk_IQ-gGmGq9ADQ?usp=share_link)] and upzip the data folder for the lesson. Save the upzipped folder on your Desktop. Make sure the folder is named `intro-rs-data`. 
+3. [Download](https://drive.google.com/drive/folders/1p-ZAwhuVXRD-VzAujLk_IQ-gGmGq9ADQ?usp=share_link) and upzip the data folder for the lesson. Save the upzipped folder on your Desktop. Make sure the folder is named `intro-rs-data`. 
 
 ## Objectives
 1. Understand how remote sensing satellite data is collected and stored.
