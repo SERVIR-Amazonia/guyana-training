@@ -40,7 +40,6 @@ This exercise will demonstrate how to utilize Earth Explorer to locate and downl
 <img align="center" src="../images/intro-rs-images/ex-1.1-dataset-select.png"  vspace="10" width="600">
 5. We do not need to filter by any additional criteria, but you can explore what options are available for the Landsat 8-9 Collection 2 Level 1 data set in this tab. Press “Results >>” to see the available data.
 6. Select the first image result. You can see what the image looks like and scroll down to learn about the metadata. The image should have the following properties:
-<img align="center" src="../images/intro-rs-images/ex-1.1-location-name.png"  vspace="10" width="600">
     1. **ID:** LC08_L1TP_012047_20220916_20220922_02_T1
     2. **Date Acquired:** 2022/09/16
     3. **Path:** 012
@@ -57,8 +56,8 @@ This exercise will demonstrate how to utilize Earth Explorer to locate and downl
 ### Exercise 1.2. Practice using Copernicus Open Access Hub.
 This exercise will demonstrate how to use Copernicus Open Access Hub to locate and download Sentinel-2 scenes for a particular date range and area of interest. For this lesson, our area of interest is the western coast of Jamaica and the date range is September 1, 2022 to September 16, 2022.
 
-1. Navigate to the Copernicus Open Access Hub home page: [https://scihub.copernicus.eu/] 
-2. Select the “Open Hub” button to use the GUI option to browse the available data. It is also accessible via this link: [https://scihub.copernicus.eu/dhus/#/home]
+1. Navigate to the Copernicus Open Access Hub home page: [https://scihub.copernicus.eu/](https://scihub.copernicus.eu/)
+2. Select the “Open Hub” button to use the GUI option to browse the available data. It is also accessible via this link: [https://scihub.copernicus.eu/dhus/#/home](https://scihub.copernicus.eu/dhus/#/home)
 <img align="center" src="../images/intro-rs-images/ex-1.2-open-hub-button.png"  vspace="10" width="600">
 
 3. Login to your account by clicking on the icon of a person with a question mark.
