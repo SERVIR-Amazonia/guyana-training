@@ -11,6 +11,7 @@ Navigate through the different lesson sections by using the menu on the lefthand
 
 ## Session Agenda
 **Date**: February 15, 2023
+
 **Instructor(s):** Jose (Pepe) Ochoa
 
 |      Time     |                                                                                                                                                    Topics                                                                                                                                                   |
