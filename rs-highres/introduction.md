@@ -10,9 +10,9 @@ nav_order: 1
 Welcome to a Remote Sensing with High Resolution Imagery! .......
 
 ## Pre-workshop Set-up
-1. 
-2. 
-3. 
+1. test
+2. test
+3. test
 
 ## Objectives
 1. Understand how bla bla....
