@@ -20,4 +20,4 @@ Welcome to the Remote Sensing with High Resolution imagery training!.  This work
  https://www.planet.com/nicfi/#sign-up
 2. Having internet connection and your GEE account ready
 
-<img align="center" src="../images//rs-highres/_4_planet.png" hspace="15" vspace="10" width="600">
+<img align="center" src="../images/rs-highres/_4_planet.png" hspace="15" vspace="10" width="600">
