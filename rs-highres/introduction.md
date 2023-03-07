@@ -20,15 +20,19 @@ Welcome to the Remote Sensing with High Resolution imagery training!.  This work
  https://www.planet.com/nicfi/#sign-up
 2. Having internet connection and your GEE account ready
 
-<img align="center" src="../images/rs-highres/_4_planet.png" hspace="15" vspace="10" width="600">
+<img align="center" src="../images/rs-highres/_4_planet.png" hspace="15" vspace="10" width="300">
+
 Figure 1. Planet Labs sign up interface.
 
 Go to the lower area of the website and you will find the sign-up form.
-<img align="center" src="../images/rs-highres/_3.png" hspace="15" vspace="10" width="600">
+
+<img align="center" src="../images/rs-highres/_3.png" hspace="15" vspace="10" width="300">
+
 Figure 2. Signing up form
 
 Once you have signed up, you need to follow the activation link that arrived to your email inbox.  Then complete a few additional data 
-<img align="center" src="../images//rs-highres/_2.png" hspace="15" vspace="10" width="600">
+<img align="center" src="../images//rs-highres/_2.png" hspace="15" vspace="10" width="300">
+
 Figure 3. Creating an account.
 
 You can select the level of expertise and provide the purpose of data use.
