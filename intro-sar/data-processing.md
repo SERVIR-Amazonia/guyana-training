@@ -15,6 +15,7 @@ The data values collected by SAR systems can be distorted in two primary ways: g
 **Slant range.** This type of distortion is caused by the fact that the distance between the radar antenna and the target, known as the slant range, is not constant along the image. This happens because the radar antenna is not perpendicular to the ground, but rather it is pointed at an angle (side-looking). Thus, within a radar image, objects that are closer to the radar system appear compressed while objects farther away are more stretched out. The image does not represent the true horizontal, ground range distance on the surface of the Earth. In order to measure distances between objects, this distortion must be corrected.
 
 <img align="center" src="../images/intro-radar-images/slant-vs-ground-range.png"  vspace="10" width="600">
+
 Slant range vs ground range. *Source: Tiago Silva, Quantifying Antarctic Icebergs and their Melting in the Ocean.*
 
 
