@@ -1,13 +1,16 @@
 ---
 layout: page
-title: Data Visualization with Landsat
-parent: Introduction to Remote Sensing
-nav_order: 3
+title: Fundamentals of high resolution satellite products
+parent: Remote Sensing with High Resolution Imagery
+nav_order: 2
 ---
 
-# Data Visualization with Landsat
+# Fundamentals
 
-Remote sensing data is useful for gaining insights about a particular region by extracting the values stored in image bands and combining them to calculate different types of indices. Perhaps even more powerful, however, is the ability to use imagery to visualize those calculations. This lesson will use Landsat data to calculate different vegetation health indicators and review how to properly visualize those results. 
+High resolution imagery corresponds to those satellite or airborne-transported sensor products with high capabilities in terms of the spatial dimension mainly, but also in the spectral and temporal (revisit cycles) domains.  High spatial resolution products for example provide outstanding details of the Earth’s land cover offering the opportunity to identify objects and figures that are not visible with traditional satellite data. 
+
+<img align="center" src="../images/intro-rs-images/ex-2.1-sr-adjusted-canvas.png"  vspace="10" width="600">
+
 
 ## Objectives
 
