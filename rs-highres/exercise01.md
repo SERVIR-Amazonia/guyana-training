@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Fundamentals of high resolution satellite products
+title: Exercise 1 Working with QGIS
 parent: Remote Sensing with High Resolution Imagery
 nav_order: 3
 ---

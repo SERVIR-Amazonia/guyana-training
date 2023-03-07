@@ -1,13 +1,13 @@
 ---
 layout: page
-title: Fundamentals of high resolution satellite products
+title: Fundamentals of high resolution data
 parent: Remote Sensing with High Resolution Imagery
 nav_order: 2
 ---
 
 # Fundamentals
 
-High resolution imagery corresponds to those satellite or airborne-transported sensor products with high capabilities in terms of the spatial dimension mainly, but also in the spectral and temporal (revisit cycles) domains.  High spatial resolution products for example provide outstanding details of the Earth’s land cover offering the opportunity to identify objects and figures that are not visible with traditional satellite data. 
+High resolution satellite imagery corresponds to those satellite or airborne-transported sensor products with high capabilities in terms of the spatial dimension mainly, but also in the spectral and temporal (revisit cycles) domains.  High spatial resolution products for example provide outstanding details of the Earth’s land cover offering the opportunity to identify objects and figures that are not visible with traditional satellite data. 
 
 <img align="center" src="../images//rs-highres/01_sat.jpg" hspace="15" vspace="10" width="600">
 Figure 9. The QuickBird-2 satellite. Source: The European Space Agency (ESA), earth.esa.int
