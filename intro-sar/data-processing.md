@@ -39,11 +39,13 @@ Radiometric correction: before (left) and after (right). *Source: Alaska Satelli
 **Shadow.** This type of error is conceptually similar to that of clouds in optical imagery. When the radar beam illuminates a large or steep vertical object, such as a mountain or tall building, it may be unable to illuminate the ground on the farther side of the object, resulting in shadow effects on the image. The effect is particularly pronounced at the top of the vertical object, where the incidence angle is larger. Although you can apply some shadow corrections and attempt to fill in the data gaps using interpolation methods, many researchers choose to treat the shadows as missing data – just like the masked out portions of cloudy images.
 
 <img align="center" src="../images/intro-radar-images/radar-shadow.png"  vspace="10" width="600">
+
 Shadow in SAR imagery. *Source: Jolanda Patruno, Polarimetric RADARSAT-2 and ALOS PALSAR multi-frequency analysis over the archaeological site of Gebel Barkal (Sudan).*
 
 **Speckle.** This error is the result of random noise and interference from the radar waves that occurs within the pixel cell. It results in a grainy, almost salt-and-pepper image appearance. There are lots of different gray tones that may appear within a single, uniform surface as the result of speckling.  These variations must be filtered in order to improve the visual quality of the data and make it easier to identify features. Unfortunately, the correction method often used to reduce speckling reduces the resolution, so you must balance the visual quality of the image with the resolution of data.
 
-<img align="center" src="../images/intro-radar-images/radar-speckle.png"  vspace="10" width="600">
+<img align="center" src="../images/intro-radar-images/radar-speckle.jpg"  vspace="10" width="600">
+
 Speckle in SAR imagery. *Source: Natural Resources Canada*
 
 ## Data Correction 
