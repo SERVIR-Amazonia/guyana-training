@@ -19,24 +19,30 @@ High spatial resolution imagery: Planet data exploration
 
 As an example to follow, we will be using Planet Labs datasets :
 https://www.planet.com/products/explorer/
+
 <img align="center" src="../images/rs-highres/02_plan.jpg" hspace="15" vspace="10" width="600">
-Figure 10. Planet web domain.
+
+**Figure 10**. Planet web domain.
 
 <img align="center" src="../images/rs-highres/03_0_planet.png" hspace="15" vspace="10" width="600">
-Figure 11. Planet explorer link.
+
+**Figure 11**. Planet explorer link.
 
 <img align="center" src="../images/rs-highres/03_1_plan.png" hspace="15" vspace="10" width="600">
-Figure 12. Planet explorer platform
+
+**Figure 12**. Planet explorer platform
 
 In the right panel we have different tools that allow you to create or upload a geometry. A geometry defines your area of interest and it is required to search Planet’s daily scene catalog.
 
 <img align="center" src="../images/rs-highres/04_highreso.png" hspace="15" vspace="10" width="600">
-Figure 13. How a Planet scene looks.
+
+**Figure 13.** How a Planet scene looks.
 
 You can use the GEE script link from the previous workshop to have a look at Landsat data (https://code.earthengine.google.com/ca5031e1dc28543143fb723deb95c4a0)
 
 <img align="center" src="../images/rs-highres/05_landsat.png" hspace="15" vspace="10" width="600">
-Figure 14. 30-m Landsat mosaic 
+
+**Figure 14.** 30-m Landsat mosaic 
 
 While comparing monthly Planet 4.6m mosaic with a Landsat 30m composite we can find important differences in terms of spatial resolution. In the Planet image we are able to identify different objects such as grass fields, houses, trees, crops, etc.  On the other hand, with the Landsat image is almost impossible to recognize any of those objects
 

@@ -6,15 +6,12 @@ has_children: True
 nav_order: 5
 ---
 
-# Introduction to Synthetic Aperture Radar
+# Introduction to Synthetic Aperture Radar (SAR)
 Navigate through the different lesson sections by using the menu on the lefthand side or the table of contents below.
 
 ## Session Agenda
-**Date**: March 8, 2023
+**Date**: Wednesday, March 8th, 2023
 **Instructor(s):** Jose (Pepe) Ochoa
-
-### Training Day 4: Introduction to Synthetic Aperture Radar (SAR)
-Date: 8 March 2023
 
 ### Time / Topics
 09:00 – 10:15
