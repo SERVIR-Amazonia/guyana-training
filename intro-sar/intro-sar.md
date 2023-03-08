@@ -13,9 +13,8 @@ Navigate through the different lesson sections by using the menu on the lefthand
 **Date**: March 8, 2023
 **Instructor(s):** Jose (Pepe) Ochoa
 
-## Training Day 4: Introduction to Synthetic Aperture Radar (SAR)
-
-### Date: 8 March 2023
+### Training Day 4: Introduction to Synthetic Aperture Radar (SAR)
+Date: 8 March 2023
 
 ### Time / Topics
 09:00 – 10:15
