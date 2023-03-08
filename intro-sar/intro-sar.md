@@ -17,10 +17,8 @@ Navigate through the different lesson sections by using the menu on the lefthand
 
 ### Date: 8 March 2023
 
-### Time
-	09:00 – 10:15
-
-### Topics
+### Time / Topics
+09:00 – 10:15
 	
     Welcome and set up check
 
