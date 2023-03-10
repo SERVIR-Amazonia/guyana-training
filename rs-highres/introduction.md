@@ -30,18 +30,21 @@ Go to the lower area of the website and you will find the sign-up form.
 
 Figure 2. Signing up form
 
-Once you have signed up, you need to follow the activation link that arrived to your email inbox.  Then complete a few additional data 
-<img align="center" src="../images//rs-highres/_2.png" hspace="15" vspace="10" width="300">
+Once you have signed up, you need to follow the activation link that arrived to your email inbox.  Then complete a few additional data
+
+<img align="center" src="../images/rs-highres/_2.png" hspace="15" vspace="10" width="300">
 
 Figure 3. Creating an account.
 
 You can select the level of expertise and provide the purpose of data use.
 
-<img align="center" src="../images//rs-highres/_1.png" hspace="15" vspace="10" width="600">
+<img align="center" src="../images/rs-highres/_1.png" hspace="15" vspace="10" width="600">
+
 Figure 4. Choose some user parameters.
 
 Finally you need to accept the policies and license agreement and hit the ‘submit’ button.
-<img align="center" src="../images//rs-highres/_0.png" hspace="15" vspace="10" width="600">
+<img align="center" src="../images/rs-highres/_0.png" hspace="15" vspace="10" width="600">
+
 Figure 5. Terms of Service
 
 In addition, you will need to have your GEE account approved. We did this step in our previous workshop. You can always go to the GEE website and sign up for a new user account: https://earthengine.google.com/signup. 
