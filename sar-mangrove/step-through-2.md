@@ -99,6 +99,6 @@ print('Producers Accuracy:', confusionMatrix.producersAccuracy());
 print('Users Accuracy:', confusionMatrix.consumersAccuracy());
 ```
 
-<img align="center" src="../images/sar_mangrove/04.PNG" hspace="15" vspace="10" width="600">
+<img align="center" src="../images/sar_mangrove/04.png" hspace="15" vspace="10" width="600">
 
 Congratulations! You have setup a Random Forest classifier for mangrove mapping using SAR data. 

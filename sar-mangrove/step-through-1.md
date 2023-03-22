@@ -40,7 +40,7 @@ Map.centerObject(aoi, 12);
 Map.addLayer(aoi, {}, 'AOI');
 ```
 
-<img align="center" src="../images/sar_mangrove/02.PNG" hspace="15" vspace="10" width="600">
+<img align="center" src="../images/sar_mangrove/02.png" hspace="15" vspace="10" width="600">
 
 # Preprocessing Image Collections 
 
