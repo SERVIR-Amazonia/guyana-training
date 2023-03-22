@@ -44,9 +44,9 @@ Map.addLayer(aoi, {}, 'AOI');
 
 # Preprocessing Image Collections 
 
-We always want to apply filters to `ImageCollections` as early in our workflow as we can to reduce the amount of effort the GEE servers will require. We already know the area that we'd like to pull data for (our AOI), and that we want relatively few clouds in our images, so we will apply a boundary and a cloud cover filter.
+We always want to apply filters to `ImageCollections` as early in our workflow as we can to reduce the amount of effort the GEE servers will require. We already know the area that we'd like to pull data for (our AOI).
 
-Let's do that for our first Landat `ImageCollection`
+Let's do that for our first Sentinel-1 `ImageCollection`
 
 ```javascript
 //--------------------------------------------------------------
@@ -146,17 +146,23 @@ Export.image.toDrive({
 Export.image.toAsset({
   image: composite,
   description: 'ToAssetmedianCompositeSentinel1_2019_Caroni',
-  assetId: 'projects/caribbean-trainings/assets/trinidad-tobago-2022/images/medianCompositeSentinel1_2019_Caroni',
+  assetId: 'medianCompositeSentinel1_2019_Caroni',
   region: aoi,
   scale: 10,
   maxPixels: 1e13
 });
 ```
 
-Now, we collect our training data. We will use collected points:
+Now, we collect our training data. We will use the collected points dataset:
+
+"https://code.earthengine.google.com/?asset=projects/croplandexpansionandes/assets/collectedPts"
+
+You can click on Import then name is as **collectedPts**
+
+<img align="center" src="../images/sar_mangrove/05.png" hspace="15" vspace="10" width="500">
 
 ```javascript
-var collectedPts = ee.FeatureCollection("projects/caribbean-trainings/assets/trinidad-tobago-2022/vector/autocollected-pts")
+var collectedPts = ee.FeatureCollection("projects/croplandexpansionandes/assets/collectedPts")
 
 // Extract spectral information at each point.
 var trainingPts = composite.sampleRegions({
