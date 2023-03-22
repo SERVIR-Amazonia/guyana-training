@@ -17,8 +17,7 @@ Navigate through the different lesson sections by using the menu on the lefthand
 |      Time     |                                                                                                       Topics                                                                                                                                     |
 |:-------------:|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
 | 09:00 – 09:45 |                                  Welcome and set-up check<br>Previous Session Recap, Q&A                                 |
-| 9:30 – 11:00  |          Mangroves overview
-Stepping through the Scripts:<br>Mapping Mangroves using  Sentinel-1 Synthetic Aperture Radar (SAR) C-band                                    |
+| 9:30 – 11:00  |          Mangroves overview<br>Stepping through the Scripts:<br>Mapping Mangroves using  Sentinel-1 Synthetic Aperture Radar (SAR) C-band                                    |
 | 11:00 – 11:15 |                                                Coffee break                                                              |
 | 11:15 – 12:00 |                                       Challenges - Making Your Own classification model for mangrove detection, Make Improvements<br>Using training data and supervised classification machine learning methods                                                     |
 | 12:00 – 13:00 |                                                  Lunch                                                                   |
