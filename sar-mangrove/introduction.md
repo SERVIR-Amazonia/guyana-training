@@ -12,7 +12,8 @@ Welcome to SAR for Mangrove Monitoring workshop! This workshop will demonstrate 
 ## Pre-workshop Set-up
 1. Ensure you are logged into your Google Earth Engine account.
 2. Click this link to accept the trinidad-tobago GEE script repository - [https://code.earthengine.google.com/?accept_repo=users/kwoodward/trinidad-tobago](https://code.earthengine.google.com/?accept_repo=users/kwoodward/trinidad-tobago)
-3. Create a new script file in your own script repository - name it 'Mangroves Classification - Landsat'. Keep in mind a master copy is available in the above script repository.
+3. Create a new script file in your own script repository - name it 'sar_mangrove_tt'. 
+4. Check the full script [https://code.earthengine.google.com/76baffb749990e7bbbcb13559de9b873](https://code.earthengine.google.com/76baffb749990e7bbbcb13559de9b873)
 
 ## Objectives
 1. Understand the general concepts of mangrove ecosystems
