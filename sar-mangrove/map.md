@@ -29,8 +29,8 @@ Now we can find our product in the Google Drive folder
 
 Now let's open QGIS and start working on the mapping
 
-<img align="center" src="../images/sar_mangrove/08.png" hspace="15" vspace="10" width="400">  <img align="center" src="../images/sar_mangrove/09.png" hspace="15" vspace="10" width="400">
+<img align="center" src="../images/sar_mangrove/08.png" hspace="15" vspace="10" width="300">  <img align="center" src="../images/sar_mangrove/09.png" hspace="15" vspace="10" width="300">
 
 Let's provide a good symbology to our product, and finalize the rest of map components
 
-<img align="center" src="../images/sar_mangrove/10.png" hspace="15" vspace="10" width="400">
+<img align="center" src="../images/sar_mangrove/10.png" hspace="15" vspace="10" width="600">
