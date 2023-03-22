@@ -168,5 +168,4 @@ var trainingPts = composite.sampleRegions({
 print('Training Points', trainingPts);
 ```
 
-
 Congratulations, you now have an `ImageCollection` consiting of SAR data ready to be used. Continue onto Step Through Part 2 to finish your workflow.
