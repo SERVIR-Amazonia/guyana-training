@@ -87,45 +87,75 @@ To filter out the image speckling, we will use a technique called multilook. Mul
 5. Click Close. Another new file should appear in the Product Explorer window.
 6. Add the Sigma0_VV band to the image viewer. There is a big improvement between the original image and the new image!
 
-<img align="center" src="../images/flood-mapping-sar-images/12_geom_cali.png"  vspace="10" width="400">
+<img align="center" src="../images/flood-mapping-sar-images/11b_reduced_speckle.png"  vspace="10" width="400">
+
+**Figure 11b.** Reducing speckle
 
 ### Perform geometric calibration ###
 Although these images have already been adjusted to ground range rather than slant range, we still need to adjust for any displacement due to terrain.
-    a. In the upper menu bar, go to Radar > Geometric > Terrain Correction > Range-Doppler Terrain Correction.
-    b. Note that this process relies on a digital elevation model (DEM) to make the corrections. You may customize the DEM by clicking on the Processing Parameters and selecting any of the options in the Digital Elevation Model drop-down menu, or using your own if you have one. We will be sticking with the default options for this exercise.
+1. In the upper menu bar, go to Radar > Geometric > Terrain Correction > Range-Doppler Terrain Correction.
+2. Note that this process relies on a digital elevation model (DEM) to make the corrections. You may customize the DEM by clicking on the Processing Parameters and selecting any of the options in the Digital Elevation Model drop-down menu, or using your own if you have one. We will be sticking with the default options for this exercise, which is an SRTM elevation model. We will use a DEM from SRTM data again in Exercise.
+3. Double check your output directory. 
 
 <img align="center" src="../images/flood-mapping-sar-images/12_geom_cali.png"  vspace="10" width="400">
 
-**Figure 12.** Reducing speckle
+**Figure 12.** Terrain correction
 
-    c. Click Run. This process may take quite a few seconds to complete.
-    d. Click Close.
-    e. Add the Sigma0_VV band to the image viewer. You should now see a mirror image that looks more in line with the true color image in the World Viewer.
+4. Click Run. This process may take quite a few seconds to complete.
+5. Click Close. Your newly added file will have a name with _Cal_ML_TC now becayse it is radiometrically calibrated, speckle reduced, and terrain corrected.
+6. Add the Sigma0_VV band to the image viewer. You should now see a mirror image that looks more in line with the true color image in the World Viewer. It will be tilted.
 
-7. Convert sigma0 to dB. Backscatter is conventionally represented in the units dB, which is a representation of the power of the signal.
-    a. Right-click on the Sigma0_VH band of the most recently corrected version of our image.
-    b. Select the Linear to/from dB option.
-    c. In the pop-up window, select Yes.
-    d. Repeat steps a-c for the Sigma0_VV band.
-    e. Add both of the db bands to the image viewer and inspect the data.
+###  Convert sigma0 to dB ###
+Backscatter is conventionally represented in the units dB, which is a representation of the power of the signal.
+1. Right-click on the Sigma0_VH band of the most recently corrected version of our image.
+2. Select the Linear to/from dB option.
+3. In the pop-up window, select Yes.
+4. Repeat steps 1-3 for the Sigma0_VV band.
+5. Add both of the new db bands to the image viewer and inspect the data.
 
 <img align="center" src="../images/flood-mapping-sar-images/13_decibels.png"  vspace="10" width="400">
 
 **Figure 13.** Converting to decibels
 
-Now it’s time to work in QGIS.  We need to add the sigma0_VV and sigma0VH layers, the ones that we obtained after the final correction (just before the decibel conversion).
+&nbsp;
+
+ ## Now it’s time to work in QGIS ##
+We need to add the sigma0_VV and sigma0VH layers, the ones that we obtained after the final correction (just before the decibel conversion).
+
 
 <img align="center" src="../images/flood-mapping-sar-images/14_adding_vh_vv_layers.png"  vspace="10" width="600">
 
 **Figure 14.** Adding the layers in QGIS
 
-Now make the conversion again from linear units to decibels (amplitude) in QGIS. We use the Raster calculator.In the Raster Calculator Expression field, enter the following: **10*log10(VV).**
+Go to your directory on your computer where you saved all the files from SNAP. You will be adding the Sigma0_VH.img and Sigma0_VV.img files to QGIS.
 
-Now highlight the portion of the equation where it says VV and input the actual band by double-clicking on the Sigma0_VV band in the Raster Bands field. 4. Your equation should now read: 10*log10(“Sigma0_VV”). Click on the ... next to the Output layer field. Save the file in the qgis_flood_tt folder and name it Sigma0_VV_db. Click OK. Repeat steps for the Sigma0_VH band.
+<img align="center" src="../images/flood-mapping-sar-images/14b_filesforQGIS.png"  vspace="10" width="600">
+
+**Figure 14b.** Layers for QGIS
+
+You will make the conversion again from linear units to decibels (amplitude) in QGIS using the Raster calculator. 
+
+1. In the Raster Calculator Expression field, enter the following: **10*log10(VV)**.
+
+2. Now highlight the portion of the equation where it says VV and input the actual band by double-clicking on the Sigma0_VV band in the Raster Bands field. 
+
+3. Your equation should now read: 10*log10(“Sigma0_VV”), or something similar.
+
+4. Scroll down and click the ... on the right under Reference layer(s) field. Check the box next to the Sigma0_VV layer and click ok. In the Reference layer(s) field it will now say "1 inputs selected."
+
+4. Click on the ... next to the Output layer field. Save the file in the qgis_flood_tt folder and name it Sigma0_VV_db_Oct. Click OK. 
+
+5. Click Run.
+
+6. Repeat steps for the Sigma0_VH band.
+
+7. Close the raster calculator.  
 
 <img align="center" src="../images/flood-mapping-sar-images/15_to_db.png"  vspace="10" width="600">
 
 **Figure 15.** Conversion to decibels (db)
+
+&nbsp;
 
 Take a look at our image pre-processing computation so far.
 
@@ -133,7 +163,14 @@ Take a look at our image pre-processing computation so far.
 
 **Figure 16.** VV polarization in db units
 
-Now we calculate the ratio. The steps are the same we applied in our previous workshop.    Select Raster > Raster Calculator.  In the Raster Calculator Expression field, enter the following: *"Sigma0_VV_db@1"/"Sigma0_VH_db@1"* . Click on the ... next to the Output layer field. Save the file in the intro-radar-data folder and name it Sigma0_db_ratio.  Click OK.
+&nbsp;
+
+### Caluclate ratio ###
+Now we calculate the ratio. The steps are the same we applied in our previous workshop. 
+1. Select Raster > Raster Calculator.  
+2. In the Raster Calculator Expression field, enter the following: *"Simga_VV_db_Oct@1"/"Sigma_VH_db_Oct@1"* or click the VV_db band then "/" then the VH_db band to create the equation. 
+3. Click on the ... next to the Output layer field. Save the file in the qgis_flood_tt folder and name it Sigma0_db_ratio_Oct.  
+4. Click OK.
 
 <img align="center" src="../images/flood-mapping-sar-images/17_ratio.png"  vspace="10" width="600">
 
@@ -145,17 +182,18 @@ Tip: We can use a Planet visualization (if we have an account) to add a true col
 
 **Figure 18.** Planet plugin available to retrieve Planet imagery
 
-With this band we can create a RGB product, by merging Sigma0_VV_db, Sigma0_VH_db, Sigma0_db_ratio.  
+With this band we can create a RGB product, by merging Sigma0_VV_db_Oct, Sigma0_VH_db_Oct, Sigma0_db_ratio_Oct.  
 
 <img align="center" src="../images/flood-mapping-sar-images/19_rgb.png"  vspace="10" width="600">
 
 **Figure 19.** RGB visualization for the October 2021 SAR image.
 
 Now it’s time to proceed to our classification of water /  non water by using a threshold. Confirm the threshold for our classification scheme.
-    a. Right-click on the Sigma0_VH_db@1 layer name and select Properties.
-    b. Click on the Histogram tab.
-    c. Click Compute Histogram.
-    d. A histogram with two peaks should appear. Confirm the value that separates the water values (minimum peak) from the non-water values (maximum peak).
+1. Right-click on the Sigma0_VH_db@1 layer name and select Properties.
+2. Click on the Histogram tab.
+3. Click Compute Histogram.
+4. A histogram with two peaks should appear. 
+5. Confirm the value that separates the water values (minimum peak) from the non-water values (maximum peak).
 
 <img align="center" src="../images/flood-mapping-sar-images/19_histo.png"  vspace="10" width="500">
 
