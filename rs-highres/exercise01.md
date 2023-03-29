@@ -28,7 +28,7 @@ This plugin allows you to quickly discover and download Planet high resolution i
 
 Make sure to zoom over Guyana country, into the capital of Georgetown.
 
-<img align="center" src="../images/rs-highres/current.png" hspace="15" vspace="10" width="600">
+<img align="center" src="../images/rs-highres/current.png" hspace="15" vspace="10" width="400">
 
 **Figure 19.** Planet explorer parametrization
 
