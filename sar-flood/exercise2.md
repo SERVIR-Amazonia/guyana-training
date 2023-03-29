@@ -16,11 +16,9 @@ However, using SRTM is a great quick approach to finding areas of potential floo
 Let's try some simulations and visualizations using SRTM in QGIS.
 
 > A quick note. There are several acronyms for elevation data that can be confusing. Let's review the differences.  
-    > * DSM: digital surface model --- oberves the surface features, including trees and buildings
-    > 
-    > * DEM: digital elevation model --- observes the bare ground elevation, which does not include vegetation of buildings 
-    > 
-    > * DTM: digital terrain model --- in some countries this is the same thing as a DEM, while in others it refers to a vector data set of regularly spaced points and contours that represent the bare ground elevation
+* DSM: digital surface model --- oberves the surface features, including trees and buildings
+* DEM: digital elevation model --- observes the bare ground elevation, which does not include vegetation of buildings 
+* DTM: digital terrain model --- in some countries this is the same thing as a DEM, while in others it refers to a vector data set of regularly spaced points and contours that represent the bare ground elevation
 
 We will be using a DEM generated using SRTM.
 

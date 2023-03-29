@@ -205,7 +205,7 @@ It appears that the value is about the same, so we can use the same threshold th
 
 Now, let’s continue with our October 2021 image, and create a binary image.
 1. Select `Raster > Raster Calculator…`.
-2. In the Raster Calculator Expression field, enter the following, being careful to include the parentheses: `55*(Sigma0_VH_db@1<-18.38)`
+2. In the Raster Calculator Expression field, enter the following, being careful to include the parentheses: `255*(Sigma0_VH_db@1<-18.38)`
 3.  Click on the `...` next to the Output layer field. Save the file in the folder and name it *water_nowater_oct2021*
 
 <img align="center" src="../images/flood-mapping-sar-images/21_water_nw_layers.png"  vspace="10" width="600">
