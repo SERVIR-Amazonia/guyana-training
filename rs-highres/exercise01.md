@@ -48,7 +48,7 @@ Using a scale of 1:44703 we can visualize a lot of interesting details on the co
 
 <img align="center" src="../images/rs-highres/09_zoom_coast.png" hspace="15" vspace="10" width="600">
 
-You should have a similar view than Figure . We can identify city blocks, roads, and houses. Now let’s use the rule tool to measure a block size. 
+You should have a similar view than Figure . We can identify city blocks, roads, and houses. Now let’s use the rule tool to measure a block size.  
 
 <img align="center" src="../images/rs-highres/11_rule.png" hspace="15" vspace="10" width="400">
 
