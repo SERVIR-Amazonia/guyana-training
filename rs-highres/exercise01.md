@@ -26,7 +26,7 @@ This plugin allows you to quickly discover and download Planet high resolution i
 
 **Figure 18.** Planet plugin overview within QGIS environment.
 
-Make sure to zoom over the Guyana country, into the capital Georgetown.
+Make sure to zoom over Guyana country, into the capital of Georgetown.
 
 <img align="center" src="../images/rs-highres/current.png" hspace="15" vspace="10" width="600">
 
