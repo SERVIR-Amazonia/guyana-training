@@ -58,3 +58,5 @@ Now let’s explore other products from different months.  It’s expected to fi
 
 <img align="center" src="../images/rs-highres/12_month.png" hspace="15" vspace="10" width="400">
 
+We need to rename each layer we add since the layers will have at first the same name, depending of its type, e.g. ‘Global monthly’. We can also use the 3-monthly products.  Let’s change the Cadence value into 3 mons, and the name of the category into Global Quarterly 
+
