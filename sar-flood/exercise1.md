@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Exercise 1: Mapping surface water using SAR data with QGIS"
-parent: "SAR for Flood Monitoring in QGIS (with DTM)"
+parent: "SAR for Flood Monitoring in QGIS (with DEM)"
 nav_order: 4
 ---
 
@@ -290,9 +290,9 @@ Congratulations on finishing Exercise 1! You will visualize this map more in Exe
 
 &nbsp;
 
-## Exercise 1 - Challenge: 
+## Exercise 1 - Challenges: 
 
- 1. As a bonus exercise, create a map using the cartographical tools from QGIS.  Don’t forget the four main components: legend, scale, north arrow, and title.
+ 1. As a bonus exercise, create a map using the cartographic tools from QGIS.  Don’t forget the four main components: legend, scale, north arrow, and title.
 
  <img align="center" src="../images/flood-mapping-sar-images/29_flood map.png"  vspace="10" width="700">
 

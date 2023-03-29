@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Flood events overview"
-parent: "SAR for Flood Monitoring in QGIS (with DTM)"
+parent: "SAR for Flood Monitoring in QGIS (with DEM)"
 nav_order: 2
 ---
 

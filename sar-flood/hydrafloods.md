@@ -18,8 +18,10 @@ Let’s explore the different menus, such as materials, methodology & documentat
 
 &nbsp;
 
-## Survey ##
+## Survey and Q&A ##
 Thank you for participating in the workshop today. Please take a few minutes to fill out the survey for this session.
 
 Feedback survey:    
 https://docs.google.com/forms/d/e/1FAIpQLSdk81jKgzDMyEFm3y5FdaiB7oTz5rzJ-rF6elyA_bUECLL2Ww/viewform  
+
+Also, please submit any questions you would like to cover in the Q&A session next workshop via the form at the start of this website. Questions should be submitted in advance of the session. 
