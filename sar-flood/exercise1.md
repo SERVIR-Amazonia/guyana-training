@@ -43,7 +43,7 @@ Add the Amplitude_VV component in the image viewer by double clicking it, and zo
 ### Create a subset ###
 Your next step will be to create a subset of this image in order to reduce file size and save some computer processing time. 
 
-1. In the upper menu bar, select Raster > Subset….
+1. In the upper menu bar, select `Raster > Subset…`.
 2. Set the following parameters:
 > Scene start X: 8775  
 > Scene start Y: 2230  
@@ -60,7 +60,7 @@ Return to the Product Explorer panel. You should see a new file listed that look
 
 ### Perform radiometric calibration ###
 1. Click on the subset filename in the Product Explorer window to highlight the file.
-In the upper menu bar, select Radar > Radiometric > Calibrate. 
+In the upper menu bar, select `Radar > Radiometric > Calibrate`. 
 
 <img align="center" src="../images/flood-mapping-sar-images/10_cali.png"  vspace="10" width="500">
 
@@ -80,7 +80,7 @@ In the upper menu bar, select Radar > Radiometric > Calibrate.
 
 ### Reduce speckle ### 
 To filter out the image speckling, we will use a technique called multilook. Multilook divides the radar beam into a number of “sub-beams”, each of which are a single “look” at the scene. The “looks” are summed and averaged together which will reduce the amount of speckle in the final image.
-1. In the upper menu bar, go to Radar > SAR Utilities > Multilooking.
+1. In the upper menu bar, go to `Radar > SAR Utilities > Multilooking`.
 2. In the pop-up window, click on the Processing Parameters tab. Set the Number of Range Looks to 6. 
 3. Then, under the I/O Parameters tab, make sure the directory is set to your qgis_flood_tt folder.
 4. Click Run.
@@ -93,7 +93,7 @@ To filter out the image speckling, we will use a technique called multilook. Mul
 
 ### Perform geometric calibration ###
 Although these images have already been adjusted to ground range rather than slant range, we still need to adjust for any displacement due to terrain.
-1. In the upper menu bar, go to Radar > Geometric > Terrain Correction > Range-Doppler Terrain Correction.
+1. In the upper menu bar, go to `Radar > Geometric > Terrain Correction > Range-Doppler Terrain Correction`.
 2. Note that this process relies on a digital elevation model (DEM) to make the corrections. You may customize the DEM by clicking on the Processing Parameters and selecting any of the options in the Digital Elevation Model drop-down menu, or using your own if you have one. We will be sticking with the default options for this exercise, which is an SRTM elevation model. We will use a DEM from SRTM data again in Exercise.
 3. Double check your output directory. 
 
@@ -133,22 +133,18 @@ Go to your directory on your computer where you saved all the files from SNAP. Y
 
 **Figure 14b.** Layers for QGIS
 
+You should have made a similar set of files for January 2023 in a previous workshop. Later we will use these files. You can use the files from your computer, or download a prepared version from this [Drive Link](https://drive.google.com/file/d/1xcHr-WFPECQdacf6sENHtCWdHDJKqJrK/view?usp=share_link).
+
+
+
 You will make the conversion again from linear units to decibels (amplitude) in QGIS using the Raster calculator. 
 
-1. In the Raster Calculator Expression field, enter the following: **10*log10(VV)**.
-
+1. In the Raster Calculator Expression field, enter the following: `10*log10(VV)`.
 2. Now highlight the portion of the equation where it says VV and input the actual band by double-clicking on the Sigma0_VV band in the Raster Bands field. 
-
-3. Your equation should now read: 10*log10(“Sigma0_VV”), or something similar.
-
-4. Scroll down and click the ... on the right under Reference layer(s) field. Check the box next to the Sigma0_VV layer and click ok. In the Reference layer(s) field it will now say "1 inputs selected."
-
-4. Click on the ... next to the Output layer field. Save the file in the qgis_flood_tt folder and name it Sigma0_VV_db_Oct. Click OK. 
-
+3. Your equation should now read: `10*log10(“Sigma0_VV”)`, or something similar.
+4. Click on the `...` next to the Output layer field. Save the file in the qgis_flood_tt folder and name it Sigma0_VV_db_Oct. Click OK. 
 5. Click Run.
-
 6. Repeat steps for the Sigma0_VH band.
-
 7. Close the raster calculator.  
 
 <img align="center" src="../images/flood-mapping-sar-images/15_to_db.png"  vspace="10" width="600">
@@ -167,26 +163,29 @@ Take a look at our image pre-processing computation so far.
 
 ### Caluclate ratio ###
 Now we calculate the ratio. The steps are the same we applied in our previous workshop. 
-1. Select Raster > Raster Calculator.  
+1. Select `Raster > Raster Calculator`.  
 2. In the Raster Calculator Expression field, enter the following: *"Simga_VV_db_Oct@1"/"Sigma_VH_db_Oct@1"* or click the VV_db band then "/" then the VH_db band to create the equation. 
-3. Click on the ... next to the Output layer field. Save the file in the qgis_flood_tt folder and name it Sigma0_db_ratio_Oct.  
+3. Click on the `...` next to the Output layer field. Save the file in the qgis_flood_tt folder and name it Sigma0_db_ratio_Oct.  
 4. Click OK.
 
 <img align="center" src="../images/flood-mapping-sar-images/17_ratio.png"  vspace="10" width="600">
 
 **Figure 17.** Ratio band computed
 
-Tip: We can use a Planet visualization (if we have an account) to add a true color basemap and compare our SAR visualization. Otherwise we can use other basemaps available in QGIS. 
+Tip: We can use a Planet visualization (if we have an account) to add a true color basemap and compare our SAR visualization. Otherwise we can use other basemaps available in QGIS. The built-in basemaps are located under XYZ Tiles on the browser menu on the left.
 
 <img align="center" src="../images/flood-mapping-sar-images/18_1_planet.png"  vspace="10" width="600">
 
 **Figure 18.** Planet plugin available to retrieve Planet imagery
 
-With this band we can create a RGB product, by merging Sigma0_VV_db_Oct, Sigma0_VH_db_Oct, Sigma0_db_ratio_Oct.  
+*Optional* 
+With this band we can create a RGB product, by merging Sigma0_VV_db_Oct, Sigma0_VH_db_Oct, Sigma0_db_ratio_Oct. You can use the Build virtual raster tool, or Raster>Miscellaneous>Merge. Be sure the selected db bands are in the correct order. 
 
 <img align="center" src="../images/flood-mapping-sar-images/19_rgb.png"  vspace="10" width="600">
 
 **Figure 19.** RGB visualization for the October 2021 SAR image.
+
+
 
 Now it’s time to proceed to our classification of water /  non water by using a threshold. Confirm the threshold for our classification scheme.
 1. Right-click on the Sigma0_VH_db@1 layer name and select Properties.
@@ -199,24 +198,49 @@ Now it’s time to proceed to our classification of water /  non water by using 
 
 **Figure 20.** Histogram for our October 2021 SAR image.
 
-It appears that the value is about the same, so we can use the same threshold that we did in the SNAP software. We can add our image from our past training corresponding to January 2023
+It appears that the value is about the same, so we can use the same threshold that we did in the SNAP software. We can add our image from our past training corresponding to January 2023.
 
 <img align="center" src="../images/flood-mapping-sar-images/20_histo_vh_jan2023.png"  vspace="10" width="500">
 
 **Figure 20.** Histogram for our January 2023 SAR image.
 
 Now, let’s continue with our October 2021 image, and create a binary image.
-    a. Select Raster > Raster Calculator….
-    b. In the Raster Calculator Expression field, enter the following: 255*(Sigma0_VH_db@1<-18.38)
-    c. Click on the ... next to the Output layer field. Save the file in the folder and name it *water_nowater_oct2021*
+1. Select `Raster > Raster Calculator…`.
+2. In the Raster Calculator Expression field, enter the following, being careful to include the parentheses: `55*(Sigma0_VH_db@1<-18.38)`
+3.  Click on the `...` next to the Output layer field. Save the file in the folder and name it *water_nowater_oct2021*
 
 <img align="center" src="../images/flood-mapping-sar-images/21_water_nw_layers.png"  vspace="10" width="600">
 
 **Figure 21.** Water-non water image for October 2021. The red circle indicates the region we want to focus on for our flood detection procedure.
 
-In figure 21 we can see a zone circled in red.  This is the area that we will focus on to compared the river flow and water surface from a potential flood event occurred in October 2021, by comparing it with January 2023
-Provide with color the image. Right-click on the *water_nowater_oct2021* image name in the Layers panel and click Properties. Select the Symbology tab. Next to the Render type field, choose Singleband psuedocolor from the dropdown menu. Select a color ramp or make your own. Make sure to follow the golden rules of data visualization.
-Now let’s apply the change detection technique!. We will use the raster calculator to make a simple multi-temporal difference. It’s time to load the product water_nonwater file from our last training session.  Rename this last product as water_nonwater_jan2023 to make the difference with our current product. Next, applying the most common change detection approach, let’s compute the difference between both dates using Raster Calculator tool again.
+In figure 21 we can see a zone circled in red.  This is the area that we will focus on to compare the typical river to the water surface from a potential flood event that occurred in October 2021, by comparing it with January 2023. 
+
+>If you have misplaced your data files from the previous training where the January 2023 flood map was generated, please download the zipped files from this [Drive Link](https://drive.google.com/file/d/1xcHr-WFPECQdacf6sENHtCWdHDJKqJrK/view?usp=share_link). 
+> * Upload the Sigma0_VV and Sigma0_VH .img files to QGIS. 
+> * Change the layer names to Sigma0_VV_Jan23 and Sigma0_VH_Jan23 so you can distinguish them from the October 2021 layers.
+> * You will need to repeat the conversion from linear units to decibels (amplitude) in QGIS using the Raster calculator. 
+    > 1. In the Raster Calculator Expression field, enter the following: `10*log10(VV)`.
+    > 2. Now highlight the portion of the equation where it says VV and input the actual band by double-clicking on the Sigma0_VV band in the Raster Bands field. 
+    > 3. Your equation should now read: `10*log10(“Sigma0_VV_Jan23”)`, or something similar.
+    > 4. Click on the `...` next to the Output layer field. Save the file in the qgis_flood_tt folder and name it Sigma0_VV_db_Jan23. Click OK. 
+    > 5. Click Run.
+    > 7. Repeat steps for the Sigma0_VH_Jan23 band.
+    > 6. Close the raster calculator.  
+> * Now make the binary map of where water is observed for January 2023.
+    > 1. Select `Raster > Raster Calculator…`.
+    > 2. In the Raster Calculator Expression field, enter the following, being careful to include the parentheses: `255*(Sigma0_VH_db_Jan23@1<-18.38)` 
+    > 3.  Click on the `...` next to the Output layer field. Save the file in the folder and name it *water_nowater_jan2023*
+
+### Color the images ###  
+1. Right-click on the *water_nowater_oct2021* image name in the Layers panel and click Properties. 
+2. Select the Symbology tab. 
+3. Next to the Render type field, choose Singleband psuedocolor from the dropdown menu. 
+4. Select a color ramp or make your own. Make sure to follow the golden rules of data visualization.
+5. Repeat this for *water_nowater_jan2023*.
+
+
+### Now let’s apply the change detection technique! ### 
+We will use the raster calculator to make a simple multi-temporal difference. Applying the most common change detection approach, let’s compute the difference between both dates using the Raster Calculator tool again. Use the equation `"water_nowater_oct2021" - "water_nowater_jan2023"`.
 
 <img align="center" src="../images/flood-mapping-sar-images/22_changede.png"  vspace="10" width="600">
 
@@ -228,19 +252,19 @@ Save the resulting product with the name Change_detec_oct2021_jan2023.tif.
 
 **Figure 23.** Saving the new file
 
-Now let’s look at the final result. We should be able to identify the flooded areas with bright-white colors
+Now let’s look at the final result. We should be able to identify the flooded areas with bright-white colors. October 2021 was a particularly rainy month.
 
 <img align="center" src="../images/flood-mapping-sar-images/24_change.png"  vspace="10" width="600">
 
 **Figure 24.** Multi-temporal change detection difference between a rainy month and a dry month
 
-Using the symbology tool we can highlight the flooded parts by riverine flooding with blue color. October corresponds to the wet season, while January belongs to the dry season. 
+Using the symbology tool we can highlight the flooded parts by riverine flooding with blue color. October corresponds to the wet season, while January belongs to the dry season. Do this by altering the symbology to Paletted/Unique Values, with -255 in a 'dry' color like red, 0 a neutral color, and positive 255 in blue for flooded areas.
 
 <img align="center" src="../images/flood-mapping-sar-images/25_change_azul.png"  vspace="10" width="600">
 
 **Figure 24.** Multi-temporal change detection difference highlighting in blue the flooded regions. Product for October 2021, using January 2023 as reference for dry land.
 
-Let’s use the measure tool to evaluate the area of the flood.
+Let’s use the measure tool to evaluate the area of one of the obvious flooded regions.
 
 <img align="center" src="../images/flood-mapping-sar-images/26_measure.png"  vspace="10" width="300">
 
@@ -260,13 +284,18 @@ You can look at the secondary window for the information about the computed esti
 
 We found 535795.61 m² or 53.6 ha of flood occurred only in this region. The magnitude of change in water surface extent suggests this is not a normal situation of river flow, but rather a flood event. This estimate can vary a bit depending on the precision to draw the polygon of measurement around the flooded region.
 
-Finally we can create a map using the cartographical tools from QGIS.  Don’t forget the four main components: legend, scale, north arrow, and title.
+Congratulations on finishing Exercise 1! You will visualize this map more in Exercise 2.  can create a map using the cartographical tools from QGIS.  Don’t forget the four main components: legend, scale, north arrow, and title.
 
-<img align="center" src="../images/flood-mapping-sar-images/29_flood map.png"  vspace="10" width="700">
+&nbsp;
+
+&nbsp;
+
+## Exercise 1 - Challenge: 
+
+ 1. As a bonus exercise, create a map using the cartographical tools from QGIS.  Don’t forget the four main components: legend, scale, north arrow, and title.
+
+ <img align="center" src="../images/flood-mapping-sar-images/29_flood map.png"  vspace="10" width="700">
 
 Figure 28. Flood map produced for the study area.
 
-## Exercise 2 - challenge: 
-
-Explore the platform SMAP Microwave Radiometer & Radar and make a short research about its functionality, data products, and applications. (https://smap.jpl.nasa.gov/)
-Write down a short paragraph about these items, and download a scene for your personal region of interest using the Alaska Satellite Facility domain just as an exercise of data access. Take a look at the metadata panel to see important data.
+2. Explore the platform SMAP Microwave Radiometer & Radar and make a short research about its functionality, data products, and applications. (https://smap.jpl.nasa.gov/). Write down a short paragraph about these items, and download a scene for your personal region of interest using the Alaska Satellite Facility domain just as an exercise of data access. Take a look at the metadata panel to see important data.
