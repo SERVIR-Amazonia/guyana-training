@@ -38,3 +38,108 @@ https://code.earthengine.google.com/252398e06c93fd18c6288ce9bee8f236
 
 <img align="center" src="../images/rs-highres/19_gee.png" hspace="15" vspace="10" width="600">
 
+First, let’s type the words ‘planet nicfi americas’ and click on the first result:
+
+<img align="center" src="../images/rs-highres/18_gee.png" hspace="15" vspace="10" width="400">
+
+We can read the description, characteristics and band properties of the NICFI basemaps available in GEE:
+
+<img align="center" src="../images/rs-highres/1901_plant nicfi.png" hspace="15" vspace="10" width="600">
+
+NICFI mosaics have a spatial resolution of ~5 m (4.77 m) and include the following spectral properties: 
+
+<table>
+  <tbody>
+    <tr>
+      <th align="center">Name</th>
+      <th align="center">Description</th>
+      <th align="center">Min</th>
+      <th align="center">Max</th>
+      <th align="center">Scale</th>
+    </tr>
+    <tr>
+      <td>B</td>
+      <td>Blue</td>
+      <td>0</td>
+      <td>10000</td>
+      <td>0.0001</td>
+    </tr>
+    <tr>
+      <td>G</td>
+      <td>Green</td>
+      <td>0</td>
+      <td>10000</td>
+      <td>0.0001</td>
+    </tr>
+    <tr>
+      <td>R</td>
+      <td>Red</td>
+      <td>0</td>
+      <td>10000</td>
+      <td>0.0001</td>
+    </tr>
+    <tr>
+      <td>NIR</td>
+      <td>Near Infrared</td>
+      <td>0</td>
+      <td>10000</td>
+      <td>0.0001</td>
+    </tr>  </tbody>
+</table>
+
+The scale value means that the surface reflectance has been multiplied per 10000. The first step is to select of area of study (AOI)  
+
+var boundaries = ee.FeatureCollection('FAO/GAUL/2015/level0');
+var aoi = boundaries.filter(ee.Filter.stringContains('ADM0_NAME', 'Guyana'));
+
+Next, we filter the imported image collection into a specific month we want to look at.  We choose January 2022.
+
+//--------------------------------------------------------------
+// Load NICFI data for the Americas
+//--------------------------------------------------------------
+
+// Filter base maps by date and grab first image from filtered collection.
+var basemap = nicfi.filter(ee.Filter.date('2022-01-01','2022-02-01')).first();
+
+Finally, we add the NICIF basemap layer to the GEE visor:
+
+// Center the map.
+var gt = ee.Geometry.Point(-58.324232, 6.880042)
+Map.centerObject(gt, 14);
+
+// Define visualization parameters
+var vis = {'bands': ['R', 'G', 'B'], 'min': 64, 'max': 5454, 'gamma': 1.8};
+
+// Add filtered basemap to the map.
+Map.addLayer(basemap, vis, 'Mosaic 07-2021');
+
+We derive a NDVI layer by computing the traditional mathematical formula.  We add our new NDVI band to the basemap dataset.
+
+// Add basemap NDVI.
+var ndvi = basemap.normalizedDifference(['N','R']).rename('NDVI');
+var basemap = basemap.addBands(ndvi);
+Map.addLayer(
+	basemap,
+	{bands: ['NDVI'], min: -0.55, max: 0.8, palette: [
+    	'8bc4f9', 'c9995c', 'c7d270','8add60','097210'
+	]}, 'NDVI', false);
+
+Now let’s improve our composite by retrieving a larger set of images in time
+
+// Looks a little cloudy... try changing the date filter.
+// Map NDVI function to entire collection.
+var nicfi = nicfi.map(function(img){
+  var ndvi = img.normalizedDifference(['N','R']).rename('NDVI');
+  return img.addBands(ndvi);
+});
+
+// Create a composite of mosaics from 2022-01 to 2022-06.
+var composite = nicfi.filter(ee.Filter.date('2022-01-01','2022-06-01')).median();
+Map.addLayer(composite,vis,'improved composite', true);
+
+
+Make a comparison between the first composite and the filtered one, both showed in a true color display setting:
+
+<img align="center" src="../images/rs-highres/20_firstcomp.png" hspace="15" vspace="10" width="600">  <img align="center" src="../images/rs-highres/21_sec_comp.png" hspace="15" vspace="10" width="600">
+
+We can observe how the clouds were removed in the second image.
