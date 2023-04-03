@@ -14,20 +14,22 @@ The main objective of the NICFI Program is to provide support to reduce and reve
 The available NICFI Planet datasets we have are:
 
 **Basemaps**
-● Hosted directly on the GEE so you can access the basemap as you would any other open source data
-● Currently, only analytical basemaps are available
-● Organized into 3 regional image collections: America, Africa and Asia
-● Source scenes for basemaps are not available in GEE
-● There are 3 steps:
+
+1. Hosted directly on the GEE so you can access the basemap as you would any other open source data
+2. Currently, only analytical basemaps are available
+3. Organized into 3 regional image collections: America, Africa and Asia
+4. Source scenes for basemaps are not available in GEE
+5. There are 3 steps:
     ○ Have a GEE account
     ○ Sign Planet NICFI Terms and Conditions
     ○ Request access to NICFI basemaps on the GEE
 
 **Daily imagery**
-● Works with Order API, i.e. not hosted by GEE
-● Only PSScene4Band and PSOrthoTiles are available for download on GEE
-● Currently, only clipping is supported.
-● There are 3 steps:
+
+1. Works with Order API, i.e. not hosted by GEE
+2. Only PSScene4Band and PSOrthoTiles are available for download on GEE
+3. Currently, only clipping is supported.
+4. There are 3 steps:
     ○ Have a GEE account integrated with Google Cloud Platform (GCP)
     ○ Create a GCP and enable the Google Earth Engine API
     ○ Give a Planet service account an EE resource writer role on GCP
@@ -87,13 +89,16 @@ NICFI mosaics have a spatial resolution of ~5 m (4.77 m) and include the followi
     </tr>  </tbody>
 </table>
 
-The scale value means that the surface reflectance has been multiplied per 10000. The first step is to select of area of study (AOI)  
+The scale value means that the surface reflectance has been multiplied per 10000. The first step is to select of area of study (AOI) :
 
+```javascript
 var boundaries = ee.FeatureCollection('FAO/GAUL/2015/level0');
 var aoi = boundaries.filter(ee.Filter.stringContains('ADM0_NAME', 'Guyana'));
+```
 
 Next, we filter the imported image collection into a specific month we want to look at.  We choose January 2022.
 
+```javascript
 //--------------------------------------------------------------
 // Load NICFI data for the Americas
 //--------------------------------------------------------------
@@ -101,8 +106,11 @@ Next, we filter the imported image collection into a specific month we want to l
 // Filter base maps by date and grab first image from filtered collection.
 var basemap = nicfi.filter(ee.Filter.date('2022-01-01','2022-02-01')).first();
 
+```
+
 Finally, we add the NICIF basemap layer to the GEE visor:
 
+```javascript
 // Center the map.
 var gt = ee.Geometry.Point(-58.324232, 6.880042)
 Map.centerObject(gt, 14);
@@ -112,9 +120,11 @@ var vis = {'bands': ['R', 'G', 'B'], 'min': 64, 'max': 5454, 'gamma': 1.8};
 
 // Add filtered basemap to the map.
 Map.addLayer(basemap, vis, 'Mosaic 07-2021');
+```
 
 We derive a NDVI layer by computing the traditional mathematical formula.  We add our new NDVI band to the basemap dataset.
 
+```javascript
 // Add basemap NDVI.
 var ndvi = basemap.normalizedDifference(['N','R']).rename('NDVI');
 var basemap = basemap.addBands(ndvi);
@@ -123,9 +133,11 @@ Map.addLayer(
 	{bands: ['NDVI'], min: -0.55, max: 0.8, palette: [
     	'8bc4f9', 'c9995c', 'c7d270','8add60','097210'
 	]}, 'NDVI', false);
+```
 
-Now let’s improve our composite by retrieving a larger set of images in time
+Now let’s improve our composite by retrieving a larger set of images in time:
 
+```javascript
 // Looks a little cloudy... try changing the date filter.
 // Map NDVI function to entire collection.
 var nicfi = nicfi.map(function(img){
@@ -136,7 +148,7 @@ var nicfi = nicfi.map(function(img){
 // Create a composite of mosaics from 2022-01 to 2022-06.
 var composite = nicfi.filter(ee.Filter.date('2022-01-01','2022-06-01')).median();
 Map.addLayer(composite,vis,'improved composite', true);
-
+```
 
 Make a comparison between the first composite and the filtered one, both showed in a true color display setting:
 

@@ -17,12 +17,13 @@ Finally the Satellite pour l'Observation de la Terre SPOT (Satellite for Earth O
 ## High spectral resolution: MODIS
 The Moderate Resolution Imaging Spectroradiometer (MODIS) instrument is operating on both the Terra and Aqua spacecraft. The Terra satellite was launched on December 18, 1999 and the Aqua on May 4, 2002. It has a viewing swath width of 2,330 km and views the entire surface of the Earth every one to two days. Its detectors measure 36 spectral bands and it acquires data at three spatial resolutions: 250 m, 500 m, and 1,000 m.
 
-<img align="center" src="../images/rs-highres/22_img_terra_satellite.png" hspace="15" vspace="10" width="600">
-Figure 22. Terra satellite carrying MODIS instrument. Source: USGS EarthData
+<img align="center" src="../images/rs-highres/22_img_terra_satellite.jpg" hspace="15" vspace="10" width="600">
+
+Terra satellite carrying MODIS instrument. Source: USGS EarthData
 
 https://lpdaac.usgs.gov/data/get-started-data/collection-overview/missions/modis-overview/
 
-
+```javascript
 var dataset = ee.ImageCollection('MODIS/061/MOD09GQ')
                   .filter(ee.Filter.date('2018-01-01', '2018-05-01'));
 var falseColorVis = {
@@ -32,8 +33,10 @@ var falseColorVis = {
 };
 Map.setCenter(6.746, 46.529, 2);
 Map.addLayer(dataset, falseColorVis, 'False Color');
+```
+For Aqua satellite the code is:
 
-For Aqua satellite:                                                                                                                                                                                                                                                           
+```javascript 
 var dataset = ee.ImageCollection('MODIS/061/MYD09GQ')
                   .filter(ee.Filter.date('2018-01-01', '2018-05-01'));
 var falseColorVis = {
@@ -43,7 +46,7 @@ var falseColorVis = {
 };
 Map.setCenter(6.746, 46.529, 2);
 Map.addLayer(dataset, falseColorVis, 'False Color');
-
+```
 
 ### Challenge 1: Working with high resolution derived water indexes
 Create a NDWI index using the NICFI tropical Americas dataset from Planet in Google Earth Engine for January  2023 for the capital of Guyana, Georgetown. 
