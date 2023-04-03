@@ -56,7 +56,7 @@ When measuring we found the length of a block of 228 m (or 228/40m = ~5 cm in th
 
 Now let’s explore other products from different months.  It’s expected to find more or less cloudy products depending on the seasonality of the place.  For example, December looks very cloudy and a poor-quality image for the Georgetown area.
 
-<img align="center" src="../images/rs-highres/12_month.png" hspace="15" vspace="10" width="400">
+<img align="center" src="../images/rs-highres/12_month.png" hspace="15" vspace="10" width="600">
 
 We need to rename each layer we add since the layers will have at first the same name, depending of its type, e.g. ‘Global monthly’. We can also use the 3-monthly products.  Let’s change the Cadence value into 3 mons, and the name of the category into Global Quarterly 
 
