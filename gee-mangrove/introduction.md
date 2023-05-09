@@ -12,9 +12,9 @@ Welcome to Mangrove Mapping Using Multiple Sensors! This workshop will demonstra
 ## Pre-workshop Set-up
 **PUT IN CORRECT REPOS!!!!!!!!!!!!**
 1. Ensure you are logged into your Google Earth Engine account.
-2. Click this link to accept the trinidad-tobago GEE script repository - [https://code.earthengine.google.com/?accept_repo=users/kwoodward/trinidad-tobago](https://code.earthengine.google.com/?accept_repo=users/kwoodward/trinidad-tobago)
+2. Click this link to accept the trinidad-tobago GEE script repository - [https://code.earthengine.google.com/?accept_repo=users/ebihari/GuyanaWS](https://code.earthengine.google.com/?accept_repo=users/ebihari/GuyanaWS)
 3. Create a new script file in your own script repository - name it 'Mangroves Classification - Landsat'. Keep in mind a master copy is available in the above script repository.
-4. Check the full script [https://code.earthengine.google.com/76baffb749990e7bbbcb13559de9b873](https://code.earthengine.google.com/76baffb749990e7bbbcb13559de9b873)
+4. Check the full script [https://code.earthengine.google.com/05e2efede37db5059fd732c1760c9852](https://code.earthengine.google.com/05e2efede37db5059fd732c1760c9852)
 
 ## Objectives
 1. Understand the general process for training and applying a model in Google Earth Engine on satellite data

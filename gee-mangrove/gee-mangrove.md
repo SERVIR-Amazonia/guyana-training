@@ -17,7 +17,7 @@ Navigate through the different lesson sections by using the menu on the lefthand
 |      Time     |                                                                                                       Topics                                                                                                                                     |
 |:-------------:|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
 | 09:00 – 09:30 |                                  Previous Session Recap <br> Q&A                                 |
-| 9:30 – 11:00  |          Step through the Scripts - Mapping Mangroves using the Landsat Archive                                    |
+| 9:30 – 11:00  |          Mapping Mangroves using the Landsat Archive                                    |
 | 11:00 – 11:15 |                                                Coffee break                                                              |
 | 11:15 – 12:00 |                                       Challenges - Make Your Own Model, Make Improvements                                                     |
 | 12:00 – 13:00 |                                                  Lunch                                                                   |

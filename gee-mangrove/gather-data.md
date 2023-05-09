@@ -305,7 +305,6 @@ var asset = ee.Image('users/ebihari/GuyanaWS/images/medianCompositeLandsat_2020-
 Map.addLayer(asset, visParamPreProcessed, 'Asset');
 ```
 
-Code Checkpoint: [https://code.earthengine.google.com/0064c2b2764e781d4f8f1abf9c59f762](https://code.earthengine.google.com/0064c2b2764e781d4f8f1abf9c59f762)
-**PUT IN CORRECT REPOS!!!!!!!!!!!!**
+Code Checkpoint: [https://code.earthengine.google.com/05e2efede37db5059fd732c1760c9852](https://code.earthengine.google.com/05e2efede37db5059fd732c1760c9852)
 
 Continue onto Part 2 to finish your workflow.
