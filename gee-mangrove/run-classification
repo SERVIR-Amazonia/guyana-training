@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Part 1 - Running Classification
-parent: Mangrove Mapping Using Multiple Sensors
+title: Part 2 - Running Classification
+parent: "Intermediate Google Earth Engine: Mangrove Use Case"
 nav_order: 3
 ---
 
