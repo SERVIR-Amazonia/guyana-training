@@ -10,9 +10,8 @@ nav_order: 1
 Welcome to Mangrove Mapping Using Multiple Sensors! This workshop will demonstrate a Random Forest classification mapping workflow using Landsat data. We will cover Image Collection filtering, merging, pre-processing, and finally, Random Forest model training, classification and accuracy assessment.
 
 ## Pre-workshop Set-up
-**PUT IN CORRECT REPOS!!!!!!!!!!!!**
 1. Ensure you are logged into your Google Earth Engine account.
-2. Click this link to accept the trinidad-tobago GEE script repository - [https://code.earthengine.google.com/?accept_repo=users/ebihari/GuyanaWS](https://code.earthengine.google.com/?accept_repo=users/ebihari/GuyanaWS)
+2. Click this link to accept the Guyana GEE script repository - [https://code.earthengine.google.com/?accept_repo=users/ebihari/GuyanaWS](https://code.earthengine.google.com/?accept_repo=users/ebihari/GuyanaWS)
 3. Create a new script file in your own script repository - name it 'Mangroves Classification - Landsat'. Keep in mind a master copy is available in the above script repository.
 4. Check the full script [https://code.earthengine.google.com/05e2efede37db5059fd732c1760c9852](https://code.earthengine.google.com/05e2efede37db5059fd732c1760c9852)
 
