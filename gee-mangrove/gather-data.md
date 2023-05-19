@@ -21,7 +21,7 @@ As an example, we will look at the Food and Agriculture Organization's Global Ad
 
 <img align="center" src="../images/gee-mangrove/faogaul.png" hspace="15" vspace="10" width="600">
 
-Click on the `Table Schema` tab. We notice there is a useful field named 'ADM1_CODE'. We will use this property to derive our AOI. We will focus in on the Barima Waini area and the mangrove area on its coast.  Once you add the FAO GAUL data set to the map, you can find the 'ADM1_CODE' for this region by clicking on the map while in **Inspector** mode, and navigating to `Objects` - `FAO Boundaries` - `0` - `properties`.
+Click on the `Table Schema` tab. We notice there is a useful field named 'ADM1_CODE'. We will use this property to derive our AOI. We will focus in on the Barima Waini area and the mangrove area on its coast.  Once you add the FAO GAUL data set to the map, you can find the 'ADM1_CODE' for this region by clicking on the map while in **Inspector** mode, and navigating to `Objects` > `FAO Boundaries` > `0` > `properties`.
 
 ```javascript
 //--------------------------------------------------------------
@@ -147,7 +147,17 @@ function cloudShadowMask(image) {
   return ee.Image(image).updateMask(mask);
 }
 ```
-In the second function we generate several spectral indices from the pre-existing spectral bands in our Landsat scenes.
+In the second function we generate several spectral indices from the pre-existing spectral bands in our Landsat scenes.  All of these indeces can help in identifying mangroves, and index values range from -1 to +1.
+
+**NDVI:** Normalized Difference Vegetation Index - quantifies vegetation by measuring the difference between near-infrared (which vegetation strongly reflects) and red light (which vegetation absorbs)
+
+**LSWI:** Land Surface Water Index - calculated as a normalized ratio between near infrared (NIR) and short-wave infrared (SWIR), is sensitive to vegetation and soil water content
+
+**NDMI:** Normalized Difference Moisture Index - used to determine vegetation water content (calculated as a ratio between the NIR and SWIR values in traditional fashion)
+
+**MNDWI:** Modified Normalized Difference Water Index - uses green and SWIR bands for the enhancement of open water features (diminishes built-up area features that are often correlated with open water in other indices)
+
+*Tip:* Here is a great resource published by the University of Bonn for finding indeces for many different purposes: [https://www.indexdatabase.de/](https://www.indexdatabase.de/)
 
 ```javascript
 // Create function to calculate indices

@@ -104,6 +104,8 @@ Now that we have generated our image composite and our training data, it is time
 
 We train a Random Forest classifier with only the training point subset. 
 
+*Tip:* Here is a short intro to how random forest classification works: [https://www.ibm.com/topics/random-forest](https://www.ibm.com/topics/random-forest)
+
 ```javascript
 //--------------------------------------------------------------
 // Run classification
