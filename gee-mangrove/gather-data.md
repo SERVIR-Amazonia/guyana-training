@@ -46,7 +46,7 @@ Map.addLayer(aoi, {}, 'AOI');
 
 However, for this section, we will create an AOI by drawing a polygon.  Comment out all the code above, and utilize the geometry drawing tools in the **Map** window to draw an area of interest. In the top-left of the **Map** window, select the Polygon draw button, then create your polygon over the coast in this region.  At the top of your script, rename it from ‘geometry’ to ‘aoi’.
 
-<img align="center" src="../images/gee-mangrove/coast_aoi.png" hspace="15" vspace="10" width="600">
+<img align="center" src="../images/gee-mangrove/coast_aoi.png" hspace="15" vspace="10" width="700">
 
 # Preprocessing Image Collections 
 
@@ -95,7 +95,7 @@ print(lt5)
 ```
 Checking in the **Console**, we see that `lt5` is an `ImageCollection` with over 40 images in it. 
 
-<img align="center" src="../images/gee-mangrove/print_lt5.png" hspace="15" vspace="10" width="600">
+<img align="center" src="../images/gee-mangrove/print_lt5.png" hspace="15" vspace="10" width="500">
 
 Let's do the same thing for Landsat 7, 8, and 9.
 
@@ -121,7 +121,7 @@ var lc9 = ee.ImageCollection('LANDSAT/LC09/C02/T1_TOA')
 
 Next, we want to apply some functions to each Landsat scene in a collection. In the first function, we will mask clouds and cloud shadows using the `QA_PIXEL` band that is included in every Landsat scene. The `QA_PIXEL` band is a bitmask generated in the Landsat processing center before it is distributed to the end-user. It has a lot of useful information contained in it. 
 
-<img align="center" src="../images/gee-mangrove/qa_pixel.png" hspace="15" vspace="10" width="600">
+<img align="center" src="../images/gee-mangrove/qa_pixel.png" hspace="15" vspace="10" width="700">
 
 We use the cloud and cloud shadow bits for this function.
 

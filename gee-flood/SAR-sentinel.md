@@ -1,15 +1,16 @@
 ---
 layout: page
-title: Mapping Flooded Areas using SAR
+title: Part 2 - Mapping Flooded Areas using SAR
 parent: "Intermediate Google Earth Engine: Flooding Use Case"
 nav_order: 3
 ---
+# Part 2 - Mapping Flooded Areas using SAR
 
 # Overview
 
 In this session we will train a classifer to predict flooded land covers using Sentinel 1 SAR scenes collected in both dry and wet seasons.
 
-1. Create a new script file in your own script repository - name it 'Flood Classification - SAR'. Keep in mind a master copy is available in the script repository.
+1. Create a new script file in your own script repository - name it 'Flood Mapping - SAR'. Keep in mind a master copy is available in the script repository.
 2. Check the full script []()
 
 **General Supervised Classification Workflow**
@@ -113,7 +114,7 @@ Map.addLayer(dry.clip(aoi),vis,'SAR dry season');
 Map.addLayer(wet.clip(aoi),vis,'SAR wet season');
 ```
 
-<img align="center" src="../images/gee-flood/SentinelSAR.png" hspace="15" vspace="10" width="400">
+<img align="center" src="../images/gee-flood/SentinelSAR.png" hspace="15" vspace="10" width="600">
 
 To reduce the salt-and-pepper effect on our eventual product, we apply a smoothing function across each scene with a focal window. Toggle between the original SAR scene and the speckle filtered result to see the effect.
 
@@ -128,8 +129,8 @@ Map.addLayer(dryFiltered, vis,'SAR dry season - speckle filter',false);
 Map.addLayer(wetFiltered, vis,'SAR wet season - speckle filter',false);
 ```
 
-<img align="center" src="../images/gee-flood/specklefilter_1.png" hspace="15" vspace="10" width="200">
-<img align="center" src="../images/gee-flood/specklefilter_2.png" hspace="15" vspace="10" width="200">
+<img align="center" src="../images/gee-flood/specklefilter_1.png" hspace="15" vspace="10" width="250">
+<img align="center" src="../images/gee-flood/specklefilter_2.png" hspace="15" vspace="10" width="250">
 
 # Create Reference Data
 
@@ -149,7 +150,7 @@ Below is the workflow for creating reference data directly in Earth Engine. We w
 
 3. Draw representative polygons on the map. Click again on the geometry layer **openWater** in the **Geometry Imports** panel and ensure it shows up in bold text. Then click on the **draw a shape** icon. Draw your open water polygons. 
 
-<img align="center" src="../images/gee-flood/draw_geometry.png" hspace="15" vspace="10" width="400">
+<img align="center" src="../images/gee-flood/draw_geometry.png" hspace="15" vspace="10" width="600">
 
 Repeat these steps for each of the remaining map classes: Flooded Vegetation and Forest. To get through this demonstration, shoot for 3 or 4 large polygons or 7 or 8 smaller ones per class. We can refine the quality of our reference data later if we have time.
 
@@ -248,7 +249,7 @@ Map.centerObject(classified,12)
 Map.addLayer(classified,classVis,'classified')
 ```
 
-<img align="center" src="../images/gee-flood/classified.png" hspace="15" vspace="10" width="400">
+<img align="center" src="../images/gee-flood/classified.png" hspace="15" vspace="10" width="600">
 
 Right away we can pick out where some features are mixed up between classes, and where the classifier excels. Let's assess the classifier's performance quantitatively now.
 
@@ -267,7 +268,7 @@ print('Accuracy [Training Set]: ', classifier.confusionMatrix().accuracy());
 
 ```
 
-<img align="center" src="../images/gee-flood/accuracy_training.png" hspace="15" vspace="10" width="200">
+<img align="center" src="../images/gee-flood/accuracy_training.png" hspace="15" vspace="10" width="250">
 
 100% accuracy on the training set sounds impressive but is not a true representation of the classifier's performance since it is the data the model saw during training.
 
@@ -296,3 +297,49 @@ print('Users Accuracy [Testing Set]:', confusionMatrix.consumersAccuracy());
 An Overall Accuracy (OA) above 90% is quite good, but note that it is the average of all class-specific accuracies. In our case, the OA is inflated by a very high Open Water class accuracy, effectively masking the much lower accuracies of the other classes.
 
 For this methodology to hold up to scientific scrutiny, we would also want to collect a completely independent set of validation points outside this exercise to assess the resulting map with. A platform like [Collect Earth Online](https://www.collect.earth/) is great for this application. Since this is just a demonstration we will move on. 
+
+# Run Classifier on Other Data
+
+Now that we have a trained model, we could _deploy_ it, or apply it to other Sentinel 1 SAR observations quite easily in Earth Engine. Change the start and end date in the `.filterDate` call below to any date range starting in 2015 (Sentinel1 data availability). Remember that the `first()` call is taking the first SAR image within that date range.
+
+```js
+//--------------------------------------------------------------
+// Run classifier on other data
+//--------------------------------------------------------------
+
+// Classify another Sentinel SAR observation
+
+// import SAR data from Copernicus
+var collection2 = ee.ImageCollection('COPERNICUS/S1_GRD') 
+.filter(ee.Filter.eq('instrumentMode', 'IW'))
+// .filter(ee.Filter.eq('orbitProperties_pass', 'ASCENDING'))
+// .filterMetadata('resolution_meters','equals',10)
+.filterBounds(aoi)
+.select('VV','VH')
+
+// one SAR observation from dry season
+var newObsDry = collection2.filterDate('2018-02-01','2018-02-28').mean().clip(aoi);
+// one SAR observation from wet season
+var newObsWet = collection2.filterDate('2018-07-01','2018-07-31').mean().clip(aoi);
+
+Map.addLayer(newObsDry.clip(aoi),vis,'new obs dry season');
+Map.addLayer(newObsWet.clip(aoi),vis,'new obs wet season ');
+
+// combine the two season observations
+var newObsFinal = ee.Image.cat(newObsDry,newObsWet).rename(bands);
+print('New observation final', newObsFinal);
+
+// apply speckle filter
+var newObsFiltered = newObsFinal.focal_mean(smoothingRadius,'circle','meters');
+
+// classify with classifier we defined before
+var newObsClassified = newObsFiltered.select(bands).classify(classifier)
+
+Map.addLayer(newObsClassified,classVis,'new obs classified')
+```
+
+<img align="center" src="../images/gee-flood/newobs_classified.png" hspace="15" vspace="10" width="600">
+
+Code Checkpoint: []()
+
+A pre-trained model such as this one could be useful in deriving insights from new satellite observations quickly. Flood monitoring applications like [HydraFloods](https://hydrafloods-servir.adpc.net/) works this way, with just a few more bells and whistles. 

@@ -11,7 +11,7 @@ nav_order: 3
 
 To train a mangrove classification model, we need presence/absence data on the locations of mangroves. There are several widely cited mangrove datasets out there now. The [Giri et al 2011 dataset](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1466-8238.2010.00584.x) is already in the GEE data catalog, it contains a mangrove extent map circa 2000.
 
-<img align="center" src="../images/mangrove-mapping/Giri2011.PNG" hspace="15" vspace="10" width="600">
+<img align="center" src="../images/gee-mangrove/Giri2011.png" hspace="15" vspace="10" width="600">
 
 This dataset is an `ImageCollection` containing tiled raster data. Let's mosaic the tiles together, clip it to our AOI and check it out.
 
@@ -94,7 +94,7 @@ Map.addLayer(trainingData, {color: '429ef5'}, 'Training points'); // Blue
 Map.addLayer(testingData, {color: '000000'}, 'Testing points'); // Black
 ```
 
-<img align="center" src="../images/gee-mangrove/training_pts.png" hspace="15" vspace="10" width="600">
+<img align="center" src="../images/gee-mangrove/training_pts.png" hspace="15" vspace="10" width="500">
 
 Each point within the `FeatureCollection` contains the value of the underlying pixel for every band in our Landsat composite image. Each band's name and value is stored as a property in the point feature. 
 
@@ -165,7 +165,7 @@ print('Producers Accuracy:', confusionMatrix.producersAccuracy());
 print('Users Accuracy:', confusionMatrix.consumersAccuracy());
 ```
 
-<img align="center" src="../images/gee-mangrove/accuracy_assess.png" hspace="15" vspace="10" width="600">
+<img align="center" src="../images/gee-mangrove/accuracy_assess.png" hspace="15" vspace="10" width="500">
 
 Code Checkpoint: [https://code.earthengine.google.com/05e2efede37db5059fd732c1760c9852](https://code.earthengine.google.com/05e2efede37db5059fd732c1760c9852)
 

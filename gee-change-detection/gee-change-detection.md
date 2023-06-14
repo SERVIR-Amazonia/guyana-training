@@ -11,6 +11,14 @@ Navigate through the different lesson sections by using the menu on the lefthand
 
 ## Session Agenda
 **Date**: July 13, 2023
-**Instructor(s):** Jose (Pepe) Ochoa
 
-Coming soon...
+**Instructor(s):** Enikoe (Eni) Bihari
+
+|      Time     |                                                                                                       Topics                                                                                                                                     |
+|:-------------:|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+| 09:00 – 09:30 |                                  Previous Session Recap<br>Q&A                                  |
+| 9:30 – 11:00  |                              Two-Date Change Detection with Landsat                                 |
+| 11:00 – 11:15 |                                              Coffee break                                                              |
+| 11:15 – 12:00 |                                       Time Series Change Detection with LandTrendr                                                     |
+| 12:00 – 13:00 |                                                  Lunch                                                                   |
+| 13:00 –15:00  |                  LandTrendr Change Detection Continued <br>Challenge - Explore the Other UI Tools in the Repository<br>Daily Recap                                      |

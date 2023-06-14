@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Challenges - Make Your Own Model, Make Improvements
+title: Challenges - Modify and Improve your Random Forest Model
 parent: "Intermediate Google Earth Engine: Mangrove Use Case"
 nav_order: 4
 ---
@@ -51,6 +51,6 @@ Map.addLayer(mangTrin2020, {color:'blue'}, 'Mangroves Trinidad 2020');
 ## Happy Coding!
 Do some experimentation, collaborate with your colleagues, ask your instructor questions - Good luck!
 
-*Tip:* The Docs tab is your friend. If you see a function is being used in the script, find that function in the Docs to see what the required arguments are. It'll help you understand how to change the pre-existing functionality. 
+*Tip:* The **Docs** tab is your friend. If you see a function is being used in the script, find that function in the **Docs** to see what the required arguments are. It'll help you understand how to change the pre-existing functionality. 
 
 <img align="center" src="../images/gee-mangrove/docs.png" hspace="15" vspace="10" width="600">

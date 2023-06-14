@@ -1,9 +1,10 @@
 ---
 layout: page
-title: Surface Water Mapping using Optical Imagery
+title: Part 1 - Mapping Surface Water using Optical Imagery
 parent: "Intermediate Google Earth Engine: Flooding Use Case"
 nav_order: 2
 ---
+# Part 1 - Mapping Surface Water using Optical Imagery
 
 # Overview
 
@@ -11,10 +12,10 @@ In this case study you will develop a tool that maps areas inundated by water fo
 
  This training session was adapted from [SERVIR Mekong Case Study 2 - Surface Water Mapping](https://docs.google.com/document/d/1uyFCMNi1mhiMvwEwFiqOflyUL__uKb7jwwsSLES3hQo/edit)
 
-1. Create a new script file in your own script repository - name it 'Water Mapping - Optical'. Keep in mind a master copy is available in the script repository.
+1. Create a new script file in your own script repository - name it 'Flood Mapping - Optical'. Keep in mind a master copy is available in the script repository.
 2. Check the full script [https://code.earthengine.google.com/94091350023b90d3d744f4302a4d1b84](https://code.earthengine.google.com/94091350023b90d3d744f4302a4d1b84)
 
-## Theory
+**Theory**
 
 High-resolution measurements of the distribution and dynamics of surface water are essential for many environmental applications, such as flood forecasting and warning, agricultural and urban water management, and simulation of transport of pollutants in water bodies. Water can be detected using multi-spectral satellite imagery, as water significantly absorbs most radiation at near-infrared (NIR) wavelengths and beyond. The Normalized Difference Water Index (NDWI) is a simple spectral index that uses the strong absorption of water in NIR to identify water bodies. 
 
@@ -141,7 +142,7 @@ Lookup the band designations of Landsat 8. Use the **Search** bar at the top lik
 
 Now we are going to calculate the Normalized Difference Water Index (NDWI) using the Landsat 8 images.  NDWI can be used to identify areas covered with water and is given by:
 
-$NDWI = (green-NIR)/(green + NIR)$
+<img align="center" src="../images/gee-flood/NDWI_formula.png" hspace="15" vspace="10" width="600">
 
 We make a function that calculates the NDWI for each image in a collection.  The function needs the Green and NIR bands from the equation above to be named 'green' and 'nir'.  NDWI is added as a band to each image.
 
@@ -277,6 +278,6 @@ Map.addLayer(frequency.selfMask(),
 
 Code Checkpoint: []()
 
-**Challenge 1:** modify the start and end parameters to map surface water detected in one season of the year over several years. 
+**Challenge 1:** Modify the start and end parameters to map surface water detected in one season of the year over several years. 
 
 **Challenge 2:** The Sentinel-2 satellite has a higher spatial resolution than the Landsat satellites. Calculate the NDWI for a Sentinel-2 image. 
