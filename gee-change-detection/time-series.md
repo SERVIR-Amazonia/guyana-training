@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Part 2.1 - Time Series Change Detection
+title: Part 2 - Time Series Change Detection
 parent:  "Advanced Google Earth Engine: Change Detection"
 nav_order: 3
 ---
@@ -148,18 +148,23 @@ The exact colors present on the RGB map will not always mean the same exact thin
 Clicking on different colored pixels, try to look at the index trajectories and create a narrative for what could have happened during the time periods of interest.  For example, when/where was forest cleared, when/where was forest left to grow, and when/where may have other more complex land use changes happened (e.g. forest was cleared for a crop which was later harvested)?  Also look at the overall patterns you see - it is pretty clear where forest clearing began and expanded to, and where regrowth or planting happened after forest clearing.
 
 **Red pixel:**
+
 <img align="center" src="../images/gee-change-detection/LT_RGBpixel_redexample.png" hspace="15" vspace="10" width="600">
 
 **Green pixel:**
+
 <img align="center" src="../images/gee-change-detection/LT_RGBpixel_greenexample.png" hspace="15" vspace="10" width="600">
 
 **Purple pixel:**
+
 <img align="center" src="../images/gee-change-detection/LT_RGBpixel_purpleexample.png" hspace="15" vspace="10" width="600">
 
 **Cyan pixel:**
+
 <img align="center" src="../images/gee-change-detection/LT_RGBpixel_cyanexample.png" hspace="15" vspace="10" width="600">
 
 **Beige/Brown pixel:**
+
 <img align="center" src="../images/gee-change-detection/LT_RGBpixel_brownexample.png" hspace="15" vspace="10" width="600">
 
 Here, the spatial patterns of the disturbance areas are consistent with the underlying landscape pattern, lending credibility to the detection of actual change. Moreover, the source data in the pixel trajectories, while noisy, appear to be consistent with the signal of disturbance.
@@ -225,12 +230,15 @@ For each of these sets of options, click `Add Filterted Disturbance Imagery`.  O
 <img align="center" src="../images/gee-change-detection/ChangeFilterOptions.png" hspace="15" vspace="10" width="300">
 
 **Duration:**
+
 <img align="center" src="../images/gee-change-detection/LT_duration.png" hspace="15" vspace="10" width="600">
 
 **Magnitude:**
+
 <img align="center" src="../images/gee-change-detection/LT_magnitude.png" hspace="15" vspace="10" width="600">
 
 **Year of Detection:**
+
 <img align="center" src="../images/gee-change-detection/LT_yearofdetection.png" hspace="15" vspace="10" width="600">
 
 ## Download Options
@@ -241,6 +249,11 @@ In `Download Options`, set the `ESPG` to `4326` for WGS 84 (or whatever other co
 
 Download all the resulting files from the **Tasks** tab to your GEE assets, which you can use later for post-processing. There will be 6 files to download, those ending with: RGB-year-year-year, DSNR, MAG, DUR, PREVAL, YOD.
 
+# Challenges
+
+**Challenge 1:** Explore the changes in forest cover in a different area and time period.  
+
+**Challenge 2:** Look at NICFI data for the time period of interest.  Try to identify the causes of the changes that occurred.
 
  
 

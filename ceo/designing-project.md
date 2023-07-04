@@ -1,13 +1,14 @@
 ---
 layout: page
-title: Designing a CEO Project
+title: Designing a CEO Project 
 parent: "Map Validation and Area Estimation with Collect Earth Online"
 nav_order: 4
 ---
 
-# Designing a CEO Project (and Data Collection Protocols)
+# Designing a CEO Project (& Data Collection Best Practices)
 
 ## General Project Planning Procedure
+
 *The following project planning guidelines are available with more detail in this [Project Development Manual for Collect Earth Online](https://www.collect.earth/ceo-guides/#:~:text=Project%20Development%20Theory), which is linked under the CEO website’s Help page.*
 
 You will need to prepare some information in preparation for designing and utilizing a project in CEO.

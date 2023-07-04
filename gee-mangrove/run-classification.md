@@ -144,10 +144,46 @@ Map.addLayer(RFclassification, {min: 0, max: 1, palette: colorPalette},
 
 <img align="center" src="../images/gee-mangrove/classification_map.png" hspace="15" vspace="10" width="600">
 
+We will also export this random forest mangrove classification as a GEE Asset and a Google Drive file for use in the sample-based area estimation module.
+
+```javascript
+// Export classified map as a GEE Asset to use for further analysis
+Export.image.toAsset({
+  image: RFclassification,
+  description: 'toasset_mangroveclassification_RF_Guyana',
+  assetId: 'users/ebihari/GuyanaWS/images/mangroveclassification_RF_Guyana',
+  region: aoi,
+  scale: 30,
+  crs:'EPSG:4326',
+  maxPixels: 1e13
+});
+
+// Export classified map to Google Drive to use for further analysis
+Export.image.toDrive({
+  image: RFclassification,
+  description: 'todrive_mangroveclassification_RF_Guyana',
+  fileNamePrefix: 'mangroveclassification_RF_Guyana',
+  region: aoi,
+  scale: 30,
+  crs:'EPSG:4326',
+  maxPixels: 1e13
+});
+```
+
+Now, when you run your code, these two export tasks should appear in the **Tasks** tab.  Run both of these tasks, filling out the names and locations you want the files to be put.
+
+<img align="center" src="../images/gee-mangrove/export_task.png" hspace="15" vspace="10" width="400">
+
+# Running an Accuracy Assessment
+
 Then we take this trained RF classifer to classify the testing point subset. Finally, we retrieve the error matrix from the classified test set and print accuracy metrics to the console.
 
 
 ```javascript
+//--------------------------------------------------------------
+// Run accuracy assessment
+//--------------------------------------------------------------
+
 // Test the classification (model precision) with testing data.
 var classificationVal = testingData.classify(RFclassifierVal);
 print('Classified points', classificationVal);

@@ -1,11 +1,11 @@
 ---
 layout: page
-title: Interpretation Best Practices
+title: Image Interpretation in a CEO Project
 parent: "Map Validation and Area Estimation with Collect Earth Online"
-nav_order: 8
+nav_order: 6
 ---
 
-# Interpretation Best Practices
+# Image Interpretation in a CEO Project (& Interpretation Best Practices)
 
 *Video on [CEO Sample Interpretation](https://www.youtube.com/watch?v=ldmvBI965WM) - available on CEO website*
 
@@ -14,7 +14,6 @@ The following steps are some general guidelines for sample interpretation. Howev
 * Utilize multiple sources of information in order to answer the survey questions, including using time-series graphs in the Geo-Dash and imagery options with known observation dates (such as Planet NICFI data, not MapBox).
 * Refer to your interpretation key throughout the interpretation process.
 * Then be sure to leave a note of the confidence in your interpretation and the reasoning behind your interpretation for later reference 
-
 
 Below is a more detailed recommendations for a step-by-step interpretation procedure that encourages quality and consistency.
 

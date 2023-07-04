@@ -2,7 +2,7 @@
 layout: page
 title: Pre-Workshop Setup
 parent: "Map Validation and Area Estimation with Collect Earth Online"
-nav_order: 2
+nav_order: 1
 ---
 
 # Pre-Workshop Set Up
@@ -22,7 +22,7 @@ nav_order: 2
 ## Creating an Institution in CEO (pre-prepared)
 If your institution is not yet signed up for CEO you can create a new institution which all your team members can join. (An institution has already been created for this workshop: **“Guyana Geospatial Workshop”**)
 1. Log in to CEO.
-2. Navigate to the Home page and click [Create New Institution’ on the left panel.
+2. Navigate to the Home page and click `Create New Institution’ on the left panel.
 3. Enter your institution’s name, URL, and description.
 4. Upload a logo from your computer for your institution by clicking `Browse…`.
 5. Click `Create Institution` when you are finished.

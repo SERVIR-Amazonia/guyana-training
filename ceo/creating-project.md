@@ -2,7 +2,7 @@
 layout: page
 title: Creating a CEO project
 parent: "Map Validation and Area Estimation with Collect Earth Online"
-nav_order: 6
+nav_order: 5
 ---
 
 # Creating a CEO project
