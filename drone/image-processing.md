@@ -1,11 +1,11 @@
 ---
 layout: page
-title: Drone Image Processing
+title: Part 2 - Drone Image Processing
 parent: "Drone Flight & Image Processing"
 nav_order: 3
 ---
 
-# Drone Flight
+# Part 2 - Drone Image Processing
 
 In this exercise, we will go over the steps to analyze drone images in Pix4Dmapper.
 

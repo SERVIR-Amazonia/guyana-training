@@ -1,6 +1,6 @@
 ---
 layout: page
-title:  Background on Stratified Random Sampling, Map Validation, & Area Estimation
+title:  Background
 parent: "Map Validation and Area Estimation with Collect Earth Online"
 nav_order: 1
 ---

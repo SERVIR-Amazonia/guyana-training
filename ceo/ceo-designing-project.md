@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Designing a CEO Project 
+title: "CEO - Designing a Project"
 parent: "Map Validation and Area Estimation with Collect Earth Online"
 nav_order: 3
 ---

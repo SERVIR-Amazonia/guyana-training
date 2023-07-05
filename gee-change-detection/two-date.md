@@ -214,6 +214,8 @@ Code Checkpoint: (https://code.earthengine.google.com/e2c066722613fec4ac50c18ee5
 
 Evaluating any maps you create, including change detection maps, is essential to determining whether the method you have selected is appropriate for informing land management and decision-making (Stehman and Czaplewski 1998), or whether you need to iterate on the mapping process to improve the final results. Maps generally, and change maps specifically, will always have errors. This is due to a suite of factors, such as the geometric registration between images, the calibration between images, the data resolution (e.g., temporal, spectral, radiometric) compared to the characteristics of the activity of interest, the complexity of the landscape of the study region (topography, atmospheric conditions, etc.), and the classification techniques employed (Lu et al. 2004). This means that similar studies can present different, sometimes controversial, conclusions about landscape dynamics (e.g., Cohen et al. 2017). In order to be useful for decision-making, a change detection mapping effort should provide the user with an understanding of the strengths and weaknesses of the product, such as by presenting omission and commission error rates. The quantification of classification quality is presented in EEFA book Chap. F2.2.
 
+# Challenges
+
 **Challenge 1:** 
 Try using a different index, such as MNDWI (Modified Normalized Difference Water Index) or a Tasseled Cap Transformation (refer to EEFA book chapter [F3.1 - Section 2 Manipulating Images with Matrix Algebra](https://www.eefabook.org/table-of-contents.html)), to run the change detection steps, and compare the results with those obtained from using NDWI.
 

@@ -1,11 +1,11 @@
 ---
 layout: page
-title: Drone Flight
+title: Part 1 - Drone Flight
 parent: "Drone Flight & Image Processing"
 nav_order: 2
 ---
 
-# Drone Flight
+# Part 1 - Drone Flight
 
 In this exercise, we will go over the steps to plan a drone flight and create a flight plan in Pix4Dcapture.
 

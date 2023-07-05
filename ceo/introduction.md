@@ -1,11 +1,12 @@
 ---
 layout: page
-title: Introduction to CEO
+title: "Introduction"
 parent: "Map Validation and Area Estimation with Collect Earth Online"
 nav_order: 2
 ---
 
-# Introduction
+# Introduction to CEO
+
 Welcome to an Map Validation and Area Estimation with Collect Earth Online (CEO)! This workshop will give an overview of CEO and how to use it for data collection (particularly for map validation and area estimation).  For the hands-on portion of the activity, the workflow will also incorporate GEE, CEO, and SEPAL.
 
 ## Pre-Workshop Set Up
