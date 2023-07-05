@@ -9,13 +9,15 @@ nav_order: 3
 
 # Overview
 
-In the caribbean trainings script repository ([]()), open the script named **LandTrendr - Data Visualization and Download**. When loaded and run, this script creates a LandTrendr-GEE GUI.
-
 You can read more about LandTrendr in the [EEFA Book Chapter F4.5](https://www.eefabook.org/go-to-the-book.html). This is how the book describes LandTrendr:
 
 >"Land surface change happens all the time, and satellite sensors witness it. If a spectral index is chosen to match the type of change being sought, surface change can be inferred from changes in spectral index values. Over time, the progression of spectral values witnessed in each pixel tells a story of the processes of change, such as growth and disturbance. Time-series algorithms are designed to leverage many observations of spectral values over time to isolate and describe changes of interest, while ignoring uninteresting change or noise.    
 
 >In this session, we use the LandTrendr time-series algorithms to map change. The LandTrendr algorithms apply “temporal segmentation” strategies to distill a multiyear time series into sequential straight-line segments that describe the change processes occurring in each pixel. We then isolate the segment of interest in each pixel and make maps of when, how long, and how intensely each process occurred. Similar strategies can be applied to more complicated descriptions of the time series, as is seen in some of the chapters that follow this one."
+
+1. Go to the `GuyanaWS` repository ([https://code.earthengine.google.com/?accept_repo=users/ebihari/GuyanaWS](https://code.earthengine.google.com/?accept_repo=users/ebihari/GuyanaWS)), and open the `LandTrendr App - Guyana version` folder. 
+2. In this folder, open the script named **LandTrendr App - Data Visualization and Download**. 
+3. Run this script.  In a few seconds, the LandTrendr GUI should load right there in GEE.
 
 # Basic orientation to the GUI
 

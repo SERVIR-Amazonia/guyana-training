@@ -27,26 +27,9 @@ The first is in the number of 'trees' in the Random Forest. You can change that 
 
 Beyond the model structure itself, we can also provide more and/or better reference data to the model. The first improvement would be to increase the amount of total samples. Try a number between 200 and 500 per class. 
 
-To provide better quality reference data, we can look for another source of Mangrove presence/absence data, or make our own. Making your own will take time and expertise. The Institute of Marine Affairs has produced mangrove extent polygons circa 2014 and 2020. 
+To provide better quality reference data, we can look for another source of Mangrove presence/absence data, or make our own. Making your own will take time and expertise. 
 
-How could you replace the Giri et al 2011 data in the workflow with this other data source?
-
-<img align="center" src="../images/mangrove-mapping/IMApolysDesc.PNG" hspace="15" vspace="10" width="600">
-
-Paste this code below in a new script to check out the data.
-
-```js
-var mangTob2014 = ee.FeatureCollection("projects/caribbean-trainings/assets/trinidad-tobago-2022/vector/mangrovesTobago2014");
-var mangTob2020 = ee.FeatureCollection("projects/caribbean-trainings/assets/trinidad-tobago-2022/vector/mangrovesTobago2020");
-var mangTrin2014 = ee.FeatureCollection("projects/caribbean-trainings/assets/trinidad-tobago-2022/vector/mangrovesTrinidad2014");
-var mangTrin2020 = ee.FeatureCollection("projects/caribbean-trainings/assets/trinidad-tobago-2022/vector/mangrovesTrinidad2020");
-
-Map.centerObject(mangTrin2014,9);
-Map.addLayer(mangTob2014, {color:'red'}, 'Mangroves Tobago 2014');
-Map.addLayer(mangTob2020, {color:'blue'}, 'Mangroves Tobago 2020');
-Map.addLayer(mangTrin2014, {color:'red'}, 'Mangroves Trinidad 2014');
-Map.addLayer(mangTrin2020, {color:'blue'}, 'Mangroves Trinidad 2020');
-```
+Try to find another mangrove data source like [Global Mangrove Watch](https://www.globalmangrovewatch.org/?activeLayers=mangrove_extent&category=distribution_and_change&zoom=7.299707280073768). How could you replace the Giri et al 2011 data in the workflow with this data source?  
 
 ## Happy Coding!
 Do some experimentation, collaborate with your colleagues, ask your instructor questions - Good luck!

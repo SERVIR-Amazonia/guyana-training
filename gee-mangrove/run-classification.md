@@ -35,7 +35,7 @@ var giriMangrovesTT = ee.ImageCollection("LANDSAT/MANGROVE_FORESTS")
 
 // Add image to map
 Map.addLayer(giriMangrovesTT,{min:0,max:1},
-            'Giri Mangrove Extent Map T&T',false)
+            'Giri mangrove extent map',false)
 ```
 
 <img align="center" src="../images/gee-mangrove/Giri2011_map.png" hspace="15" vspace="10" width="600">
@@ -59,7 +59,10 @@ var collectedPts = giriMangrovesTT.stratifiedSample({
   dropNulls:true, 
   tileScale:2, 
   geometries:true});
-print('Collected Points', collectedPts)
+print('Collected points:', collectedPts)
+
+// Add points to the map
+Map.addLayer(collectedPts,{},'sample points')
 
 // Optionally you can export and re-import it
 // Export.table.toAsset(collectedPts,'mangroveSamples','users/ebihari/GuyanaWS/images/referencePoints_GiriMangroves_100ea')
@@ -77,21 +80,21 @@ var trainingPts = composite.sampleRegions({
     scale: 30,
     geometries:true
   });
-print('Training Points', trainingPts);
+print('Training Points:', trainingPts);
 
-// Divide points into training and testing points.
-// Create random column in reference points.
+// Divide points into training and testing points
+// Create random column in reference points
 var trainingTesting = trainingPts.randomColumn();
 print(trainingTesting);
 
-// Divide 80% of data for training and 20% for testing.
+// Divide 80% of data for training and 20% for testing
 var trainingData = trainingTesting.filter(ee.Filter.lt('random', 0.8));
-print('Number of training points', trainingData.size());
+print('Number of training points:', trainingData.size());
 var testingData = trainingTesting.filter(ee.Filter.gte('random', 0.8));
-print('Number of testing points', testingData.size());
+print('Number of testing points:', testingData.size());
 
-Map.addLayer(trainingData, {color: '429ef5'}, 'Training points'); // Blue
-Map.addLayer(testingData, {color: '000000'}, 'Testing points'); // Black
+Map.addLayer(trainingData, {color: '429ef5'}, 'training points'); // Blue
+Map.addLayer(testingData, {color: '000000'}, 'testing points'); // Black
 ```
 
 <img align="center" src="../images/gee-mangrove/training_pts.png" hspace="15" vspace="10" width="500">
@@ -108,13 +111,13 @@ We train a Random Forest classifier with only the training point subset.
 
 ```javascript
 //--------------------------------------------------------------
-// Run classification
+// Run classification (Random Forest)
 //--------------------------------------------------------------
 
 // Define prediction bands
 // Get all image bands except the QA band
 var predictionBands =  landsatFiltered.first().bandNames().remove('QA_PIXEL'); 
-print('Prediction Bands', predictionBands)
+print('Prediction Bands:', predictionBands)
 
 // Train the classifier with training points only
 // "Call" the random forest classifier and train it with the training points
@@ -126,7 +129,7 @@ var RFclassifierVal = ee.Classifier.smileRandomForest({numberOfTrees:10}).train(
 
 // Print decision trees
 var decisionTrees = RFclassifierVal.explain();
-print('Decision trees', decisionTrees);
+print('Decision Trees:', decisionTrees);
 
 // Classify the median composite
 var RFclassification = composite
@@ -134,12 +137,11 @@ var RFclassification = composite
 .classify(RFclassifierVal);
 
 // Define color palette for the classified image
-// (grab from geometry tools for each class)
-var colorPalette = ['d63000', '98ff00'];
+var colorPalette = ['800000', 'c0ff33'];
 
 // Add classified image to map
 Map.addLayer(RFclassification, {min: 0, max: 1, palette: colorPalette}, 
-            'RF Classification');
+            'RF mangrove classification');
 ```
 
 <img align="center" src="../images/gee-mangrove/classification_map.png" hspace="15" vspace="10" width="600">
@@ -148,10 +150,11 @@ We will also export this random forest mangrove classification as a GEE Asset an
 
 ```javascript
 // Export classified map as a GEE Asset to use for further analysis
+// change the location to your root GEE folder
 Export.image.toAsset({
   image: RFclassification,
   description: 'toasset_mangroveclassification_RF_Guyana',
-  assetId: 'users/ebihari/GuyanaWS/images/mangroveclassification_RF_Guyana',
+  assetId: 'users/ebihari/mangroveclassification_RF_Guyana',
   region: aoi,
   scale: 30,
   crs:'EPSG:4326',
@@ -186,7 +189,7 @@ Then we take this trained RF classifer to classify the testing point subset. Fin
 
 // Test the classification (model precision) with testing data.
 var classificationVal = testingData.classify(RFclassifierVal);
-print('Classified points', classificationVal);
+print('Classified Points:', classificationVal);
 
 // Create confusion matrix
 var confusionMatrix = classificationVal.errorMatrix({
@@ -195,7 +198,7 @@ var confusionMatrix = classificationVal.errorMatrix({
 });
 
 // Print confusion matrix and accuracies
-print('Confusion matrix:', confusionMatrix);
+print('Confusion Matrix:', confusionMatrix);
 print('Overall Accuracy:', confusionMatrix.accuracy());
 print('Producers Accuracy:', confusionMatrix.producersAccuracy());
 print('Users Accuracy:', confusionMatrix.consumersAccuracy());
@@ -203,6 +206,6 @@ print('Users Accuracy:', confusionMatrix.consumersAccuracy());
 
 <img align="center" src="../images/gee-mangrove/accuracy_assess.png" hspace="15" vspace="10" width="500">
 
-Code Checkpoint: [https://code.earthengine.google.com/05e2efede37db5059fd732c1760c9852](https://code.earthengine.google.com/05e2efede37db5059fd732c1760c9852)
+Code Checkpoint: [https://code.earthengine.google.com/537c5ab42bbc2088b72de222fb961bb6](https://code.earthengine.google.com/537c5ab42bbc2088b72de222fb961bb6)
 
 Congratulations! You have setup a Random Forest classifier for mangrove mapping using multiple Landsat sensors. 

@@ -1,33 +1,23 @@
 ---
 layout: page
-title: Area Estimation
+title: Map Validation & Area Estimation
 parent: "Map Validation and Area Estimation with Collect Earth Online"
-nav_order: 8
+nav_order: 6
 ---
 
-# Sample-Based Area Estimation with SEPAL
-
-# MOVE THIS PART
-
-Often we create classification or change maps to estimate the amount of area that has a certain land cover type or underwent a certain type of change.  
-
-Pixel counting approaches simply sum up the area belonging to each class. However, simple pixel counting is not the most precise or accurate way to do this, since classification maps have errors (both small and large) - originating from data noise, pixel mixing, or poor separation of classes by the classification algorithm.  Thus, pixel counting will produce biased estimates of class areas, and you cannot tell whether these are overestimates or underestimates. 
-
-Sample-based approaches use manually collected samples and statistical formulas based on the sampling design to estimate class areas.  They create unbiased estimates of area and can also be used to calculate the error associated with your map.  These approaches help quanitfy and reduce uncertainty, making the estimates more robust.  
-
-# MOVE
-
+# Sample-Based Map Validation and Area Estimation (with GEE, CEO, & SEPAL)
 
 # Overview
 
 In this workflow, we will create a stratified random sample of a land cover map, and use to conduct an accuracy assessment and area estimate of the strata in the land cover map.  We will make the stratified random sample in GEE, collect validation data at those points in CEO, and then calculate error matrices and estimate the true area of each land cover stratum in SEPAL.
 
-1. Create a new script file in your own script repository - name it 'Area Estimation - Sample Design'. Keep in mind a master copy is available in the above script repository.
-2. Check the full script [https://code.earthengine.google.com/05e2efede37db5059fd732c1760c9852](https://code.earthengine.google.com/05e2efede37db5059fd732c1760c9852)
-
 For this exercise, we will use System for Earth Observation Data Access, Processing, & Analysis for Land Monitoring (SEPAL). It is a cloud-based computing software designed by the United Nation’s Food and Agricultural Organization (FAO) to aid in remote sensing applications in developing countries. 
 
 SEPAL is essentially a system for accessing, processing, & analyzing earth observation data for land monitoring.  It enables users to create image composites, process images, download files, create stratified sampling designs, and more.  SEPAL is part of the Open Foris suite of tools,, and it integrates with Collect Earth Online (CEO) and the Google Earth Engine (GEE). 
+
+1. Create a new script file in your own script repository - name it 'Area Estimation - Sample Design'. Keep in mind a master copy is available in the above script repository.
+2. Check the full script [https://code.earthengine.google.com/074c57c9a2487dc88f4cbad30669e5d7](https://code.earthengine.google.com/074c57c9a2487dc88f4cbad30669e5d7)
+3. If you need to check any of the documents or data from this exercise, you can find them in this Google Drive folder [https://drive.google.com/drive/folders/1MvRha9K4355wRICQs-jGy2Uw0BPBQ3Kr?usp=drive_link](https://drive.google.com/drive/folders/1MvRha9K4355wRICQs-jGy2Uw0BPBQ3Kr?usp=drive_link)
 
 # Create Classification Map in GEE
 
@@ -70,6 +60,23 @@ From your Google Drive, download this .tif of the classification to your compute
 In the new GEE script you created called 'Area Estimation - Sample Design', import the magrove classification asset.
 
 ```javascript
+//--------------------------------------------------------------
+// Import Giri et al. Mangrove Map
+//--------------------------------------------------------------
+
+// // Load the mangrove extent image collection
+// // clip to aoi, unmask, rename band
+// var giriMangrovesTT = ee.ImageCollection("LANDSAT/MANGROVE_FORESTS")
+// // .filterBounds(aoi)
+// .mosaic()
+// .unmask(0)
+// // .clip(aoi)
+// .rename('class')
+
+// // Add image to map
+// Map.addLayer(giriMangrovesTT,{min:0,max:1},
+//             'Giri mangrove extent map',false)
+
 //--------------------------------------------------------------
 // Import Classification Map
 //--------------------------------------------------------------
@@ -165,7 +172,7 @@ Export.table.toDrive({
 
 From your Google Drive, download this .csv of points to your computer.
 
-Code Checkpoint: ()[]
+Code Checkpoint: [https://code.earthengine.google.com/074c57c9a2487dc88f4cbad30669e5d7](https://code.earthengine.google.com/074c57c9a2487dc88f4cbad30669e5d7)
 
 # Collect Validation Data in CEO
 

@@ -1,11 +1,11 @@
 ---
 layout: page
-title:  Stratified Random Sampling and Map Validation
+title:  Background on Stratified Random Sampling, Map Validation, & Area Estimation
 parent: "Map Validation and Area Estimation with Collect Earth Online"
-nav_order: 2
+nav_order: 1
 ---
 
-# Stratified Random Sampling and Map Validation
+# Background on Stratified Random Sampling, Map Validation, & Unbiased Area Estimation
 
 ## Stratified Random Sampling
 
@@ -94,3 +94,12 @@ Let’s fill in this confusion matrix with example values if 100 points were col
 
 * Overall accuracy = (True Positive + True Negative) / Sample size
 * The overall accuracy essentially tells us what proportion of the reference data was classified correctly
+
+## Unbiased Area Estimation
+
+Often we create classification or change maps to estimate the amount of area that has a certain land cover type or underwent a certain type of change.  
+
+Pixel counting approaches simply sum up the area belonging to each class. However, simple pixel counting is not the most precise or accurate way to do this, since classification maps have errors (both small and large) - originating from data noise, pixel mixing, or poor separation of classes by the classification algorithm.  Thus, pixel counting will produce biased estimates of class areas, and you cannot tell whether these are overestimates or underestimates. 
+
+Sample-based approaches use manually collected samples and statistical formulas based on the sampling design to estimate class areas (essentially scaling up the data collected in samples to the entire area of interest).  They create unbiased estimates of area and can also be used to calculate the error associated with your map.  These approaches help quanitfy and reduce uncertainty, making the estimates more robust.  
+

@@ -13,7 +13,7 @@ In this case study you will develop a tool that maps areas inundated by water fo
  This training session was adapted from [SERVIR Mekong Case Study 2 - Surface Water Mapping](https://docs.google.com/document/d/1uyFCMNi1mhiMvwEwFiqOflyUL__uKb7jwwsSLES3hQo/edit)
 
 1. Create a new script file in your own script repository - name it 'Flood Mapping - Optical'. Keep in mind a master copy is available in the script repository.
-2. Check the full script [https://code.earthengine.google.com/94091350023b90d3d744f4302a4d1b84](https://code.earthengine.google.com/94091350023b90d3d744f4302a4d1b84)
+2. Check the full script [https://code.earthengine.google.com/ff3a503f501769d2191f95cf803ef929](https://code.earthengine.google.com/ff3a503f501769d2191f95cf803ef929)
 
 **Theory**
 
@@ -198,7 +198,7 @@ Zoom into an area you are familiar with. Click the **Inspector** tab then click 
 
 <img align="center" src="../images/gee-flood/NDWImax_zoom.png" hspace="15" vspace="10" width="600">
 
-Code Checkpoint: []()
+Code Checkpoint: [https://code.earthengine.google.com/ff3a503f501769d2191f95cf803ef929](https://code.earthengine.google.com/ff3a503f501769d2191f95cf803ef929)
 
 Next we will calculate the NDWI for Landsat 5 and Landsat 7. Note that the bands designations are different.  Open the **Data Catalog** information on Landsat 5, Landsat 7, and Landsat 9 to see which bands correspond to Green and NIR wavelengths. Remember, you can click on your script's imported datasets at the top to open the **Data Catalog** information. 
 
@@ -276,7 +276,7 @@ Map.addLayer(frequency.selfMask(),
 ```
 <img align="center" src="../images/gee-flood/inundation_freq.png" hspace="15" vspace="10" width="600">
 
-Code Checkpoint: []()
+Code Checkpoint: [https://code.earthengine.google.com/ff3a503f501769d2191f95cf803ef929](https://code.earthengine.google.com/ff3a503f501769d2191f95cf803ef929)
 
 **Challenge 1:** Modify the start and end parameters to map surface water detected in one season of the year over several years. 
 

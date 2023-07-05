@@ -11,7 +11,7 @@ nav_order: 3
 In this case study, we will train a classifer to predict flooded land covers using Sentinel 1 SAR scenes collected in both dry and wet seasons.
 
 1. Create a new script file in your own script repository - name it 'Flood Mapping - SAR'. Keep in mind a master copy is available in the script repository.
-2. Check the full script []()
+2. Check the full script [https://code.earthengine.google.com/36484d3506fb35468aa8e5a0bf80d3e9](https://code.earthengine.google.com/36484d3506fb35468aa8e5a0bf80d3e9)
 
 **General Supervised Classification Workflow**
 
@@ -169,7 +169,7 @@ Now that we have reference polygons for our map classes, we will merge their `Fe
 var newFc = openWater.merge(floodedVegetation).merge(forest);
 ```
 
-Code Checkpoint: []()
+Code Checkpoint: [https://code.earthengine.google.com/36484d3506fb35468aa8e5a0bf80d3e9](https://code.earthengine.google.com/36484d3506fb35468aa8e5a0bf80d3e9)
 
 Next, we will use the merged `FeatureCollection` of reference polygons to extract the SAR backscatter pixel values for each landcover. The polygons within the `newFc` `FeatureCollection` are overlaid on the image, and each pixel is converted to a point containing the image's pixel values and the other properties inherited from the polygon (in our case 'landcover' property). After you run this, note in the **Console** the total size of reference points we now have to train and validate our map. 
 
@@ -340,6 +340,6 @@ Map.addLayer(newObsClassified,classVis,'new obs classified')
 
 <img align="center" src="../images/gee-flood/newobs_classified.png" hspace="15" vspace="10" width="600">
 
-Code Checkpoint: []()
+Code Checkpoint: [https://code.earthengine.google.com/36484d3506fb35468aa8e5a0bf80d3e9](https://code.earthengine.google.com/36484d3506fb35468aa8e5a0bf80d3e9)
 
 A pre-trained model such as this one could be useful in deriving insights from new satellite observations quickly. Flood monitoring applications like [HydraFloods](https://hydrafloods-servir.adpc.net/) works this way, with just a few more bells and whistles. 

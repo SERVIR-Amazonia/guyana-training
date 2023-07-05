@@ -2,17 +2,24 @@
 layout: page
 title: Introduction to CEO
 parent: "Map Validation and Area Estimation with Collect Earth Online"
-nav_order: 3
+nav_order: 2
 ---
 
-# Introduction to CEO
-Welcome to an Introduction to Collect Earth Online (CEO)! This workshop will give an overview of CEO and how to use it for data collection.  
+# Introduction
+Welcome to an Map Validation and Area Estimation with Collect Earth Online (CEO)! This workshop will give an overview of CEO and how to use it for data collection (particularly for map validation and area estimation).  For the hands-on portion of the activity, the workflow will also incorporate GEE, CEO, and SEPAL.
+
+## Pre-Workshop Set Up
+
+1. Create a [CEO account](https://app.collect.earth/register). Remember the email address you used to make this account.
+2. Join the CEO institution for this workshop **“Guyana Geospatial Workshop”**. If your organization already has a CEO Institution, request to join that institution. We will also cover this step in the workshop, and make an institution if your organization does not have one.
+3. Install [Google Earth Pro](https://support.google.com/earth/answer/21955?hl=en) on your computer.
+4. Create a [SEPAL](https://docs.sepal.io/en/latest/setup/register.html) account and request additional resources.
 
 ## Objectives
 1. Understand the uses and benefits of CEO.
-2. Get set up on CEO with an account and institution.
-2. Learn how to create a CEO project for data collection. 
-3. Learn interpretation best practices in CEO.
+2. Get set up on CEO with an account and institution, and learn how to create a CEO project for data collection.
+3. Understand sample design and interpretation best practices.
+4. Learn how to do map validation and unbiased area estimation using GEE, CEO, and SEPAL.
 
 ## What is CEO?
 >Collect Earth Online (CEO) is a custom built, open-source, **satellite image viewing and interpretation platform** created to collect reference data needed to classify and monitor land cover / land use change. CEO aims to help organizations across the world gain **an accurate picture of what’s happening on the ground**, detecting the effects of deforestation, forest degradation, crop loss, and other changes in land use.

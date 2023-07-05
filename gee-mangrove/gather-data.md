@@ -24,7 +24,7 @@ As an example, we will look at the Food and Agriculture Organization's Global Ad
 Click on the `Table Schema` tab. We notice there is a useful field named 'ADM1_CODE'. We will use this property to derive our AOI. We will focus in on the Barima Waini area and the mangrove area on its coast.  Once you add the FAO GAUL data set to the map, you can find the 'ADM1_CODE' for this region by clicking on the map while in **Inspector** mode, and navigating to `Objects` > `FAO Boundaries` > `0` > `properties`.
 
 ```javascript
-//--------------------------------------------------------------
+///--------------------------------------------------------------
 // Define vector data (area of interest, aoi)
 //--------------------------------------------------------------
 
@@ -38,7 +38,7 @@ var aoi = boundaries.filter(ee.Filter.eq('ADM1_CODE', 1398));
 // (between 1-24)
 Map.centerObject(aoi, 7);
 
-// Add the aoi object as a layer to the map
+// // Add the aoi object as a layer to the map
 Map.addLayer(aoi, {}, 'AOI');
 ```
 
@@ -189,8 +189,8 @@ var le7_preprocessed = le7.map(cloudShadowMask)
 var lc8_preprocessed = lc8.map(cloudShadowMask)
                               .map(calculateIndices);
 var lc9_preprocessed = lc9.map(cloudShadowMask)
-                              .map(calculateIndices);                                 
-                              
+                              .map(calculateIndices);                              
+
 //--------------------------------------------------------------
 // Visualize a non-processed and pre-processed images
 //--------------------------------------------------------------
@@ -256,7 +256,7 @@ Map.addLayer(landsatFiltered,visParamPreProcessed,
              'Landsat Collection 2020-2023', false)
 ```
 
-Code Checkpoint: [https://code.earthengine.google.com/0064c2b2764e781d4f8f1abf9c59f762](https://code.earthengine.google.com/0064c2b2764e781d4f8f1abf9c59f762)
+Code Checkpoint: [https://code.earthengine.google.com/537c5ab42bbc2088b72de222fb961bb6](https://code.earthengine.google.com/537c5ab42bbc2088b72de222fb961bb6)
 
 We now have an `ImageCollection` consisting of data from multiple Landsat sensors for your area and date range of interest. 
 
@@ -268,16 +268,19 @@ We've now got an `ImageCollection` consisting of multiple Landsat missions that 
 
 ```javascript
 //--------------------------------------------------------------
-// Create a composite image
+// Create composite image
 //--------------------------------------------------------------
+
 // Use the following functions to compare different aggregations: 
 // .min(); .max(); .mean(); .median()
+// We will work with the median composite
 
-// We will work with the Median composite.
+// Get the median of value of each pixel in the collection
+// clipping it to the aoi
 var composite = landsatFiltered.median().clip(aoi);
 
-// Add composite to the map.
-Map.addLayer(composite, visParamPreProcessed, 'Median Composite');
+// Add composite to the map
+Map.addLayer(composite, visParamPreProcessed, '2020-23 Landsat median composite');
 ```
 
 <img align="center" src="../images/gee-mangrove/median_composite.png" hspace="15" vspace="10" width="600">
@@ -315,6 +318,6 @@ var asset = ee.Image('users/ebihari/GuyanaWS/images/medianCompositeLandsat_2020-
 Map.addLayer(asset, visParamPreProcessed, 'Asset');
 ```
 
-Code Checkpoint: [https://code.earthengine.google.com/05e2efede37db5059fd732c1760c9852](https://code.earthengine.google.com/05e2efede37db5059fd732c1760c9852)
+Code Checkpoint: [https://code.earthengine.google.com/537c5ab42bbc2088b72de222fb961bb6](https://code.earthengine.google.com/537c5ab42bbc2088b72de222fb961bb6)
 
 Continue onto Part 2 to finish your workflow.

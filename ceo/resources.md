@@ -1,15 +1,11 @@
 ---
 layout: page
-title: Pre-Workshop Setup
+title: Resources
 parent: "Map Validation and Area Estimation with Collect Earth Online"
-nav_order: 1
+nav_order: 8
 ---
 
-# Pre-Workshop Set Up
-1. Create a [CEO account](https://app.collect.earth/register). Remember the email address you used to make this account.
-2. Make sure you have joined the CEO institution for this workshop **“Guyana Geospatial Workshop”**. If your organization already has a CEO Institution, request to join that institution. We will also cover this step in the workshop, and make an institution if your organization does not have one.
-3. Install [Google Earth Pro](https://support.google.com/earth/answer/21955?hl=en)
-4. Create a [Google Earth Engine (GEE) account](https://earthengine.google.com/new_signup/) (Optional) 
+# Extra Resources
 
 ## Setting Up Your CEO Account  
 1. In your browser window, navigate to https://collect.earth/. CEO supports Google Chrome, Mozilla Firefox, and Microsoft Edge.  
@@ -31,13 +27,13 @@ If your institution is not yet signed up for CEO you can create a new institutio
 You can edit the elements of your institution later. If you ever decide to delete the institution all projects within it will be lost.
 
 ## Joining an Institution in CEO 
-1. A list of all institutions is displayed on the Home page 
+1. A list of all institutions is displayed on the home page 
 2. If you are logged in, this list is broken into two: Your Affiliations and Other Institutions. Your Affiliations are institutions to which you belong.
-3. Search for your institution’s name — for this workshop use the pre-created institution of “Trinidad and Tobago Geospatial Workshop”
-4. Next to each institution’s name is a [VISIT] button. Clicking on this will open the Institution page. 
+3. Search for your institution’s name — for this workshop use the pre-created institution of **“Guyana Geospatial Workshop”**
+4. Next to each institution’s name is a `VISIT` button. Clicking on this will open the Institution page. 
 <img align="center" src="../images/ceo/2A_visitCEOinstitution.png"  vspace="10" width="250"> 
 
-5. Click on the User’s button and click the Request Membership button if you have not already joined the institution.  
+5. Click on the `Users` button and click the Request Membership button if you have not already joined the institution.  
 <img align="center" src="../images/ceo/2B_requestInstitutionMembership.png"  vspace="10" width="500"> 
 
 6. An admin user can then convert all new users from Member to Admin

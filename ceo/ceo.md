@@ -14,28 +14,18 @@ Navigate through the different lesson sections by using the menu on the lefthand
 
 **Instructor(s):** Enikoe (Eni) Bihari
 
-
-|      Time     |                                                                                                       Topics                                                                                                                                     |
-|:-------------:|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-| 09:00 – 09:30 |                                  Previous Session Recap <br> Q&A                                 |
-| 9:30 – 11:00  |          Mapping Mangroves using the Landsat Archive                                    |
-| 11:00 – 11:15 |                                                Coffee break                                                              |
-| 11:15 – 12:00 |                                       Challenges - Modify and Improve your Random Forest Model                                                     |
-| 12:00 – 13:00 |                                                  Lunch                                                                   |
-| 13:00 –15:00  |                                Challenges Continued <br>Showcase Your Classification Product<br>Daily Recap                                       |
-
-|      Time     | Topics                                                                                                                                                                                                                                         |
-|:-------------:|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 09:00 – 09:45 | Welcome and set-up check<br> - What is CEO and how is it used? e.g. Map validation<br> - Making a CEO account<br> - Making and joining a CEO institution                                                                                                |
-| 09:45 – 10:00 | Hands on demonstration - Introductory tour of CEO                                                                                                                                                                                              |
-| 10:00 – 11:00 | Designing/Planning a CEO Project and Data Collection Protocols <br> - General project planning<br> - Creating an interpretation key<br> - QA/QC options for multiple interpretation or expert review and QA/QC procedures for reviewing interpretations |
-| 11:00 – 11:15 | Coffee break                                                                                                                                                                                                                                   |
-| 11:15 – 12:00 | Introduction to Stratified Random Sampling<br>Hands On Demonstration - Creating a CEO project                                                                                                                                                  |
-| 12:00 – 13:00 | Lunch                                                                                                                                                                                                                                          |
-|  13:00 –14:15 | Introduction to map validation using CEO results<br>Recommended sample interpretation best practices                                                                                                                                           |
-|  14:15 –15:00 | Hands on - Interpretation practice<br>Practicing interpretation review - discuss points of difficulty<br>Discussion on how to utilize CEO for your work                                                                                        |                                                                                   |
+Using Collect Earth Online and SEPAL for accuracy assessment and unbiased area estimation of maps
 
 
+
+|Time           |  Topics       |
+|:-------------:|:-------------:|
+| 09:00 – 9:30  | Previous Session Recap <br> Q&A <br> Setup Check |
+| 9:30 – 10:30  | Introduction to Stratified Random Sampling, Map Validation, & Unbiased Area Estimation |
+| 10:30 – 10:45 | Coffee break |
+| 10:45 – 12:00 | Introduction to Collect Earth Online |
+| 12:00 – 13:00 | Lunch |
+| 13:00 –15:00  | Map Validation and Area Estimation with GEE, CEO, and SEPAL <br> Challenges - Improve Your Stratified Random Sample and Interpretation <br> Daily Recap <br> Final Survey|
 
 ## Sources 
 Material for this overview was gathered and modified from:

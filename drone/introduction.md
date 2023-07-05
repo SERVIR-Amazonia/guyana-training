@@ -15,7 +15,7 @@ Welcome to Drone Flight and Image Processing! In this workshop, we will discuss 
 1. Make sure you have Pix4Dmapper installed on your computer.
 2. Make sure you have Pix4Dcapture installed on your phone.
 3. Make sure you have made a Pix4D account and activated your 14-day free Pix4Dmapper trial.
-4. Download the all the images from this folder onto your computer []().
+4. Download all the files from this folder onto your computer [https://drive.google.com/drive/folders/1D306CvHz0vIgXtWKXkIn5_z_TuYh4B7n?usp=drive_link](https://drive.google.com/drive/folders/1D306CvHz0vIgXtWKXkIn5_z_TuYh4B7n?usp=drive_link).
 
 ## Objectives 
 1. Understand the basics of the drone flight planning process, including safety, logistics, and flight parameters.

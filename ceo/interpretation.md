@@ -2,7 +2,7 @@
 layout: page
 title: Image Interpretation in a CEO Project
 parent: "Map Validation and Area Estimation with Collect Earth Online"
-nav_order: 6
+nav_order: 5
 ---
 
 # Image Interpretation in a CEO Project (& Interpretation Best Practices)
@@ -21,7 +21,7 @@ Below is a more detailed recommendations for a step-by-step interpretation proce
 2. In the main window, zoom out and in to look at the plot in context using Mapbox imagery.
 3. Next look at the high resolution imagery in Google Earth Pro using the time slider from the historical imagery tool.  Scan to a date within or close to the time period of interest using the historical imagery tool.
 
-    <img align="center" src="../images/ceo/8A_Pro_historicalicon.png"  vspace="10" width="150"> 
+    <img align="center" src="../images/ceo/8A_Pro_historicalicon.png"  vspace="10" width="50"> 
     
 4. If not enough information is available in Google Earth Pro to answer all the questions, next use the imagery drop down menu in CEO. (Planet and Sentinel data are only available in recent years.)
     - Planet NICFI mosaics to help you interpret the land cover type. Make sure to use the Update Map button each time you change the date. 
