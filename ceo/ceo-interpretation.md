@@ -38,6 +38,7 @@ Below is a more detailed recommendations for a step-by-step interpretation proce
             - E.g. True color for Landsat 8: {"bands": ["B4", "B3", "B2"], "min":0, "max":3000}. Note that you only see the most recent image from the time period selected, like the top card in a stack of cards. In this Landsat 8 example 01/01/2010-12/31/2020 is selected, but what you are seeing is a scene from late 2022.
                 <img align="center" src="../images/ceo/8D_truecolorL8.png"  vspace="10" width="500">
         - False-color infrared band combination is meant to emphasize healthy and unhealthy vegetation, and can be used to assess plant density or plant health. Vegetation is red, denser plant growth is darker red, urban areas and exposed ground are gray or tan, and water appears blue or black.
+
             <img align="center" src="../images/ceo/8E_falsecolor.png"  vspace="10" width="500">       
     - The Sentinel-2 imagery option has many other pre-loaded lesser-used band combinations in its drop down menu.
         - General guidelines for identifying types of surfaces with SAR:
@@ -66,7 +67,7 @@ Below is a more detailed recommendations for a step-by-step interpretation proce
     - If your images are unclear or not available at the exact event time in which you are interested, use context clues to make your decision.
         - E.g. If you think a deforestation event happened because of a drop in the NDFI graph, but no image is available in Google Earth Pro until 3 years later, then look for young recovering growth, or evidence nearby of human-caused deforestation such as logging roads or other clearings.
 7. In the survey question where you can leave notes, provide information on your reasoning and/or points of confusion in the short answer box and click ‘Save’. Include anything you might want to remember later to justify your reasoning if another interpreter disagreed.  
-<img align="center" src="../images/ceo/8I_surveyquestions.png"  vspace="10" width="300">
+    <img align="center" src="../images/ceo/8I_surveyquestions.png"  vspace="10" width="300">
 
 8. If available, be sure to indicate in the slider your level of confidence in your answers, so those with low confidence can be reviewed by the group or another interpreter.  
     <img align="center" src="../images/ceo/4C_plotconfidence.png"  vspace="10" width="200">
@@ -74,4 +75,4 @@ Below is a more detailed recommendations for a step-by-step interpretation proce
 9. Click `Save` at the end of all the questions, making all the numbered boxes have turned blue to signify you have completed them. You can then proceed to another point for interpretation.
 10. You should only click [Flag Plot] if the sample point is for some reason unusable. Any answers you provided for this plot will not be saved.
 11. If you want to go back to a previously analyzed plot to adjust your answers, change the “Navigate through” option at the top right of the screen from “Unanalyzed plots” to “My analyzed plots” and go to the desired plot number.  
-<img align="center" src="../images/ceo/8J_reviewnavigate.png"  vspace="10" width="200">
+    <img align="center" src="../images/ceo/8J_reviewnavigate.png"  vspace="10" width="200">

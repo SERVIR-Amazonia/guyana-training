@@ -66,9 +66,11 @@ If you want to add this imagery source to all of your institution’s projects, 
     - **Private**: Group Admins: Only your Institution’s Admins can see and contribute to your project. Admins from other institutions cannot use your project as a template.
 4. Select Project Options.
     - The first option is **Show GEE Script Link on the Collection Page**. This allows users in Data Collection to click on a button labeled Go to GEE Script. This button will take them to a GEE website tool with additional information about the plot, including annual imagery and time series graphs. An example is shown here:
-    <img align="center" src="../images/ceo/5F_GEEtool.png"  vspace="10" width="600"> 
+            <img align="center" src="../images/ceo/5F_GEEtool.png"  vspace="10" width="600"> 
+
     - The second option is **Show Extra Plot Columns on Collection Page**. This option is only useful if you are using .csv or .shp files to define your Plot Design and that file has extra columns of information. Data collectors will be able to see them on the Data Collection page under Plot Information.  
-    <img align="center" src="../images/ceo/5G_PlotInformation.png"  vspace="10" width="200"> 
+            <img align="center" src="../images/ceo/5G_PlotInformation.png"  vspace="10" width="200"> 
+            
     - The third option is **Collect Plot Confidence on Collection Page**. If you want users to be able to tell you how certain they are of their answers to the survey questions, the confidence slider will allow them to assign a value 1-100, where 100 is completely confident of their answers; this value applies to the entire plot. This info will be included in your plot and sample CSV downloads. It can also be used during QA/QC, as you can use this to filter the plots in CEO and only review those with confidence below a certain value.
     <p align="center">
     <img src="..//images/ceo/5H_PlotConfidence.png" vspace="10" width="250"> 
@@ -120,12 +122,12 @@ If you want to add this imagery source to all of your institution’s projects, 
     - **Equal assignments** splits the total number of plots evenly between users.
     - **Percentage of plots** allows for uneven splits.
 
-     <img align="center" src="../images/ceo/5L_assignplots.png"  vspace="10" width="300"> 
+        <img align="center" src="../images/ceo/5L_assignplots.png"  vspace="10" width="300"> 
 8. Quality Control –  this feature is set to None by default and cannot be implemented unless users have been assigned to the project by their email address (‘Equal assignments’ or ‘Percentage of plots’ options for User Assignment). The following Quality Control options allow multiple users to collect data for the same plot for QA/QC purposes. If this feature is enabled, the project can no longer support User Drawn samples (see next section).
     - **Overlap**: A certain percentage of each users’ plots are reviewed by the other users.
     - **Subject Matter Expert Verification (SME Verification)**: A percentage of each users’ plots are reviewed by one or more SMEs. For example, the SME might be someone with deep knowledge of the local landscape, or a project administrator.
 
-    <img align="center" src="../images/ceo/5M_QAQCdesign.png"  vspace="10" width="400"> 
+        <img align="center" src="../images/ceo/5M_QAQCdesign.png"  vspace="10" width="400"> 
 
 <p>&nbsp;</p>
 
@@ -185,7 +187,7 @@ If you want to add this imagery source to all of your institution’s projects, 
 ### Survey Rules
 1. This section is optional. Survey rules help ensure users collect logical and correct answers. If you do not want to add any rules, you can just click Next.
 2. There are several options for survey rules.  
-<img align="center" src="../images/ceo/5P_surveyrules.png"  vspace="10" width="300"> 
+    <img align="center" src="../images/ceo/5P_surveyrules.png"  vspace="10" width="300"> 
 
     >- **Text Regex Match**: This rule applies only to Input—text questions & their answers. It allows you to verify if the entered value fits, using regular expressions. However, unless you have a specific reason to use the Input—text question type, consider using Button—text or Radiobutton—text instead. These options are easier for users and will always provide exact text. This rule uses the JavaScript RegExp function, documentation for writing a regular expression can be found [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions). 
     >- **Numeric Range**: This rule applies to Input—number questions & their answers. With this rule, you can verify that the numeric input falls within a predefined range. 
