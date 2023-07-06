@@ -11,6 +11,8 @@ Welcome to an Map Validation and Area Estimation with Collect Earth Online (CEO)
 
 ## Pre-Workshop Set Up
 
+### **[Detailed instructions on pre-workshop setup](https://docs.google.com/document/d/16N5wXbWi767AG4k-BPusu9Gc0HXKrY9qACFN9JZkiAA/edit?usp=sharing)**     
+
 1. Create a [CEO account](https://app.collect.earth/register). Remember the email address you used to make this account.
 2. Join the CEO institution for this workshop **“Guyana Geospatial Workshop”**. If your organization already has a CEO Institution, request to join that institution. We will also cover this step in the workshop, and make an institution if your organization does not have one.
 3. Install [Google Earth Pro](https://support.google.com/earth/answer/21955?hl=en) on your computer.

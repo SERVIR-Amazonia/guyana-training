@@ -15,9 +15,11 @@ For this exercise, we will use System for Earth Observation Data Access, Process
 
 SEPAL is essentially a system for accessing, processing, & analyzing earth observation data for land monitoring.  It enables users to create image composites, process images, download files, create stratified sampling designs, and more.  SEPAL is part of the Open Foris suite of tools,, and it integrates with Collect Earth Online (CEO) and the Google Earth Engine (GEE). 
 
+### **Detailed instructions on pre-workshop setup - [https://docs.google.com/document/d/16N5wXbWi767AG4k-BPusu9Gc0HXKrY9qACFN9JZkiAA/edit?usp=sharing](https://docs.google.com/document/d/16N5wXbWi767AG4k-BPusu9Gc0HXKrY9qACFN9JZkiAA/edit?usp=sharing)**    
+
 1. Create a new script file in your own script repository - name it 'Area Estimation - Sample Design'. Keep in mind a master copy is available in the above script repository.
-2. Check the full script [https://code.earthengine.google.com/074c57c9a2487dc88f4cbad30669e5d7](https://code.earthengine.google.com/074c57c9a2487dc88f4cbad30669e5d7)
-3. If you need to check any of the documents or data from this exercise, you can find them in this Google Drive folder [https://drive.google.com/drive/folders/1MvRha9K4355wRICQs-jGy2Uw0BPBQ3Kr?usp=drive_link](https://drive.google.com/drive/folders/1MvRha9K4355wRICQs-jGy2Uw0BPBQ3Kr?usp=drive_link)
+2. Check the full script - [https://code.earthengine.google.com/074c57c9a2487dc88f4cbad30669e5d7](https://code.earthengine.google.com/074c57c9a2487dc88f4cbad30669e5d7)
+3. If you need to check any of the documents or data from this exercise, you can find them in this Google Drive folder - [https://drive.google.com/drive/folders/1MvRha9K4355wRICQs-jGy2Uw0BPBQ3Kr?usp=drive_link](https://drive.google.com/drive/folders/1MvRha9K4355wRICQs-jGy2Uw0BPBQ3Kr?usp=drive_link)
 
 # Create Classification Map in GEE
 
@@ -178,7 +180,7 @@ Code Checkpoint: [https://code.earthengine.google.com/074c57c9a2487dc88f4cbad306
 
 Log in to CEO.  On the main CEO page, in the search bar at the top left, search for an institution called “Guyana Geospatial Workshop.” Click `Visit`.
 
-<img align="center" src="../images/ceo/ceo_homepage.png" hspace="15" vspace="10" width="600">
+<img align="center" src="../images/ceo/CEO_homepage.png" hspace="15" vspace="10" width="600">
 
 ## Create a CEO Project
 
@@ -190,31 +192,31 @@ You can also create a project from scratch, but for the sake of simplicity, we w
 
 Then, **add YOUR NAME to the end of the project name**.  This way, everyone in the workshop will have their own project to work in.  
 
-<img align="center" src="../images/ceo/ceo_newproject.png" hspace="15" vspace="10" width="700">
+<img align="center" src="../images/ceo/CEO_newproject.png" hspace="15" vspace="10" width="700">
 
 Click `Next`.
 
 On the `Imagery Selection` page, you can change the imagery that will be available when collecting data.  You will see the default CEO imagery data sets under `Public Imagery`, as well as the imagery data sets you or someone else manually uploaded to your institution under `Private Institution Imagery `.  Here, we have already uploaded the Giri mangrove map we originally used to sample from when we were training our random forest mangrove classification model (we will return to how this was done in a bit).
 
-<img align="center" src="../images/ceo/ceo_imageryselection.png" hspace="15" vspace="10" width="700">
+<img align="center" src="../images/ceo/CEO_imageryselection.png" hspace="15" vspace="10" width="700">
 
 On the `Plot Design` page, you cannot change the parameters because `Copy Template Plots and Samples` was checked on the `Project Overview` page.  There are 20 plots centered on our validation points exported from GEE.  They are square and 30m in width because the Landsat data used for our classification has a resolution of 30m.
 
-<img align="center" src="../images/ceo/ceo_plotdesign.png" hspace="15" vspace="10" width="700">
+<img align="center" src="../images/ceo/CEO_plotdesign.png" hspace="15" vspace="10" width="700">
 
 If `Copy Template Plots and Samples` was not checked, this page would look like this, and you would need to upload the .csv file with the validation points that was exported from GEE.
 
-<img align="center" src="../images/ceo/ceo_plotdesign2.png" hspace="15" vspace="10" width="700">
+<img align="center" src="../images/ceo/CEO_plotdesign2.png" hspace="15" vspace="10" width="700">
 
 Click `Next`.
 
 On the `Sample Design` page, you also cannot change the parameters because `Copy Template Plots and Samples` was checked on the `Project Overview` page.  Each plot corresponds to a single sample located in the center of the plot.
 
-<img align="center" src="../images/ceo/ceo_sampledesign.png" hspace="15" vspace="10" width="700">
+<img align="center" src="../images/ceo/CEO_sampledesign.png" hspace="15" vspace="10" width="700">
 
 If `Copy Template Plots and Samples` was not checked, this page would look like this, and you would be able to create multiple samples within each plot.
 
-<img align="center" src="../images/ceo/ceo_sampledesign2.png" hspace="15" vspace="10" width="700">
+<img align="center" src="../images/ceo/CEO_sampledesign2.png" hspace="15" vspace="10" width="700">
 
 Click `Next`.
 
@@ -222,49 +224,49 @@ On the `Survey Questions` page, you can create various types of sruvey questions
 
 For this exercise, we have one simple survey question asking about whether the plot is mangrove or not.  On the right, you can see an example of what the survey question will look like when collecting data.
 
-<img align="center" src="../images/ceo/ceo_surveyquestions.png" hspace="15" vspace="10" width="700">
+<img align="center" src="../images/ceo/CEO_surveyquestions.png" hspace="15" vspace="10" width="700">
 
 Click `Next`.
 
 On the `Survey Rules` page, you can create rules related to your survey questions.  You can set the rules so that CEO does not accept certain answers if the other questions were answered in a certain way.
 
-<img align="center" src="../images/ceo/ceo_surveyrules.png" hspace="15" vspace="10" width="700">
+<img align="center" src="../images/ceo/CEO_surveyrules.png" hspace="15" vspace="10" width="700">
 
 Click `Next`.
 
 On the `Review` page, you can check that everything looks good and create the project.  Check the box agreeing to the terms and conditions, and click `Create Project`.
 
-<img align="center" src="../images/ceo/ceo_review.png" hspace="15" vspace="10" width="700">
+<img align="center" src="../images/ceo/CEO_review.png" hspace="15" vspace="10" width="700">
 
 At this point, you can still edit the project.  In order to start collecting data, you will need to click `Publish Project` on the next page, but you will now lose your ability to edit the plot and sample design.
 
-<img align="center" src="../images/ceo/ceo_publish.png" hspace="15" vspace="10" width="700">
+<img align="center" src="../images/ceo/CEO_publish.png" hspace="15" vspace="10" width="700">
 
 Go back to the institution home page, and click on `Imagery`.
 
-<img align="center" src="../images/ceo/ceo_imagery.png" hspace="15" vspace="10" width="700">
+<img align="center" src="../images/ceo/CEO_imagery.png" hspace="15" vspace="10" width="700">
 
 Click on the `edit` button for the last imagery on the page called "Global Mangrove Forests Distribution".  Here, you can see how to add a new type of imagery to a project.  There are some data sets already available in CEO, like Sentinel and Planet, but you can also import any public GEE image/image Collection or any private GEE asset.  You just need its asset ID, a start and end date, and some parameters for its visualization.
 
-<img align="center" src="../images/ceo/ceo_imagery2.png" hspace="15" vspace="10" width="700">
+<img align="center" src="../images/ceo/CEO_imagery2.png" hspace="15" vspace="10" width="700">
 
 ## Collect Data in the CEO Project
 
 Now that you have published your project, go back to the institution home page and click on your project you just created to start collecting data.  It should be red before you start collecting data, yellow after you start collecting data, and green when you finish collecting data for all plots.
 
-<img align="center" src="../images/ceo/ceo_projectpage2.png" hspace="15" vspace="10" width="700">
+<img align="center" src="../images/ceo/CEO_projectpage2.png" hspace="15" vspace="10" width="700">
 
 Select `Collect` and click `Go to First Plot`.
 
-<img align="center" src="../images/ceo/ceo_collect.png" hspace="15" vspace="10" width="700">
+<img align="center" src="../images/ceo/CEO_collect.png" hspace="15" vspace="10" width="700">
 
 It should take you to the first plot.  Here, you can view the original Giri et al. mangrove classifications in `Plot Information`, as well as all the imagery that was selected for this project in `Imagery Options`.  
 
-<img align="center" src="../images/ceo/ceo_collect2.png" hspace="15" vspace="10" width="700">
+<img align="center" src="../images/ceo/CEO_collect2.png" hspace="15" vspace="10" width="700">
 
 If you want some more high resolution imagery to help in your decision, click `Download Plot KML`.  Now, open this file, and Google Earth Pro will open with the plot geometry already loaded in on top of Google Earth imagery.
 
-<img align="center" src="../images/ceo/ceo_downloadKML.png" hspace="15" vspace="10" width="300">
+<img align="center" src="../images/ceo/CEO_downloadKML.png" hspace="15" vspace="10" width="300">
 
 Once you have opened Google Earth Pro, click on the clock icon on the toolbar at the top of the screen.  A bar showing a timeline of dates will appear at the top left corner of the screen.  You can use this bar to look at all historical and current Google Earth imagery available for this location. 
 
@@ -274,13 +276,13 @@ Go back to the CEO project.  In `Survey Questions`, select whether the plot was 
 
 **It is very important to click `Save` after EVERY plot you finish!**  
 
-<img align="center" src="../images/ceo/ceo_collect2.png" hspace="15" vspace="10" width="700">
+<img align="center" src="../images/ceo/CEO_collect2.png" hspace="15" vspace="10" width="700">
 
 When you click `Save`, it should take you to the next plot.  Go through all 20 plots and select whether it was mangrove or not.  When you are done (and have saved each plot individually), click `Quit` to exit data collection mode.
 
 Now that you have finished collecting data in your project, go back to the institution home page and click the `S` button to the right of your project.  This will download the data as a .csv file.  The file you download will retain the original columns from the sample points we generated in GEE and uploaded to CEO as a .csv (with `pl_` added to the column name).
 
-<img align="center" src="../images/ceo/ceo_projectpage2.png" hspace="15" vspace="10" width="600">
+<img align="center" src="../images/ceo/CEO_projectpage2.png" hspace="15" vspace="10" width="600">
 
 # Assess Accuracy and Estimate Area in SEPAL
 

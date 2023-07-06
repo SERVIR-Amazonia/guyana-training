@@ -12,10 +12,13 @@ Welcome to Drone Flight and Image Processing! In this workshop, we will discuss 
 *The imagery we use in this workshop has been provided by Paula A. Paz from the CIAT Campus.*
 
 ## Pre-workshop Set-up
-1. Make sure you have Pix4Dmapper installed on your computer.
-2. Make sure you have Pix4Dcapture installed on your phone.
-3. Make sure you have made a Pix4D account and activated your 14-day free Pix4Dmapper trial.
-4. Download all the files from this folder onto your computer [https://drive.google.com/drive/folders/1D306CvHz0vIgXtWKXkIn5_z_TuYh4B7n?usp=drive_link](https://drive.google.com/drive/folders/1D306CvHz0vIgXtWKXkIn5_z_TuYh4B7n?usp=drive_link).
+
+### **[Detailed instructions on pre-workshop setup](https://docs.google.com/document/d/16N5wXbWi767AG4k-BPusu9Gc0HXKrY9qACFN9JZkiAA/edit?usp=sharing)**  
+
+1. Make sure you have [Pix4Dmapper](https://www.pix4d.com/download/pix4dmapper/) installed on your computer.
+2. Make sure you have [Pix4Dcapture](https://play.google.com/store/apps/details?id=com.pix4d.capturepro) installed on your phone.
+3. Make sure you have made a Pix4D account and activated your [14-day free Pix4Dmapper trial](https://support.pix4d.com/hc/en-us/articles/202560729-How-to-get-a-trial-of-Pix4Dmapper).
+4. Download all the files from this Google Drive folder onto your computer -[https://drive.google.com/drive/folders/1D306CvHz0vIgXtWKXkIn5_z_TuYh4B7n?usp=drive_link](https://drive.google.com/drive/folders/1D306CvHz0vIgXtWKXkIn5_z_TuYh4B7n?usp=drive_link).
 
 ## Objectives 
 1. Understand the basics of the drone flight planning process, including safety, logistics, and flight parameters.

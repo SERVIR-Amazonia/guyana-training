@@ -12,7 +12,7 @@ nav_order: 2
 For the practicum, you will select pre-event and post-event image scenes and investigate the conditions in these images in a false-color composite display. Next, you will calculate the NDWI index for each scene and create a difference image using the two NDWI maps. Finally, you will apply a threshold to the difference image to establish categories of changed versus stable areas. For this demonstration we will capture the difference in surface water levels between 2015 (a historically dry year) and 2021 (a historically wet year).
 
 1. Create a new script file in your own script repository - name it 'Change Detection - Two Date'. Keep in mind a master copy is available in the script repository.
-2. Check the full script [https://code.earthengine.google.com/e2c066722613fec4ac50c18ee5bba557](https://code.earthengine.google.com/e2c066722613fec4ac50c18ee5bba557)
+2. Check the full script - [https://code.earthengine.google.com/e2c066722613fec4ac50c18ee5bba557](https://code.earthengine.google.com/e2c066722613fec4ac50c18ee5bba557)
 
 # Preparing Imagery
 

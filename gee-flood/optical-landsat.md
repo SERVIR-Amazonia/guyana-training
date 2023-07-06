@@ -13,7 +13,7 @@ In this case study you will develop a tool that maps areas inundated by water fo
  This training session was adapted from [SERVIR Mekong Case Study 2 - Surface Water Mapping](https://docs.google.com/document/d/1uyFCMNi1mhiMvwEwFiqOflyUL__uKb7jwwsSLES3hQo/edit)
 
 1. Create a new script file in your own script repository - name it 'Flood Mapping - Optical'. Keep in mind a master copy is available in the script repository.
-2. Check the full script [https://code.earthengine.google.com/ff3a503f501769d2191f95cf803ef929](https://code.earthengine.google.com/ff3a503f501769d2191f95cf803ef929)
+2. Check the full script - [https://code.earthengine.google.com/ff3a503f501769d2191f95cf803ef929](https://code.earthengine.google.com/ff3a503f501769d2191f95cf803ef929)
 
 **Theory**
 

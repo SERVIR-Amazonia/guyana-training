@@ -12,10 +12,12 @@ Welcome to Two Date Change Detection! This workshop contains multiple hands on G
 *Content for this workshop was adapted from [EEFA Book Chapter F4.4](https://www.eefabook.org/table-of-contents.html) and [EEFA Book Chapter F4.5](https://www.eefabook.org/table-of-contents.html)*
 
 ## Pre-workshop Set-up
+
+### **[Detailed instructions on pre-workshop setup](https://docs.google.com/document/d/16N5wXbWi767AG4k-BPusu9Gc0HXKrY9qACFN9JZkiAA/edit?usp=sharing)**    
+
 1. Ensure you are logged into your Google Earth Engine account.
 2. Click this link to accept the Guyana GEE script repository - [https://code.earthengine.google.com/?accept_repo=users/ebihari/GuyanaWS](https://code.earthengine.google.com/?accept_repo=users/ebihari/GuyanaWS)
 3. Slides from today are in the Resources page of this website and also linked [here](https://docs.google.com/presentation/d/1YPY0MzGYcraMQOmlPv2PP_ibPjMQh9bT/edit?usp=sharing&ouid=115564508851028065035&rtpof=true&sd=true)
-
 
 ## Objectives (two-date change detection)
 1. Calculate spectral indices to extract patterns
@@ -28,7 +30,7 @@ Welcome to Two Date Change Detection! This workshop contains multiple hands on G
 2. Gain exposure to several time series change detection algorithms
 3. Get hands-on practice running LandTrendr using the LandTrendr GUI
 
-# Change Detection Theory
+# Background
 
 Change detection is the process of assessing how landscape conditions are changing by looking at differences in images acquired at different times. This can be used to quantify changes in forest cover—such as those following a volcanic eruption, logging activity, or wildfire—or when crops are harvested (Fig. F4.4.1). For example, using time-series change detection methods, Hansen et al. (2013) quantified annual changes in forest loss and regrowth. Change detection mapping is important for observing, monitoring, and quantifying changes in landscapes over time. Key questions that can be answered using these techniques include identifying whether a change has occurred, measuring the area or the spatial extent of the region undergoing change, characterizing the nature of the change, and measuring the pattern (configuration or composition) of the change (MacLeod and Congalton 1998).
 

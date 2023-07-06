@@ -11,7 +11,7 @@ nav_order: 3
 In this case study, we will train a classifer to predict flooded land covers using Sentinel 1 SAR scenes collected in both dry and wet seasons.
 
 1. Create a new script file in your own script repository - name it 'Flood Mapping - SAR'. Keep in mind a master copy is available in the script repository.
-2. Check the full script [https://code.earthengine.google.com/36484d3506fb35468aa8e5a0bf80d3e9](https://code.earthengine.google.com/36484d3506fb35468aa8e5a0bf80d3e9)
+2. Check the full script - [https://code.earthengine.google.com/36484d3506fb35468aa8e5a0bf80d3e9](https://code.earthengine.google.com/36484d3506fb35468aa8e5a0bf80d3e9)
 
 **General Supervised Classification Workflow**
 

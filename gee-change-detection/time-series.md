@@ -15,6 +15,21 @@ You can read more about LandTrendr in the [EEFA Book Chapter F4.5](https://www.e
 
 >In this session, we use the LandTrendr time-series algorithms to map change. The LandTrendr algorithms apply “temporal segmentation” strategies to distill a multiyear time series into sequential straight-line segments that describe the change processes occurring in each pixel. We then isolate the segment of interest in each pixel and make maps of when, how long, and how intensely each process occurred. Similar strategies can be applied to more complicated descriptions of the time series, as is seen in some of the chapters that follow this one."
 
+In essence, it looks at how the values of an index change over time, fitting lines to the changes.  It then classifies those changes based on their length and magnitude.
+
+Landtrendr (and similar time series segmentation algorithms) have some big advantages:
+* it can break time series data up into time periods of change, telling us the time and magnitude of change
+* it can interpolate between missing observations (e.g. cloud or cloud shadow)
+* it can smooth out noise in the data (e.g. small differences in reflectance due to atmospheric conditions)
+
+<img align="center" src="../images/gee-change-detection/LandTrendr_explanation1.png" hspace="15" vspace="10" width="600">
+
+<img align="center" src="../images/gee-change-detection/LandTrendr_explanation2.png" hspace="15" vspace="10" width="600">
+
+<img align="center" src="../images/gee-change-detection/LandTrendr_explanation3.png" hspace="15" vspace="10" width="600">
+
+You can also read more about LandTrendr on [the eMaprR website](https://emapr.github.io/LT-GEE/landtrendr.html).
+
 1. Go to the `GuyanaWS` repository ([https://code.earthengine.google.com/?accept_repo=users/ebihari/GuyanaWS](https://code.earthengine.google.com/?accept_repo=users/ebihari/GuyanaWS)), and open the `LandTrendr App - Guyana version` folder. 
 2. In this folder, open the script named **LandTrendr App - Data Visualization and Download**. 
 3. Run this script.  In a few seconds, the LandTrendr GUI should load right there in GEE.
