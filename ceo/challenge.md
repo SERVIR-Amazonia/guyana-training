@@ -51,7 +51,7 @@ Map.addLayer(samplePts,{},'sample points');
 * How could CEO be useful to you?
 * What tools/data would be helpful to include in your project?
 
-## General Help
+# General Help
 *If you ever need help with your work in CEO a good place to start is with the `Support` and `Blog` pages linked at the top of the CEO website. Tutorials are provided for project creation and interpretation*
 
 

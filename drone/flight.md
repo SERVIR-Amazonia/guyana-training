@@ -11,7 +11,7 @@ In this exercise, we will go over the steps to plan a drone flight and create a 
 
 # Overview 
 
-<img align="center" src="../images/drone/flight_process.png" hspace="15" vspace="10" width="800">
+<img align="center" src="../images/drone/flight_process.png" hspace="15" vspace="10" width="1000">
 
 *Flowchart made by Paula A. Paz​, Jhon Jairo Tello​, Louis Reymondin​ in Alliance Bioversity CIAT for the Terra-i project*
 

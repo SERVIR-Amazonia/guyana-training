@@ -15,7 +15,7 @@ For this exercise, we will use System for Earth Observation Data Access, Process
 
 SEPAL is essentially a system for accessing, processing, & analyzing earth observation data for land monitoring.  It enables users to create image composites, process images, download files, create stratified sampling designs, and more.  SEPAL is part of the Open Foris suite of tools,, and it integrates with Collect Earth Online (CEO) and the Google Earth Engine (GEE). 
 
-### **Detailed instructions on pre-workshop setup - [https://docs.google.com/document/d/16N5wXbWi767AG4k-BPusu9Gc0HXKrY9qACFN9JZkiAA/edit?usp=sharing](https://docs.google.com/document/d/16N5wXbWi767AG4k-BPusu9Gc0HXKrY9qACFN9JZkiAA/edit?usp=sharing)**    
+### **[Detailed instructions on pre-workshop setup](https://docs.google.com/document/d/16N5wXbWi767AG4k-BPusu9Gc0HXKrY9qACFN9JZkiAA/edit?usp=sharing)**    
 
 1. Create a new script file in your own script repository - name it 'Area Estimation - Sample Design'. Keep in mind a master copy is available in the above script repository.
 2. Check the full script - [https://code.earthengine.google.com/074c57c9a2487dc88f4cbad30669e5d7](https://code.earthengine.google.com/074c57c9a2487dc88f4cbad30669e5d7)

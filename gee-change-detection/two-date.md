@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Part 1 - Two-Date Change Detection 
+title: Part 1 - Two-Date Change Detection with Landsat
 parent:  "Advanced Google Earth Engine: Change Detection"
 nav_order: 2
 ---

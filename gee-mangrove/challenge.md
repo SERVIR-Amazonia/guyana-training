@@ -29,7 +29,7 @@ Beyond the model structure itself, we can also provide more and/or better refere
 
 To provide better quality reference data, we can look for another source of Mangrove presence/absence data, or make our own. Making your own will take time and expertise. 
 
-Try to find another mangrove data source like [Global Mangrove Watch](https://www.globalmangrovewatch.org/?activeLayers=mangrove_extent&category=distribution_and_change&zoom=7.299707280073768). How could you replace the Giri et al 2011 data in the workflow with this data source?  
+Try to find another mangrove data source like [Global Mangrove Watch](https://www.globalmangrovewatch.org/?activeLayers=mangrove_extent&category=distribution_and_change&zoom=7.299707280073768). How could you replace the Giri et al. 2011 data in the workflow with this data source?  
 
 ## Happy Coding!
 Do some experimentation, collaborate with your colleagues, ask your instructor questions - Good luck!

@@ -105,6 +105,8 @@ Each point within the `FeatureCollection` contains the value of the underlying p
 
 Now that we have generated our image composite and our training data, it is time to train the Random Forest and classify our composite with it. 
 
+<img align="center" src="../images/gee-mangrove/randomforest.png" hspace="15" vspace="10" width="600">
+
 We train a Random Forest classifier with only the training point subset. 
 
 *Tip:* Here is a short intro to how random forest classification works: [https://www.ibm.com/topics/random-forest](https://www.ibm.com/topics/random-forest)
