@@ -9,7 +9,7 @@ nav_order: 2
 
 # Overview 
 
-In this workflow, we will create an archive of Landsat imagery from Landsat missions 5 through 9, filter the image archive down to a desired time period of interest, then use the data to classify mangrove presence using a Random Forest classification model. 
+In this workflow, we will create an archive of Landsat imagery from Landsat missions 5 through 9, filter the image archive down to a desired time period of interest, add elevation and Synthetic Aperture Radar (SAR) data (from Copernicus), and then use the data to classify mangrove presence using a Random Forest classification model. 
 
 Follow along by copying and pasting each code block in the lesson into your own blank script. At the end you will have the entire workflow saved to a script file on your own GEE account.
 
@@ -50,17 +50,61 @@ However, for this section, we will create an AOI by drawing a polygon.  Comment 
 
 # Preprocessing Image Collections 
 
+First, let's import our elevation and SAR data.  We will use a Digital Elevation Model (DEM) produced from Copernicus data with a 30m resoltuion, and we will use SAR from Copernicus with a 10m resolution.  For the SAR data, we will filter for the dates we want, create a median composite, sepcify a couple other parameters, and apply a focal mean filter to reduce speckling (which is a common artifact of SAR).
+
+```javascript
+//--------------------------------------------------------------
+// Define raster data (Landsat, Copernicus SAR, Copernicus DEM)
+//--------------------------------------------------------------
+
+// Copernicus DEM ----------------------------------------------
+
+// import the DEM band from the Copernicus DEM data set
+var demCollection = ee.ImageCollection('COPERNICUS/DEM/GLO30');
+var elevation = demCollection
+    .select('DEM')
+    .mosaic()
+    .clip(aoi);
+var elevationVis = {
+  min: 0.0,
+  max: 50,
+  palette: ['0000ff','00ffff','ffff00','ff0000','ffffff'],
+};
+
+// add DEM to the map
+Map.addLayer(elevation, elevationVis, 'DEM');
+
+// Copernicus SAR ----------------------------------------------
+
+// import the VV and VH bands from the Copernicus SAR imagery 
+var SARcollection = ee.ImageCollection('COPERNICUS/S1_GRD') 
+.filter(ee.Filter.eq('instrumentMode', 'IW'))
+// .filter(ee.Filter.eq('orbitProperties_pass', 'ASCENDING'))
+// .filterMetadata('resolution_meters','equals',10)
+.filterBounds(aoi)
+.select('VV','VH')
+
+// filter for the year we want
+var SAR = SARcollection.filterDate('2020-01-01','2023-01-01').median().clip(aoi);
+
+// define visualization parameters
+var SARvis = {bands:['VV'],min:-20,max:0};
+
+// apply speckle filter
+var smoothingRadius = 50;
+var SARFiltered = SAR.focal_mean(smoothingRadius,'circle','meters');
+
+// add filtered SAR to map
+Map.addLayer(SARFiltered, SARvis,'SAR',false);
+```
+
 We always want to apply filters to `ImageCollections` as early in our workflow as we can to reduce the amount of effort the GEE servers will require. We already know the area that we'd like to pull data for (our AOI), and that we want relatively few clouds in our images, so we will apply a boundary and a cloud cover filter.
 
-Let's do that for our first Landat `ImageCollection`, Landsat 5.
+Let's do that for our first Landsat `ImageCollection`, Landsat 5.
 
 *Tip:*  Since there are differences in the amount and the order of bands on each Landsat mission, we use a dictionary (`sensorBandDictLandsatTOA`) and a list (`bandNamesLandsatTOA`) to standardize this information for us going forward using `select()` - it saves us quite a bit of typing when doing this for multiple collections. 
 
 ```javascript
-//--------------------------------------------------------------
-// Define raster data (Landsat data)
-//--------------------------------------------------------------
-
 // merge together all Landsat Image Collections from 
 // Landsat 4 to Landsat 9 
 // to make a continuous archive of data going back to the 1990s
@@ -147,6 +191,7 @@ function cloudShadowMask(image) {
   return ee.Image(image).updateMask(mask);
 }
 ```
+
 In the second function we generate several spectral indices from the pre-existing spectral bands in our Landsat scenes.  All of these indeces can help in identifying mangroves, and index values range from -1 to +1.
 
 **NDVI:** Normalized Difference Vegetation Index - quantifies vegetation by measuring the difference between near-infrared (which vegetation strongly reflects) and red light (which vegetation absorbs)
@@ -262,7 +307,7 @@ We now have an `ImageCollection` consisting of data from multiple Landsat sensor
 
 # Image Compositing
 
-We've now got an `ImageCollection` consisting of multiple Landsat missions that captured data in our desired date range. To train a mangrove classification model, we'll reduce the size of our input data by making a composite of the `ImageCollection`. Let's make a median composite for this demonstration and clip it to our AOI.
+We've now got an `ImageCollection` consisting of multiple Landsat missions that captured data in our desired date range. To train a mangrove classification model, we'll reduce the size of our input data by making a composite of the `ImageCollection`. Let's make a median composite for this demonstration and clip it to our AOI.  Also, let's add in our DEM and SAR data to this composite.
 
 *Note:*  At a given pixel in your composite, if every single image in your `ImageCollection` was masked in that location (due to preprocessing in our case), then the composite will also be masked there. This can be remedied by more nuanced preprocessing algorithms and filters for the `ImageCollection`, but is beyond the scope of this demonstration.
 
@@ -276,46 +321,58 @@ We've now got an `ImageCollection` consisting of multiple Landsat missions that 
 // We will work with the median composite
 
 // Get the median of value of each pixel in the collection
-// clipping it to the aoi
-var composite = landsatFiltered.median().clip(aoi);
+// clipping it to the aoi and adding in the elevation and SAR data
+var composite = landsatFiltered
+.median()
+.clip(aoi)
+.addBands(elevation)
+.addBands(SARFiltered);
 
 // Add composite to the map
 Map.addLayer(composite, visParamPreProcessed, '2020-23 Landsat median composite');
+
 ```
 
 <img align="center" src="../images/gee-mangrove/median_composite.png" hspace="15" vspace="10" width="600">
 
-At this point, sometimes it is a good idea to export the input data you have processed for your models. Importing pre-computed data products from a GEE asset will reduce the computational effort required to train and apply models in GEE. It is not necessary for this demonstration with such a small AOI, but bear that in mind for future work. If you decide to export your composite to a GEE asset, please change the `assetId` path to one of your own asset folders. 
+At this point, it is often a good idea to export the input data you have processed for your models. Importing pre-computed data products from a GEE asset will reduce the computational effort required to train and apply models in GEE. It is not necessary for very small AOIs and images with few bands, but this exercise will be too computationally expensive if we don't do this (GEE will give us an error when we have reached our computational limit). Change the `assetId` path to one of your own asset folders. 
 
 ```javascript
 //--------------------------------------------------------------
 // Export composite to Drive or Asset
 //--------------------------------------------------------------
 
-// Export composite to Google Drive.
-Export.image.toDrive({
-  image: composite.toFloat(),
-  description: 'ToDrivemedianCompositeLandsat_2020-23',
-  fileNamePrefix: 'medianCompositeLandsat_2020-23',
-  region: aoi,
-  scale: 30,
-  maxPixels: 1e13
-});
+// Export composite to Drive or Asset
+//--------------------------------------------------------------
 
-// Export composite as a GEE Asset.
+// // Export composite to Google Drive
+// Export.image.toDrive({
+//   image: composite.toFloat(),
+//   description: 'ToDrivemedianCompositeLandsat_2020-23',
+//   fileNamePrefix: 'medianCompositeLandsatDEMSAR_2020-23',
+//   region: aoi,
+//   scale: 30,
+//   maxPixels: 1e13
+// });
+
+// Export composite as a GEE Asset
 // change assetId to a folder inside your user folder (e.g. users/kwoodward/trinidad-tobago/)
 Export.image.toAsset({
   image: composite,
   description: 'ToAssetmedianCompositeLandsat_2020-23',
-  assetId: 'users/ebihari/GuyanaWS/images/medianCompositeLandsat_2020-23',
+  assetId: 'users/ebihari/medianCompositeLandsatDEMSAR_2020-23',
   region: aoi,
   scale: 30,
   maxPixels: 1e13
 });
+```
 
-// Re-import median composite.
-var asset = ee.Image('users/ebihari/GuyanaWS/images/medianCompositeLandsat_2020-23');
-Map.addLayer(asset, visParamPreProcessed, 'Asset');
+From now on, we will only use the composite imagery we reimport.  Make sure to change the path to the correct location of your exported composite.
+
+```javascript
+// Re-import the composite
+var composite = ee.Image('users/ebihari/medianCompositeLandsatDEMSAR_2020-23_v3');
+// Map.addLayer(asset, visParamPreProcessed, 'Asset');
 ```
 
 Code Checkpoint: [https://code.earthengine.google.com/537c5ab42bbc2088b72de222fb961bb6](https://code.earthengine.google.com/537c5ab42bbc2088b72de222fb961bb6)
