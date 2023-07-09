@@ -372,7 +372,7 @@ From now on, we will only use the composite imagery we reimport.  Make sure to c
 ```javascript
 // Re-import the composite
 var composite = ee.Image('users/ebihari/medianCompositeLandsatDEMSAR_2020-23_v3');
-// Map.addLayer(asset, visParamPreProcessed, 'Asset');
+// Map.addLayer(composite, visParamPreProcessed, 'Asset');
 ```
 
 Code Checkpoint: [https://code.earthengine.google.com/537c5ab42bbc2088b72de222fb961bb6](https://code.earthengine.google.com/537c5ab42bbc2088b72de222fb961bb6)
