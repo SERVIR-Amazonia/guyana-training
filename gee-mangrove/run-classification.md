@@ -118,7 +118,7 @@ We train a Random Forest classifier with only the training point subset.
 
 // Define prediction bands
 // Get all image bands except the QA band
-var predictionBands =  landsatFiltered.first().bandNames().remove('QA_PIXEL'); 
+var predictionBands =  composite.bandNames().remove('QA_PIXEL'); 
 print('Prediction Bands:', predictionBands)
 
 // Train the classifier with training points only
