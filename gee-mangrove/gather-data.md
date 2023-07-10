@@ -359,7 +359,7 @@ At this point, it is often a good idea to export the input data you have process
 // change assetId to a folder inside your user folder (e.g. users/kwoodward/trinidad-tobago/)
 Export.image.toAsset({
   image: composite,
-  description: 'ToAssetmedianCompositeLandsat_2020-23',
+  description: 'ToAssetmedianCompositeLandsat_2020-23',  
   assetId: 'users/ebihari/medianCompositeLandsatDEMSAR_2020-23',
   region: aoi,
   scale: 30,
@@ -371,7 +371,7 @@ From now on, we will only use the composite imagery we reimport.  Make sure to c
 
 ```javascript
 // Re-import the composite
-var composite = ee.Image('users/ebihari/medianCompositeLandsatDEMSAR_2020-23_v3');
+var composite = ee.Image('users/ebihari/medianCompositeLandsatDEMSAR_2020-23');
 // Map.addLayer(composite, visParamPreProcessed, 'Asset');
 ```
 
