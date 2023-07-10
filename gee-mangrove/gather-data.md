@@ -143,6 +143,8 @@ Checking in the **Console**, we see that `lt5` is an `ImageCollection` with over
 
 Let's do the same thing for Landsat 7, 8, and 9.
 
+<img align="center" src="../images/gee-mangrove/landsat_timeline.png" hspace="15" vspace="10" width="600">
+
 ```javascript
 // Landsat 7
 var le7 = ee.ImageCollection('LANDSAT/LE07/C02/T1_TOA')
@@ -165,7 +167,6 @@ var lc9 = ee.ImageCollection('LANDSAT/LC09/C02/T1_TOA')
 
 Next, we want to apply some functions to each Landsat scene in a collection. In the first function, we will mask clouds and cloud shadows using the `QA_PIXEL` band that is included in every Landsat scene. The `QA_PIXEL` band is a bitmask generated in the Landsat processing center before it is distributed to the end-user. It has a lot of useful information contained in it. 
 
-<img align="center" src="../images/gee-mangrove/qa_pixel.png" hspace="15" vspace="10" width="700">
 
 We use the cloud and cloud shadow bits for this function.
 
@@ -372,7 +373,7 @@ From now on, we will only use the composite imagery we reimport.  Make sure to c
 ```javascript
 // Re-import the composite
 var composite = ee.Image('users/ebihari/medianCompositeLandsatDEMSAR_2020-23');
-// Map.addLayer(composite, visParamPreProcessed, 'Asset');
+// Map.addLayer(composite, visParamPreProcessed, 'Asset');  
 ```
 
 Code Checkpoint: [https://code.earthengine.google.com/537c5ab42bbc2088b72de222fb961bb6](https://code.earthengine.google.com/537c5ab42bbc2088b72de222fb961bb6)
