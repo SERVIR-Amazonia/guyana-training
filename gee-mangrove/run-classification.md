@@ -208,6 +208,30 @@ print('Users Accuracy:', confusionMatrix.consumersAccuracy());
 
 <img align="center" src="../images/gee-mangrove/accuracy_assess.png" hspace="15" vspace="10" width="500">
 
+Additionally, let's calculate the area of mangroves in our study area.
+
+```javascript
+//--------------------------------------------------------------
+// Calculate area
+//--------------------------------------------------------------
+
+// We will define the pixel category that correspond to mangrove (1):
+var Area = RFclassification.eq(1).multiply(ee.Image.pixelArea());
+
+//Apply reducer to sum the area of all pixels:
+var reducerArea = Area.reduceRegion({
+  reducer: ee.Reducer.sum(),
+  geometry: aoi,
+  scale: 30,
+  crs: 'EPSG:4326',
+  maxPixels: 1e13
+  });
+
+// Convert m^2 to km^2
+var areaSqKm = ee.Number(reducerArea.get('classification')).divide(1e6);
+print('Area (km^2):',areaSqKm);
+```
+
 Code Checkpoint: [https://code.earthengine.google.com/537c5ab42bbc2088b72de222fb961bb6](https://code.earthengine.google.com/537c5ab42bbc2088b72de222fb961bb6)
 
 Congratulations! You have setup a Random Forest classifier for mangrove mapping using multiple Landsat sensors. 
