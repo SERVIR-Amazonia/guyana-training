@@ -106,12 +106,15 @@ var wet = collection.filterDate('2021-07-01','2021-07-31').median().clip(aoi);
 var dry = collection.filterDate('2021-02-01','2021-02-28').median().clip(aoi);
 
 // define visualization parameters
-var vis = {bands:['VV'],min:-20,max:0};
+var visVV = {bands:['VV'],min:-30,max:0};
+var visVH = {bands:['VH'],min:-30,max:0};
 Map.centerObject(aoi,7);
 
 // add SAR to map
-Map.addLayer(dry.clip(aoi),vis,'SAR dry season');
-Map.addLayer(wet.clip(aoi),vis,'SAR wet season');
+Map.addLayer(dry.clip(aoi),visVV,'SAR dry season VV');
+Map.addLayer(dry.clip(aoi),visVH,'SAR dry season VH');
+Map.addLayer(wet.clip(aoi),visVV,'SAR wet season VV');
+Map.addLayer(wet.clip(aoi),visVH,'SAR wet season VH');
 ```
 
 <img align="center" src="../images/gee-flood/SentinelSAR.png" hspace="15" vspace="10" width="600">
@@ -125,8 +128,8 @@ var dryFiltered = dry.focal_mean(smoothingRadius,'circle','meters');
 var wetFiltered = wet.focal_mean(smoothingRadius,'circle','meters');
 
 // add filtered SAR to map
-Map.addLayer(dryFiltered, vis,'SAR dry season - speckle filter',false);
-Map.addLayer(wetFiltered, vis,'SAR wet season - speckle filter',false);
+Map.addLayer(dryFiltered, visVV,'SAR dry season - speckle filter',false);
+Map.addLayer(wetFiltered, visVV,'SAR wet season - speckle filter',false);
 ```
 
 <img align="center" src="../images/gee-flood/specklefilter_1.png" hspace="15" vspace="10" width="250">
@@ -156,7 +159,7 @@ Repeat these steps for each of the remaining map classes: Flooded Vegetation and
 
 *Note:* Since each geometry layer represents its own map class, the value for the `landcover` property must change when you are at the configuration step. For example, use landcover value of 2 for the next geometry layer that you create. 
 
-# Create Traiing and Testing Data
+# Create Training and Testing Data
 
 Now that we have reference polygons for our map classes, we will merge their `FeatureCollections` into one. Be mindful of the names that you gave to each polygon feature collection for this next line of code. 
 
