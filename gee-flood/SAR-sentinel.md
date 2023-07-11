@@ -325,8 +325,8 @@ var newObsDry = collection2.filterDate('2018-02-01','2018-02-28').mean().clip(ao
 // one SAR observation from wet season
 var newObsWet = collection2.filterDate('2018-07-01','2018-07-31').mean().clip(aoi);
 
-Map.addLayer(newObsDry.clip(aoi),vis,'new obs dry season');
-Map.addLayer(newObsWet.clip(aoi),vis,'new obs wet season ');
+Map.addLayer(newObsDry.clip(aoi),visVV,'new obs dry season');
+Map.addLayer(newObsWet.clip(aoi),visVV,'new obs wet season ');
 
 // combine the two season observations
 var newObsFinal = ee.Image.cat(newObsDry,newObsWet).rename(bands);
