@@ -13,6 +13,8 @@ In this workflow, we will create an archive of Landsat imagery from Landsat miss
 
 Follow along by copying and pasting each code block in the lesson into your own blank script. At the end you will have the entire workflow saved to a script file on your own GEE account.
 
+<img align="center" src="../images/gee-mangrove/landsat_timeline.png" hspace="15" vspace="10" width="600">
+
 # Setting up Area of Interest
 
 An area of interest can be uploaded from a local shapefile, drawn on the map, or derived from a pre-existing dataset in the Earth Engine catalogue.
@@ -142,8 +144,6 @@ Checking in the **Console**, we see that `lt5` is an `ImageCollection` with over
 <img align="center" src="../images/gee-mangrove/print_lt5.png" hspace="15" vspace="10" width="500">
 
 Let's do the same thing for Landsat 7, 8, and 9.
-
-<img align="center" src="../images/gee-mangrove/landsat_timeline.png" hspace="15" vspace="10" width="600">
 
 ```javascript
 // Landsat 7
