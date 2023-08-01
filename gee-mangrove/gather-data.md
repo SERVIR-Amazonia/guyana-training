@@ -167,8 +167,9 @@ var lc9 = ee.ImageCollection('LANDSAT/LC09/C02/T1_TOA')
 
 Next, we want to apply some functions to each Landsat scene in a collection. In the first function, we will mask clouds and cloud shadows using the `QA_PIXEL` band that is included in every Landsat scene. The `QA_PIXEL` band is a bitmask generated in the Landsat processing center before it is distributed to the end-user. It has a lot of useful information contained in it. 
 
-
 We use the cloud and cloud shadow bits for this function.
+
+<img align="center" src="../images/gee-mangrove/qa_pixel.png" hspace="15" vspace="10" width="600">
 
 ```javascript
 //--------------------------------------------------------------
@@ -340,9 +341,6 @@ At this point, it is often a good idea to export the input data you have process
 
 ```javascript
 //--------------------------------------------------------------
-// Export composite to Drive or Asset
-//--------------------------------------------------------------
-
 // Export composite to Drive or Asset
 //--------------------------------------------------------------
 

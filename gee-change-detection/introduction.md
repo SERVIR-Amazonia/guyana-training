@@ -24,7 +24,7 @@ Welcome to Two Date Change Detection! This workshop contains multiple hands on G
 2. Create a two-image difference to help locate areas of change
 3. Produce a change map and classify changes using thresholding
 
-## Objectives (time eseries change detection)
+## Objectives (time series change detection)
 
 1. Understand generally what a pixel-based imagery time series is and why it is useful for change detection
 2. Gain exposure to several time series change detection algorithms
