@@ -25,7 +25,7 @@ Using Collect Earth Online and SEPAL for accuracy assessment and unbiased area e
 | 10:30 – 10:45 | Coffee break |
 | 10:45 – 12:00 | Introduction to Collect Earth Online |
 | 12:00 – 13:00 | Lunch |
-| 13:00 –15:00  | Map Validation and Area Estimation with GEE, CEO, and SEPAL <br> Challenges - Improve Your Stratified Random Sample and Interpretation <br> Daily Recap <br> Final Survey|
+| 13:00 – 15:00 | Map Validation and Area Estimation with GEE, CEO, and SEPAL <br> Challenges - Improve Your Stratified Random Sample and Interpretation <br> Daily Recap <br> Final Survey|
 
 ## Sources 
 Material for this overview was gathered and modified from:

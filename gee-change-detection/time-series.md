@@ -194,7 +194,7 @@ Here, the spatial patterns of the disturbance areas are consistent with the unde
 
 *The spatial pattern of these artifacts is suggestive of the Landsat 7 scan line error pattern - a problem where roughly-horizontal slices of the Landsat 7 imagery are not recorded. Note that the problem is not, in fact, with the Landsat 7 images, but the fact that they have no data in these areas and are allowing an underlying Landsat 8 or Landsat 5 image with cloud problems to show through! Nevertheless, the summary interpretation here is that this region has persistent cloudiness that is not being captured by the default cloud mask algorithms. Hovering over the chart itself and examining the grey source data, you can inspect which years of data are missing. Data is often be missing when clouds are present.*
 
-*What is the solution? The key thing to realize here is that the persistent cloudiness is happening within the window of the season that we are using to build the image collections! Thus, the best option is to examine and change the window of time for the image collections. *
+*What is the solution? The key thing to realize here is that the persistent cloudiness is happening within the window of the season that we are using to build the image collections! Thus, the best option is to examine and change the window of time for the image collections.*
 
 # Generate LandTrendr outputs
 

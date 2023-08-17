@@ -5,4 +5,5 @@ nav_order: 14
 ---
 
 # Resources
-Add links and general resources here.
+
+[Capstone presentation resources](https://drive.google.com/drive/u/2/folders/1V0T1c849VefwL9CacuOkDlxc4mpqO8RS)
