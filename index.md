@@ -47,3 +47,7 @@ If you have any feedback from any of the workshops, please fill out the form bel
 The recordings for each workshop session can be access by clicking the button below. Please do not remove any files from the folder.
 
 [View Recordings](https://drive.google.com/drive/folders/1gxnP8N7rcZ1L4fwe87JfEQyFnyT-pD7k?usp=share_link){: .btn .btn-purple }
+
+## License
+
+The accompanying program is provided under the terms of the Eclipse Public License v 2.0 ("Agreement"). Any use, reproduction or distribution of the program constitutes recipient's acceptance of this agreement. For more information go to https://github.com/SERVIR-Amazonia/guyana-training/blob/main/LICENSE.
