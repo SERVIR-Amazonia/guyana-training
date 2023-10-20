@@ -14,6 +14,8 @@ Navigate through the different lesson sections by using the menu on the lefthand
 
 **Instructor:** Enikoe (Eni) Bihari
 
+**Contact information**: [em-trainings@sig-gis.com](em-trainings@sig-gis.com)
+
 |Time           |  Topics       |
 |:-------------:|:-------------:|
 | 09:00 – 10:00 | Introductions <br> Q&A <br> Setup Check |

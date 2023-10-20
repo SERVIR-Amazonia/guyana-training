@@ -11,7 +11,10 @@ Navigate through the different lesson sections by using the menu on the lefthand
 
 ## Session Agenda
 **Date**: March 22, 2023
+
 **Instructor(s):** Jose (Pepe) Ochoa 
+
+**Contact information**: [em-trainings@sig-gis.com](em-trainings@sig-gis.com)
 
 
 |      Time     |                                                                                                       Topics                                                                                                                                     |

@@ -14,6 +14,8 @@ Navigate through the different lesson sections by using the menu on the lefthand
 
 **Instructor(s):** Enikoe (Eni) Bihari
 
+**Contact information**: [em-trainings@sig-gis.com](em-trainings@sig-gis.com)
+
 Using Collect Earth Online and SEPAL for accuracy assessment and unbiased area estimation of maps
 
 

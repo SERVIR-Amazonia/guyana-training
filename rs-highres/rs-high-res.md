@@ -14,6 +14,8 @@ Navigate through the different lesson sections by using the menu on the lefthand
 
 **Instructor(s):** Jose (Pepe) Ochoa
 
+**Contact information**: [em-trainings@sig-gis.com](em-trainings@sig-gis.com)
+
 |      Time     |                                                                                                                                                    Topics                                                                                                                                                   |
 |:-------------:|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
 | 09:00 – 09:45 | Welcome and set-up check<br>Fundamentals of high resolution satellite products<br>Private/commercial versus governmental/open-free datasets                                                                                                                                                                 |
